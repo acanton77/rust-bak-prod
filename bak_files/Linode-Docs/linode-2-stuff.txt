@@ -1,0 +1,65 @@
+hostnamectl set-hostname saturn
+
+
+timedatectl set-timezone America/Los_Angeles
+
+sudo apt install ufw
+sudo mkdir -p /var/www/html/k6anc.net/{public_html,log,backups}
+
+
+rsync -avzh *.*      acanton@45.79.77.211:/var/www/html/k6anc.net/public_html
+
+scp -r Linode-Docs   4054@usw-s004.rsync.net:Linode-Docs2
+
+ssh  4054@usw-s004.rsync.net rm  espo-db-backup/*.zip
+
+scp  /home/anc1/espo-db-backup-dir/espocrm2-bak_$b.zip   4054@usw-s004.rsync.net:espo-db-backup/
+
+scp -r /home/anc1/Linode-Docs/*.*   4054@usw-s004.rsync.net:Linode-Docs2/
+
+scp -r  /home/acanton/Mars-Cron   anc1@192.53.126.91:Linode-Docs
+
+copy dir to remote
+
+scp -r /home/anc1/Linode-Docs   4054@usw-s004.rsync.net:/data2/home/4054/
+
+
+sudo nano /etc/apache2/sites-available/k6anc.net.conf
+
+sudo a2ensite k6anc.net.conf
+
+
+
+
+sudo chown -R $USER:$USER /var/www/html/k6anc.net/public_html
+
+dig @ns1.linode.com -tA k6anc.net
+
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+
+
+
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =www.k6anc.net [OR]
+RewriteCond %{SERVER_NAME} =k6anc.net
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
+sudo apt install python-certbot-apache
+
+
+Redirect 301 /index.html        http://www.k6anc.net/wp2/
+
+mysqldump -u nhrc77 -p nhrc > dump.sql
+mysqldump --no-tablespaces -u user -ppass nhrc77 > db_backup_file.sql
+
+mysqldump --no-tablespaces -u root -p --databases wordpress1 wordpress2 > wp-backup.sql
+
+mysqldump -u [username] -p --databases [database1] [database2] > dump.sql
+mysqldump -u [username] -p --databases wordpress1 wordpress2 > wp-dump.sql
+
+
+

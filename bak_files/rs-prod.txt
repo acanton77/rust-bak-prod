@@ -1,0 +1,17 @@
+========== START MSG FILE ==========
+this is the first line of the message
+this is the 2nd line of the message
+this is the 3rd line of the message
+
+   1--  2024-02-12 07:20:01:542 PST  vec_switch and appends DONE*****
+   2--  2024-02-12 07:20:04:566 PST  ancins backup is DONE
+   3--  2024-02-12 07:20:39:948 PST  artfromamy site backup is DONE
+   4--  2024-02-12 07:20:48:089 PST  k6aai backup is DONE**
+
+this is after the messages 1 
+this is the 2nd line after the messages
+this is the 3rd and LAST line after the message
+
+========== END MSG FILE ==========
+Email sent successfully!
+---END OF CODE---

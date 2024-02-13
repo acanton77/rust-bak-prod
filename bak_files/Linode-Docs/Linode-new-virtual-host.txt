@@ -1,0 +1,210 @@
+Create a new virtual-host for domain
+https://www.linode.com/docs/guides/hosting-a-website-ubuntu-18-04/
+
+
+- Create a virtual-host conf file for the new domain
+sudo nano /etc/apache2/sites-available/newmedialite.com.conf
+
+- Paste in the virtual file below with changes. 
+
+-Create the web directories
+sudo mkdir -p /var/www/html/newmedialite.com/{public_html,logs}
+
+- Change owner and group to user in public_html
+****NO***sudo chown -R www-data:www-data /var/www/html/newmedialite.com./public_html
+----> sudo chown -R $USER:$USER /var/www/html/newmedialite.com/public_html
+
+FOR WORDPRESS FILES:
+----> sudo chown -R $USER:www-data /var/www/html/k6anc.com/public_html/shop
+
+
+
+- Change permissions for public_html 
+sudo chmod -R 755 /var/www/html/newmedialite.com/public_html
+
+- Check if it is "log" or "logs". Should be "logs". Do this:
+cd to /var/www/html/newmedialite.com
+sudo mv log logs
+
+- Test apache config:  sudo apachectl configtest
+
+- Link  virtual host file from the sites-available directory to the sites-enabled directory:
+
+sudo a2ensite newmedialite.com.conf
+
+
+
+- Reload apache:
+sudo systemctl reload apache2
+
+(FIRST TIME ON SERVER)
+-If you want to later configure some rules in .htaccess, you will most likely need to enable mod_rewrite.
+
+sudo a2enmod rewrite
+
+Restart Apache.
+
+sudo systemctl restart apache2
+
+================================
+MYSQL DATABASE 
+================================
+
+- Log into MYSQL
+sudo mysql -u root -p  (t7+77sql or system "sudo" t7+88)
+
+
+- Create DATABASE and user/pass
+CREATE USER 'radio_user2'@'localhost' IDENTIFIED BY 'tek7iah77radio';
+GRANT ALL PRIVILEGES ON  *.* to 'radio_user2'@'localhost';
+
+---- OR 
+
+Use phpMyAdmin on new server to create database.
+Use phpMyAdmin on old server to dump the database.
+Use phpMyAdmin to upload data.sql IF under 2 MB. If over:
+
+Upload .sql dump to public_html of new domain
+cd to that domain
+mysql -u radio_user -ptek7iah77radio database_db < xxxxx.sql
+
+================================
+phyMyAdmin
+================================
+https://www.linode.com/docs/guides/install-mysql-phpmyadmin-on-ubuntu-12-04/
+
+CD TO public_html and create link:
+
+cd /var/www/html/newmedialite.com/public_html
+sudo ln -s /usr/share/phpmyadmin
+
+
+
+========================
+COPY STUFF FROM PAIR
+====================
+
+- Run this from Pair (source)
+
+rsync -avrzh mcare      anc1@192.53.126.91:/var/www/html/newmedialite.com/public_html
+
+or --- all files to root dir: 
+rsync -avzh *.*      anc1@192.53.126.91:/var/www/html/newmedialite.com/public_html
+
+or just one file:
+scp alice-1971.jpg      anc1@192.53.126.91:/var/www/html/radioqsl.com/public_html
+
+for dir:
+scp -rpv cantonpix anc1@192.53.126.91:/var/www/html/radioqsl.com/public_html
+
+-Change wp-config database parms. 
+
+- Perhaps change wpX owner and permissions:
+
+sudo chown -R $USER:www-data /var/www/html/newmedialite.com/public_html/web1
+
+cd /var/www/html/newmedialite.com/public_html/wp3
+sudo chmod -R 775 /var/www/html/newmedialite.com/public_html/web1
+
+- Disable xmlrpc.php - prevent remote hacking
+
+# Block WordPress xmlrpc.php requests
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+#allow from xxx.xxx.xxx.xxx
+</Files>
+
+=============
+CERTBOT
+MAKE SURE DNS IS SET FOR A RECORD
+===============
+
+sudo certbot
+Accept redirect.
+
+Certbot MAY corrupt the Apache virual-host in /etc/apache2/sites-available file.
+
+Try this:
+
+sudo a2enmod rewrite
+
+Followed by a restart
+
+sudo systemctl restart apache2
+
+ If still not working take out:
+
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =radioqsl.com [OR]
+RewriteCond %{SERVER_NAME} =www.radioqsl.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
+
+======================
+MISC
+======================
+
+About permissions: https://devanswers.co/configure-sftp-web-server-document-root/
+
+Important PWs:
+
+MySQL - root - t7+77sql
+radio_user and radio_user2 - t7+77radio
+
+ancnet1 - t7+77net-
+
+Linode server "saturn" user/IP: ssh anc1@192.53.126.91
+user: anc1, t7+88
+root: t7+99
+
+mailbox: ac77/js77@mailanc2.net
+
+=======================
+
+Send to rysnc.com from server:
+rsync -avrzh webster vid2.html      4054@usw-s004.rsync.net:web-backup-newmediacreate
+
+/usr/bin/rsync -a -r -q -t -v  wpradio-5-16-2021.zip 4054@usw-s004.rsync.net:web-backup-wpradio 
+
+-END
+
+====================================
+THIS IS THE VIRTUAL-HOST FILE... JUST CHANGE THE DOMAIN NAME
+AND PASTE INTO NANO
+====================================
+
+# domain: newmedialite.com
+# public: /var/www/html/newmedialite.com/public_html/
+
+<VirtualHost *:80>
+  # Admin email, Server Name (domain name), and any aliases
+  ServerAdmin webmaster@newmedialite.com
+  ServerName  newmedialite.com
+  ServerAlias www.newmedialite.com
+
+  # Index file and Document Root (where the public files are located)
+  DirectoryIndex index.html index.php
+  DocumentRoot /var/www/html/newmedialite.com/public_html
+  
+  
+  
+  
+  # Log file locations
+  LogLevel warn
+  ErrorLog  /var/www/html/newmedialite.com/logs/error.log
+  CustomLog /var/www/html/newmedialite.com/logs/access.log combined
+  
+ 
+
+
+</VirtualHost>
+
+<Directory /var/www/>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+  
+# END OF FILE 
+
