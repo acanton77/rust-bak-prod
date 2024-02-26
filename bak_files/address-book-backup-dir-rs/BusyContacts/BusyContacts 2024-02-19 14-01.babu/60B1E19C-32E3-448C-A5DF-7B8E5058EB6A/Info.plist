@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Color</key>
+	<integer>128</integer>
+	<key>Hidden</key>
+	<true/>
+	<key>Local</key>
+	<false/>
+	<key>Name</key>
+	<string>PAIRCardDAV-94a</string>
+	<key>Owner</key>
+	<string>PAIR-bak-CardDAV94a</string>
+	<key>Read Only</key>
+	<false/>
+	<key>Service Name</key>
+	<string>CardDAV Synchronization</string>
+	<key>Service UID</key>
+	<string>F5B02980-E77D-44DE-AEBE-03B635E86E40</string>
+	<key>Service URL</key>
+	<string>https://anc123.com</string>
+	<key>Sort Order</key>
+	<integer>1</integer>
+	<key>UID</key>
+	<string>60B1E19C-32E3-448C-A5DF-7B8E5058EB6A</string>
+</dict>
+</plist>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Color</key>
+	<integer>0</integer>
+	<key>Hidden</key>
+	<true/>
+	<key>Local</key>
+	<false/>
+	<key>Name</key>
+	<string>LIN Address Book</string>
+	<key>Owner</key>
+	<string>LIN-bak-book94</string>
+	<key>Read Only</key>
+	<false/>
+	<key>Service Name</key>
+	<string>CardDAV Synchronization</string>
+	<key>Service UID</key>
+	<string>195F091F-176B-4566-B27C-C0F3569063E9</string>
+	<key>Service URL</key>
+	<string>https://k6anc.com</string>
+	<key>Sort Order</key>
+	<integer>1</integer>
+	<key>UID</key>
+	<string>EDAE8159-72BA-4EB0-9394-9ED4DF780CC8</string>
+</dict>
+</plist>

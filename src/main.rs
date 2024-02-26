@@ -1,14 +1,17 @@
-// RS_BAK_PROD
-// RS_BAK_PROD
-// RS_BAK_PROD- RUST
+// RS_BAK_PROD - Rust
+// RS_BAK_PROD - RUST
+// RS_BAK_PROD - RUST
 
 #![allow(warnings)]
 
 use chrono::{DateTime, Local, TimeZone, Utc};
 use chrono_tz::Tz;
 use chrono_tz::US::Pacific;
+
+use lettre::message::header::ContentType;
 use lettre::transport::smtp::authentication::Credentials;
 use lettre::{Message, SmtpTransport, Transport};
+
 use std::fs;
 use std::fs::File;
 use std::fs::OpenOptions;
@@ -24,6 +27,7 @@ use std::process::Command;
 use std::time::{Duration, Instant};
 use std::{thread, time};
 
+use std::fs::rename;
 use std::process::Stdio;
 
 const SSH_RSYNC_ADDRESS: &str = "fm1364@fm1364.rsync.net";
@@ -46,7 +50,7 @@ fn main() {
     let mut dump_out_file_name = String::from("");
 
     // Put one-time run here
-    // ========
+    // =========
 
     //==========
 
@@ -56,9 +60,10 @@ fn main() {
 
     //*** APPEND DAILY ITEMS TO VEC_SWITCH_FILE
 
-    vec_switch_file.push("linode".to_string());
-    vec_switch_file.push("ac_addressbook".to_string());
+    vec_switch_file.push("xxxlinode".to_string());
+    vec_switch_file.push("xxxxac_addressbook".to_string());
     vec_switch_file.push("chk_espo_ver".to_string());
+    //vec_switch_file.push("1test".to_string());
 
     //*** SORT THE VECTOR
 
@@ -68,7 +73,7 @@ fn main() {
 
     vec_switch_file.dedup();
 
-    //====write messg========================
+    //====write message for email ========================
 
     message_data = "vec_switch and appends DONE".to_string();
     write_msg(&mut msg_vec, message_data);
@@ -77,12 +82,15 @@ fn main() {
     //***********************LOOP *********************************
     //***********************LOOP *********************************
 
+    // Just send email of this is found in switch file
     for line in &vec_switch_file {
         if line == "1test" {
-            //println!("we got 1test and break");
-            //break;
+            message_data = "test1 - mail only".to_string();
+            write_msg(&mut msg_vec, message_data);
+            break;
         }
 
+        // Do a crontab dump to file -- see global constant
         if line == "linode" {
             let file_lin = File::create(LINODE_DIR).unwrap();
             let stdio = Stdio::from(file_lin);
@@ -92,7 +100,7 @@ fn main() {
                 .args(["-l"])
                 .output()
                 .expect("crontab command failed to start");
-            
+
             zip_in_file = "/usr/home/ancnet1/rs_bak_prod/bak_files/Linode-Docs".to_string();
             zip_out_file_name = "linode-docs-rs-".to_string();
             rsync_dir = "web-backup-linode-rs".to_string();
@@ -105,6 +113,7 @@ fn main() {
             // println!("we got piwigo");
         }
 
+        // this is a wordpress site.
         if line == "alicegift" {
             // println!("we will do alicegift");
             // alicegift(&mut msg1);
@@ -129,6 +138,7 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         }
 
+        // this is a wordpress site
         if line == "artfromamy" {
             zip_in_file = "/usr/home/ancnet1/public_html/artfromamy.com".to_string();
             zip_out_file_name = "artfromamy.com-rs-".to_string();
@@ -145,6 +155,179 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         }
 
+        // Special logic to scrape web page to find latest version and compare to what we had.
+        // Use curl to get the web page
+        if line == "chk_espo_ver" {
+            let _mycurl = Command::new("curl")
+                .args([
+                    "https://www.espocrm.com/download/",
+                    "-o",
+                    "/usr/home/ancnet1/rs_bak_prod/bak_files/grep1.txt",
+                ])
+                .output()
+                .expect("curl command failed to start");
+
+            // Use grep to find the string
+            let cmdx = Command::new("/usr/bin/grep")
+                .args([
+                    "-i",
+                    "Latest Release EspoCRM",
+                    "/usr/home/ancnet1/rs_bak_prod/bak_files/grep1.txt",
+                ])
+                .output()
+                .expect("grep command failed to start");
+
+            // for debugging if needed.
+            //println!("status: {}", cmdx.status);
+            // println!("stdout: {}", String::from_utf8_lossy(&cmdx.stdout));
+            // println!("err: {}", String::from_utf8_lossy(&cmdx.stderr));
+
+            let new_ver = String::from_utf8_lossy(&cmdx.stdout);
+
+            println!("{}", new_ver);
+            let new_ver = new_ver.trim();
+            println!("{}", new_ver);
+            //println!("new_ver is: {}", new_ver);
+            // prints out:  <h2>Latest Release EspoCRM 8.1.4 (February 07, 2024)</h2>
+
+            // Get the previous version from file
+            let mut prev_ver1 = String::from("");
+            prev_ver1  =
+                fs::read_to_string("/usr/home/ancnet1/rs_bak_prod/bak_files/prev-espo-ver.txt")
+                    .expect("Should have been able to read the file");
+
+            // get rid of \n as grep does not have one.
+
+            let mut prev_ver = String::from("");
+            prev_ver = prev_ver1.to_string();
+            println!("---prev--");
+            println!("{}", prev_ver);
+           prev_ver = prev_ver.trim().to_string();
+            //prev_ver.pop();
+            println!("{}", prev_ver);
+            // If no new version, all done, else
+            if new_ver == prev_ver {
+                //println!("they are equal");
+                message_data = "new espo version NOT FOUND ".to_string();
+                write_msg(&mut msg_vec, message_data);
+
+            // if new version, write the message. No longer do update
+            } else {
+                //println!("NOT EQUAL");
+
+                /*
+                               fs::write(
+                                   "/usr/home/ancnet1/rs_bak_prod/bak_files/prev-espo-ver.txt",
+                                   new_ver,
+                               )
+                               .expect("Unable to write file");
+                */
+
+                // println!("WROTE THE FILE");
+
+                message_data = "new espo version FOUND. -- Do the manual update. ".to_string();
+                write_msg(&mut msg_vec, message_data);
+
+                message_data = format!("version is: {}", new_ver.to_string());
+                write_msg(&mut msg_vec, message_data);
+            } // end if-else
+        } // end chk-espo
+
+        //========================
+
+        if line == "ac_addressbook" {
+            // send up the vcf file
+
+            let mut my_vec: Vec<String> = Vec::new();
+            //let mut z : String ="".to_string();
+            for file in fs::read_dir(
+                "/usr/home/ancnet1/rs_bak_prod/bak_files/address-book-backup-dir-rs/BusyContacts",
+            )
+            .unwrap()
+            {
+                let mut z: String = file.unwrap().path().display().to_string();
+                let mut y: String = "".to_string();
+
+                if z.contains("babu") {
+                    if z.contains(" ") {
+                        y = z.replace(" ", "-");
+                        println!("it is now: {}", y);
+                        let _ = rename(z, y.clone());
+                        // let _ = rename(z, y);
+
+                        // my_vec.push(y.clone().to_string());
+                        my_vec.push(y.to_string());
+                    } else {
+                        //       println!("{} ", z);
+                        //    my_vec.push(z.clone().to_string());
+                        my_vec.push(z.to_string());
+                    }
+                    // println!("{}", file.unwrap().path().display());
+                } // outer if
+            }
+
+            /*
+                       println!("===========  vec ===========");
+                       for line in &my_vec {
+                           println!("{}", line);
+                       }
+            */
+
+            //            println!("===========  descending vec ===========");
+            &my_vec.sort();
+            /*
+                       for line in &my_vec {
+                           println!("{}", line);
+                       }
+            */
+
+            //           println!("===========  reverse vec ===========");
+            &my_vec.reverse();
+            /*
+                       for line in &my_vec {
+                           println!("{}", line);
+                       }
+            */
+
+            //           println!("===========  only 1st 4 ===========");
+
+            /*
+                       for i in 0..4 {
+                           // for line in &my_vec {
+                           println!("{}", &my_vec[i]);
+
+                       }
+            */
+
+            //           println!("===========  From 4 to end ===========");
+            let count = my_vec.len();
+            for i in 4..count {
+                //       println!("deleted: {}", &my_vec[i]);
+                let mut qqq = &my_vec[i];
+                fs::remove_dir_all(qqq);
+            }
+
+            message_data = "address book backup is DONE".to_string();
+            write_msg(&mut msg_vec, message_data);
+
+            let _cmd = Command::new("touch")
+                .args(["/usr/home/ancnet1/rs_bak_prod/bak_files/address-book-backup-dir-rs/rs-address-time.txt",
+                ])
+                .output()
+                .expect("touch command failed to start");
+
+            let _cmd = Command::new("rsync")
+                .args([
+                    "-r",
+                    "-a",
+                    "-p",
+                    "/usr/home/ancnet1/rs_bak_prod/bak_files/address-book-backup-dir-rs",
+                    "fm1364@fm1364.rsync.net:addressbook-backup-rs",
+                ])
+                .output()
+                .expect("rsync command failed to start");
+        } // end addressabok
+
         if line == "jack" {
             // println!("we got jack");
         }
@@ -155,303 +338,348 @@ fn main() {
 
     // Send the mail
 
-    send_mail(&mut msg_vec);
+    send_mail(&mut msg_vec, &vec_switch_file);
 
     //truncate switch file
 
-    let file = OpenOptions::new().write(true).truncate(true).open(SWITCH_FILE);
-
-    println!("---END OF CODE---");
-
-    // ****************** FUNCTIONS *************************************************
-    // ****************** FUNCTIONS *************************************************
-    // ****************** FUNCTIONS *************************************************
-
-    //=== FUNCTION: BOOTSTRAP ================================================
-    //=== FUNCTION: BOOTSTRAP ================================================
-
-    fn bak_bootstrap(
-        mut zip_in_file: String,
-        mut zip_out_file_name: String,
-        mut rsync_dir: &String,
-    ) {
-        let mut zip_out_file: String =
-            format!("{}{}", HOME_FILE_DIR.to_string(), zip_out_file_name);
-        let timestamp_new = get_timestamp().to_string();
-
-        //====let current_local22: DateTime<Local> = Local::now();
-        //let custom_format22 = current_local22.format("%Y-%m-%d %H:%M:%S");
-
-        //=====let custom_format22 = current_local22.format("%b %d %H:%M:%S");
-        //println!("current local 2: {}", custom_format22);
-
-        zip_out_file.push_str(&timestamp_new);
-        zip_out_file.push_str(".zip");
-
-        // zip up the file (zip file comes first, file-to-zip comes second
-        // zip "-r", "/usr/home/ancnet1/rs_bak/bak_files/out-dump.zip" "/usr/home/ancnet1/rs_bak/bak_files/out-dump.sql"
-
-        let _cmd2 = Command::new("/usr/bin/zip")
-            .args(["-r", &zip_out_file, &zip_in_file])
-            .output()
-            .expect("zip command failed to start");
-
-        // Remove previous  zip files on rsync datacenter
-
-        // python:  cmd = "ssh fm1364@fm1364.rsync.net 'rm  web-backup-baikal/baikal*.zip'"
-
-        let del_rsync_file: String = format!(
-            "{}{}{}{}",
-            &rsync_dir.to_string(),
-            "/",
-            &zip_out_file_name.to_string(),
-            "*".to_string()
-        );
-
-        let _cmd = Command::new("/usr/bin/ssh")
-            .args([
-                SSH_RSYNC_ADDRESS.to_string(),
-                " rm ".to_string(),
-                del_rsync_file,
-            ])
-            .output()
-            .expect("ssh command failed to start");
-
-        //println!(
-        // "stderr from  function: {}",
-        //  String::from_utf8_lossy(&_cmd.stderr)
-        //  );
-
-        //  println!("stdout: {}", String::from_utf8_lossy(&_cmd.stdout));
-        //   println!("status: {}", _cmd.status);
-        //  println!("{:?}", _cmd);
-
-        // rsync
-
-        let rsync_out: String = RSYNC_ADDRESS.to_string() + &rsync_dir.to_string();
-
-        let _cmd = Command::new("rsync")
-            .args(["-r", "-a", "-p", &zip_out_file, &rsync_out])
-            .output()
-            .expect("rsync command failed to start");
-
-        // Delete the local .zip file
-        
-        fs::remove_file(zip_out_file);
-        
-    } //end bootstrap
-
-    //=== FUNCTION: WORDPRESS ===========================
-    //=== FUNCTION: WORDPRESS ===========================
-
-    fn bak_wordpress(
-        database: String,
-        dump_out_file_name: String,
-        log_path: String,
-        rsync_dir: &String,
-    ) {
-        let timestamp_new = get_timestamp().to_string();
-        let current_local22: DateTime<Local> = Local::now();
-        let custom_format22 = current_local22.format("%b %d %H:%M:%S");
+    let file = OpenOptions::new()
+        .write(true)
+        .truncate(true)
+        .open(SWITCH_FILE);
 
-        // mysql dump
+    let current_local_done: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
+    let msg_date_done = current_local_done.format("%c");
 
-        let mut dump_out_file: String =
-            format!("{}{}", HOME_FILE_DIR.to_string(), dump_out_file_name);
+    //println!("Date: {}",msg_date_done);
+    //println!("Email Sent");
+    println!("---GOOD EOJ---");
+    println!("Date: {}", msg_date_done);
+}
 
-        dump_out_file.push_str(&timestamp_new);
-        dump_out_file.push_str(".sql");
+// ****************** FUNCTIONS *************************************************
+// ****************** FUNCTIONS *************************************************
+// ****************** FUNCTIONS *************************************************
+
+//=== FUNCTION: BOOTSTRAP ================================================
+//=== FUNCTION: BOOTSTRAP ================================================
+
+fn bak_bootstrap(mut zip_in_file: String, mut zip_out_file_name: String, mut rsync_dir: &String) {
+    let mut zip_out_file: String = format!("{}{}", HOME_FILE_DIR.to_string(), zip_out_file_name);
+    let timestamp_new = get_timestamp().to_string();
 
-        let mut dump_out_file2 = "--result-file=".to_string();
-        dump_out_file2.push_str(&dump_out_file);
+    //====let current_local22: DateTime<Local> = Local::now();
+    //let custom_format22 = current_local22.format("%Y-%m-%d %H:%M:%S");
 
-        // zip the sql file
+    //=====let custom_format22 = current_local22.format("%b %d %H:%M:%S");
+    //println!("current local 2: {}", custom_format22);
 
-        let _cmd = Command::new("/usr/local/bin/mysqldump")
-            .args([
-                log_path,
-                "--add-drop-table".to_string(),
-                database,
-                dump_out_file2,
-            ])
-            .output()
-            .expect("mysql command failed to start");
+    zip_out_file.push_str(&timestamp_new);
+    zip_out_file.push_str(".zip");
 
-        //  zip up the database file
+    // zip up the file (zip file comes first, file-to-zip comes second
+    // zip "-r", "/usr/home/ancnet1/rs_bak/bak_files/out-dump.zip" "/usr/home/ancnet1/rs_bak/bak_files/out-dump.sql"
 
-        let mut db_zip: String = dump_out_file.to_string();
-        let mut sql_in: String = dump_out_file.to_string();
+    let _cmd2 = Command::new("/usr/bin/zip")
+        .args(["-r", &zip_out_file, &zip_in_file])
+        .output()
+        .expect("zip command failed to start");
+
+    // Remove previous  zip files on rsync datacenter
 
-        db_zip.push_str(".zip");
+    // python:  cmd = "ssh fm1364@fm1364.rsync.net 'rm  web-backup-baikal/baikal*.zip'"
+
+    let del_rsync_file: String = format!(
+        "{}{}{}{}",
+        &rsync_dir.to_string(),
+        "/",
+        &zip_out_file_name.to_string(),
+        "*".to_string()
+    );
+
+    let _cmd = Command::new("/usr/bin/ssh")
+        .args([
+            SSH_RSYNC_ADDRESS.to_string(),
+            " rm ".to_string(),
+            del_rsync_file,
+        ])
+        .output()
+        .expect("ssh command failed to start");
+
+    //println!(
+    // "stderr from  function: {}",
+    //  String::from_utf8_lossy(&_cmd.stderr)
+    //  );
+
+    //  println!("stdout: {}", String::from_utf8_lossy(&_cmd.stdout));
+    //   println!("status: {}", _cmd.status);
+    //  println!("{:?}", _cmd);
+
+    // rsync
+
+    let rsync_out: String = RSYNC_ADDRESS.to_string() + &rsync_dir.to_string();
+
+    let _cmd = Command::new("rsync")
+        .args(["-r", "-a", "-p", &zip_out_file, &rsync_out])
+        .output()
+        .expect("rsync command failed to start");
 
-        let _cmd2 = Command::new("/usr/bin/zip")
-            .args(["-r", &db_zip, &sql_in])
-            .output()
-            .expect("zip command failed to start");
+    // Delete the local .zip file
+
+    fs::remove_file(zip_out_file);
+} //end bootstrap
+
+//=== FUNCTION: WORDPRESS ===========================
+//=== FUNCTION: WORDPRESS ===========================
 
-        //# Use SSH to remove previous  zip files on rsync datacenter
+fn bak_wordpress(
+    database: String,
+    dump_out_file_name: String,
+    log_path: String,
+    rsync_dir: &String,
+) {
+    let timestamp_new = get_timestamp().to_string();
+    let current_local22: DateTime<Local> = Local::now();
+    let custom_format22 = current_local22.format("%b %d %H:%M:%S");
+
+    // mysql dump
 
-        let del_rsync_file: String = format!(
-            "{}{}{}{}",
-            &rsync_dir.to_string(),
-            "/",
-            &dump_out_file_name.to_string(),
-            "*".to_string()
-        );
+    let mut dump_out_file: String = format!("{}{}", HOME_FILE_DIR.to_string(), dump_out_file_name);
 
-        let _cmd = Command::new("/usr/bin/ssh")
-            .args([
-                SSH_RSYNC_ADDRESS.to_string(),
-                " rm ".to_string(),
-                del_rsync_file,
-            ])
-            .output()
-            .expect("ssh command failed to start");
+    dump_out_file.push_str(&timestamp_new);
+    dump_out_file.push_str(".sql");
 
-        //println!(
-        // "stderr from  function: {}",
-        //  String::from_utf8_lossy(&_cmd.stderr)
-        //  );
-        //  println!("stdout: {}", String::from_utf8_lossy(&_cmd.stdout));
-        //   println!("status: {}", _cmd.status);
+    let mut dump_out_file2 = "--result-file=".to_string();
+    dump_out_file2.push_str(&dump_out_file);
 
-        //  println!("{:?}", _cmd);
+    // zip the sql file
 
-        // rsync the zip db zip file
+    let _cmd = Command::new("/usr/local/bin/mysqldump")
+        .args([
+            log_path,
+            "--add-drop-table".to_string(),
+            database,
+            dump_out_file2,
+        ])
+        .output()
+        .expect("mysql command failed to start");
 
-        let rsync_out = RSYNC_ADDRESS.to_string() + &rsync_dir.to_string();
+    //  zip up the database file
 
-        let _cmd = Command::new("rsync")
-            .args(["-r", "-a", "-p", &db_zip, &rsync_out])
-            .output()
-            .expect("rsync command failed to start");
+    let mut db_zip: String = dump_out_file.to_string();
+    let mut sql_in: String = dump_out_file.to_string();
 
-// Delete the .zip file
-        
-        fs::remove_file(db_zip);
-        fs::remove_file(sql_in);
-        
-    } // end wordpress
+    db_zip.push_str(".zip");
 
+    let _cmd2 = Command::new("/usr/bin/zip")
+        .args(["-r", &db_zip, &sql_in])
+        .output()
+        .expect("zip command failed to start");
 
+    //# Use SSH to remove previous  zip files on rsync datacenter
 
+    let del_rsync_file: String = format!(
+        "{}{}{}{}",
+        &rsync_dir.to_string(),
+        "/",
+        &dump_out_file_name.to_string(),
+        "*".to_string()
+    );
 
-    //=== FUNCTION: CURRENT DATE ================
-    //=== FUNCTION: CURRENT DATE ================
+    let _cmd = Command::new("/usr/bin/ssh")
+        .args([
+            SSH_RSYNC_ADDRESS.to_string(),
+            " rm ".to_string(),
+            del_rsync_file,
+        ])
+        .output()
+        .expect("ssh command failed to start");
 
-    fn get_current_date() -> String {
-        let current_local: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
-        let msg_date1 = current_local.format("%Y-%m-%d %H:%M:%S:%3f %Z");
-        msg_date1.to_string()
-    } // end current date
+    //println!(
+    // "stderr from  function: {}",
+    //  String::from_utf8_lossy(&_cmd.stderr)
+    //  );
+    //  println!("stdout: {}", String::from_utf8_lossy(&_cmd.stdout));
+    //   println!("status: {}", _cmd.status);
 
+    //  println!("{:?}", _cmd);
 
+    // rsync the zip db zip file
 
+    let rsync_out = RSYNC_ADDRESS.to_string() + &rsync_dir.to_string();
 
-    //=== FUNCTION: TIME STAMP =======================
-    //=== FUNCTION: TIME STAMP =======================
+    let _cmd = Command::new("rsync")
+        .args(["-r", "-a", "-p", &db_zip, &rsync_out])
+        .output()
+        .expect("rsync command failed to start");
 
-    fn get_timestamp() -> String {
-        let milliseconds_timestamp: u128 = std::time::SystemTime::now()
-            .duration_since(std::time::UNIX_EPOCH)
-            .unwrap()
-            .as_millis();
+    // Delete the .zip file
 
-        let timestamp_string: String;
-        timestamp_string = milliseconds_timestamp.to_string();
+    fs::remove_file(db_zip);
+    fs::remove_file(sql_in);
+} // end wordpress
 
-        timestamp_string // return
-    } // end time stamp
+//=== FUNCTION: CURRENT DATE ================
+//=== FUNCTION: CURRENT DATE ================
 
+fn get_current_date() -> String {
+    let current_local: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
+    let msg_date1 = current_local.format("%Y-%m-%d %H:%M:%S:%3f %Z");
+    msg_date1.to_string()
+} // end current date
 
+//=== FUNCTION: TIME STAMP =======================
+//=== FUNCTION: TIME STAMP =======================
 
-    //=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
-    //=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
+fn get_timestamp() -> String {
+    let milliseconds_timestamp: u128 = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .unwrap()
+        .as_millis();
 
-    fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
-        BufReader::new(File::open(filename)?).lines().collect()
-    } // end create vec
+    let timestamp_string: String;
+    timestamp_string = milliseconds_timestamp.to_string();
 
+    timestamp_string // return
+} // end time stamp
 
+//=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
+//=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
 
+fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
+    BufReader::new(File::open(filename)?).lines().collect()
+} // end create vec
 
-    // FUNCTION: WRITE MESSAGE TO MSG_VEC
-    // FUNCTION: WRITE MESSAGE TO MSG_VEC
-    // FUNCTION: WRITE MESSAGE TO MSG_VEC
+// FUNCTION: WRITE MESSAGE TO MSG_VEC
+// FUNCTION: WRITE MESSAGE TO MSG_VEC
+// FUNCTION: WRITE MESSAGE TO MSG_VEC
 
-    fn write_msg(msg_vec: &mut Vec<(String, String, String)>, message_data: String) {
-        thread::sleep(Duration::from_millis(100));
-        let msg_date: String = get_current_date();
-        let time_stamp = get_timestamp();
-        msg_vec.push((time_stamp.to_string(), msg_date.to_string(), message_data));
-    }
+fn write_msg(msg_vec: &mut Vec<(String, String, String)>, message_data: String) {
+    thread::sleep(Duration::from_millis(100));
+    let msg_date: String = get_current_date();
+    let time_stamp = get_timestamp();
+    msg_vec.push((time_stamp.to_string(), msg_date.to_string(), message_data));
+}
 
+// FUNCTION: SEND MAIL
+// FUNCTION: SEND MAIL
+// FUNCTION: SEND MAIL
 
+fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<(String)>) {
+    let mut msg_final = String::new();
 
+    //let msg_date_mail: String = get_current_date();
 
-    // FUNCTION: SEND MAIL
-    // FUNCTION: SEND MAIL
-    // FUNCTION: SEND MAIL
+    let current_local: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
+    let msg_date_mail = current_local.format("%c");
 
-    fn send_mail(msg_vec: &mut Vec<(String, String, String)>) {
-        let mut msg_final = String::new();
+    let msg_line_date = format!("Sent on {} by Rust script on Pair VPS.\n", msg_date_mail);
 
-        msg_final.push_str("this is the first line of the message\n");
-        msg_final.push_str("this is the 2nd line of the message\n");
-        msg_final.push_str("this is the 3rd line of the message\n");
+    msg_final.push_str(&msg_line_date);
 
-        msg_final.push_str("\n");
+    msg_final.push_str("Jobs run in Mountain time (+1 hr.) but reported in Pacific time.\n");
 
-        // get the msg file and pop in line numbrers
+    msg_final.push_str("\n");
 
-        let mut num = 0;
-        let mut newvalue: String;
-        let mut from_orig: String;
+    msg_final.push_str("Files to be done:\n");
 
-        for line in msg_vec {
-            num = num + 1;
-            let mut num2: &str = &num.to_string();
-            let newvalue = format!("   {}--  {}  {}\n", num2, line.1, line.2);
+    msg_final.push_str("\n");
 
-            msg_final.push_str(&newvalue);
-        } // end for line read loop
+    for line in vec_switch_file {
+        let newvalue2 = format!("{}\n", line);
+        msg_final.push_str(&newvalue2);
+    } // end for line read loop
 
-        msg_final.push_str("\n");
-        msg_final.push_str("this is after the messages 1 \n");
-        msg_final.push_str("this is the 2nd line after the messages\n");
-        msg_final.push_str("this is the 3rd and LAST line after the message\n");
-        //msg_final.push_str("-------- END ----------\n");
+    msg_final.push_str("\n");
 
-        // println!("========== START MSG FILE ==========");
+    // get the msg file and pop in line numbrers
 
-        // println!("{}", msg_final);
-        // println!("========== END MSG FILE ==========");
+    let mut num = 0;
+    let mut newvalue: String;
+    let mut from_orig: String;
 
-        // Send the mail
+    for line in msg_vec {
+        num = num + 1;
+        let mut num2: &str = &num.to_string();
+        let newvalue = format!("   {}--  {}  {}\n", num2, line.1, line.2);
 
-        let email = Message::builder()
-            .from("Pair-Rust-VPS <ac99@answer123.com>".parse().unwrap())
-            .to("Receiver <ac99@answer123.com>".parse().unwrap())
-            .subject("Sending email with Rust - new")
-            .body(String::from(msg_final))
-            .unwrap();
+        //println!("line is: {}",newvalue);
 
-        let creds = Credentials::new(
-            "smtp2@mailanc2.net".to_string(),
-            "tek7iah77mail-".to_string(),
-        );
+        msg_final.push_str(&newvalue);
+    } // end for line read loop
 
-        // Open a remote connection to Pair server
+    msg_final.push_str("\n");
 
-        let mailer = SmtpTransport::relay("ancnet1.mail.pairserver.com")
-            .unwrap()
-            .credentials(creds)
-            .build();
+    msg_final.push_str("Errors:\n");
+    msg_final.push_str("\n");
 
-        // Send the email
-        match mailer.send(&email) {
-            Ok(_) => println!("Email sent successfully!"),
-            Err(e) => panic!("Could not send email: {:?}", e),
-        } // end match
-    } // end mail
-} // end all code
+    //No errors found.
+
+    msg_final.push_str("Note:\n\n");
+
+    msg_final.push_str("# For user crontab - pair:\n");
+
+    msg_final.push_str("crontab -e \n");
+    msg_final.push_str("crontab -l \n\n");
+
+    msg_final.push_str("# For root crontab - not used:\n");
+    msg_final.push_str("sudo nano /etc/crontab\n\n");
+
+    msg_final.push_str("# To update ESPO to a new version:\n");
+    msg_final.push_str("SSH into Pair VPS\n");
+    msg_final.push_str("cd /usr/home/ancnet1/py-backup (or \'py\')\n");
+    msg_final.push_str("./espo-prod-new-ver.sh \n\n");
+
+    msg_final.push_str("# To backup any site or file:\n");
+    msg_final.push_str("Go to: https://anc123.com/switch2/index.php\n");
+    msg_final.push_str("Enter the job/backups you want to run\n");
+    msg_final.push_str("The backup will be uploaded to rsync.net that night.\n\n");
+
+    msg_final.push_str("-- End --\n");
+
+    //msg_final.push_str("-------- END ----------\n");
+
+    // println!("========== START MSG FILE ==========");
+
+    // println!("{}", msg_final);
+    // println!("========== END MSG FILE ==========");
+
+    // Send the mail
+
+    //println!("msg_final is: {}",msg_final);
+
+    //*************************************************************
+    //*****************EMAIL CODE**********************************
+    //*************************************************************
+
+    let email = Message::builder()
+        .from("Pair-Rust-VPS <ac99@answer123.com>".parse().unwrap())
+        .to("ANC <ac99@answer123.com>".parse().unwrap())
+        .subject("Sending email with Rust - new")
+        .header(ContentType::TEXT_PLAIN)
+        .body(String::from(msg_final))
+        .unwrap();
+
+    let creds = Credentials::new(
+        "smtp2@mailanc2.net".to_string(),
+        "tek7iah77mail-".to_string(),
+    );
+
+    // Open a remote connection to Pair server
+
+    let mailer = SmtpTransport::relay("ancnet1.mail.pairserver.com")
+        .unwrap()
+        .credentials(creds)
+        .build();
+
+    // Send the email
+
+    //  mailer.send(&email).expect("mail should have been sent");
+
+    //   let mut a = 1;
+    match mailer.send(&email) {
+        Ok(_) => println!("Email sent successfully!"),
+        // Ok(_) => a = 2,
+        Err(e) => panic!("Could not send email: {:?}", e),
+    } // end match
+} // end mail
+  //} // end all code
