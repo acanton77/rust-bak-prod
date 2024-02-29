@@ -67,7 +67,7 @@ MAILTO=ac99@answer123.com
 #06  14 *  * *  /usr/home/ancnet1/py-backup/dec-31-del.sh >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
 # TEST RUST PROD
-#00  15  * * * /usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt
+01  03  * * * /usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt
 
 
 # THIS IS THE NEW PYTHON BACKUP SYSTEM. ONE JOB DOES ALL. RUN AT 2 AM PACIFIC, 3 AM MTN

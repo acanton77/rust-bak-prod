@@ -1,6 +1,6 @@
-// RS_BAK_PROD - Rust
-// RS_BAK_PROD - RUST
-// RS_BAK_PROD - RUST
+// RS_BAK_PROD -- Rust
+// RS_BAK_PROD -- RUST
+// RS_BAK_PROD -- RUST
 
 #![allow(warnings)]
 
@@ -60,8 +60,8 @@ fn main() {
 
     //*** APPEND DAILY ITEMS TO VEC_SWITCH_FILE
 
-    vec_switch_file.push("xxxlinode".to_string());
-    vec_switch_file.push("xxxxac_addressbook".to_string());
+    vec_switch_file.push("linode".to_string());
+    vec_switch_file.push("ac_addressbook".to_string());
     vec_switch_file.push("chk_espo_ver".to_string());
     //vec_switch_file.push("1test".to_string());
 
@@ -82,13 +82,15 @@ fn main() {
     //***********************LOOP *********************************
     //***********************LOOP *********************************
 
-    // Just send email of this is found in switch file
+    //=== 1TEST==========
+    // Just send email if this is found in switch file
     for line in &vec_switch_file {
         if line == "1test" {
             message_data = "test1 - mail only".to_string();
             write_msg(&mut msg_vec, message_data);
             break;
         }
+        //=== LINODE==========
 
         // Do a crontab dump to file -- see global constant
         if line == "linode" {
@@ -109,6 +111,8 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         }
 
+        //=== PIWIGO==========
+
         if line == "piwigo" {
             // println!("we got piwigo");
         }
@@ -119,6 +123,7 @@ fn main() {
             // alicegift(&mut msg1);
         }
 
+        //=== ANCINS==========
         if line == "ancins" {
             zip_in_file = "/usr/home/ancnet1/public_html/ancins.com".to_string();
             zip_out_file_name = "ancins.com-rs-".to_string();
@@ -128,9 +133,10 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         }
 
+        //=== K6AAI==========
+
         if line == "k6aai" {
             zip_in_file = "/usr/home/ancnet1/public_html/k6aai.net".to_string();
-            // zip_out_file = "/usr/home/ancnet1/rs_bak_prod/bak_files/k6aai.net-rs-".to_string();
             zip_out_file_name = "k6aai.net-rs-".to_string();
             message_data = "k6aai backup is DONE".to_string();
             rsync_dir = "web-backup-k6aai".to_string();
@@ -138,6 +144,7 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         }
 
+        //=== ARTFROMAMY==========
         // this is a wordpress site
         if line == "artfromamy" {
             zip_in_file = "/usr/home/ancnet1/public_html/artfromamy.com".to_string();
@@ -155,6 +162,7 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         }
 
+        //=== CHECK ESPO==========
         // Special logic to scrape web page to find latest version and compare to what we had.
         // Use curl to get the web page
         if line == "chk_espo_ver" {
@@ -184,15 +192,15 @@ fn main() {
 
             let new_ver = String::from_utf8_lossy(&cmdx.stdout);
 
-            println!("{}", new_ver);
+            //===println!("{}", new_ver);
             let new_ver = new_ver.trim();
-            println!("{}", new_ver);
+            //====println!("{}", new_ver);
             //println!("new_ver is: {}", new_ver);
             // prints out:  <h2>Latest Release EspoCRM 8.1.4 (February 07, 2024)</h2>
 
             // Get the previous version from file
             let mut prev_ver1 = String::from("");
-            prev_ver1  =
+            prev_ver1 =
                 fs::read_to_string("/usr/home/ancnet1/rs_bak_prod/bak_files/prev-espo-ver.txt")
                     .expect("Should have been able to read the file");
 
@@ -200,11 +208,11 @@ fn main() {
 
             let mut prev_ver = String::from("");
             prev_ver = prev_ver1.to_string();
-            println!("---prev--");
-            println!("{}", prev_ver);
-           prev_ver = prev_ver.trim().to_string();
+            //====println!("---prev--");
+            //====println!("{}", prev_ver);
+            prev_ver = prev_ver.trim().to_string();
             //prev_ver.pop();
-            println!("{}", prev_ver);
+            //====println!("{}", prev_ver);
             // If no new version, all done, else
             if new_ver == prev_ver {
                 //println!("they are equal");
@@ -233,7 +241,7 @@ fn main() {
             } // end if-else
         } // end chk-espo
 
-        //========================
+        //=== ADDRESS BOOKS==========
 
         if line == "ac_addressbook" {
             // send up the vcf file
@@ -245,33 +253,23 @@ fn main() {
             )
             .unwrap()
             {
-                let mut z: String = file.unwrap().path().display().to_string();
-                let mut y: String = "".to_string();
+                let mut orig_file_name: String = file.unwrap().path().display().to_string();
+                let mut new_file_name: String = "".to_string();
 
-                if z.contains("babu") {
-                    if z.contains(" ") {
-                        y = z.replace(" ", "-");
-                        println!("it is now: {}", y);
-                        let _ = rename(z, y.clone());
-                        // let _ = rename(z, y);
+                if orig_file_name.contains("babu") {
+                    if orig_file_name.contains(" ") {
+                        new_file_name = orig_file_name.replace(" ", "-");
 
-                        // my_vec.push(y.clone().to_string());
-                        my_vec.push(y.to_string());
+                        let _ = rename(orig_file_name, new_file_name.clone());
+
+                        my_vec.push(new_file_name.to_string());
                     } else {
-                        //       println!("{} ", z);
-                        //    my_vec.push(z.clone().to_string());
-                        my_vec.push(z.to_string());
+                        my_vec.push(orig_file_name.to_string());
                     }
-                    // println!("{}", file.unwrap().path().display());
                 } // outer if
-            }
+            } // for loop
 
-            /*
-                       println!("===========  vec ===========");
-                       for line in &my_vec {
-                           println!("{}", line);
-                       }
-            */
+            // Sort the vec of file names into descending: old first
 
             //            println!("===========  descending vec ===========");
             &my_vec.sort();
@@ -280,6 +278,7 @@ fn main() {
                            println!("{}", line);
                        }
             */
+            // Now reorder them so that the newest are at the top
 
             //           println!("===========  reverse vec ===========");
             &my_vec.reverse();
@@ -298,15 +297,19 @@ fn main() {
 
                        }
             */
-
+            // We are going to find out how many we have in the vec and then only keep
+            // the top (newest) for files by deleting all the others.
             //           println!("===========  From 4 to end ===========");
             let count = my_vec.len();
+
+            // println!("busy conact dir count: {}", count);
             for i in 4..count {
-                //       println!("deleted: {}", &my_vec[i]);
-                let mut qqq = &my_vec[i];
-                fs::remove_dir_all(qqq);
+                //  println!("deleted: {}", &my_vec[i]);
+                let mut file_name_to_be_deleted = &my_vec[i];
+                fs::remove_dir_all(file_name_to_be_deleted);
             }
 
+            // write our mail message, touch a file to show date done and send up to datacenter
             message_data = "address book backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
 
@@ -318,20 +321,47 @@ fn main() {
 
             let _cmd = Command::new("rsync")
                 .args([
-                    "-r",
                     "-a",
-                    "-p",
+                    "-r",
+                    "-q",
+                    "--delete",
                     "/usr/home/ancnet1/rs_bak_prod/bak_files/address-book-backup-dir-rs",
                     "fm1364@fm1364.rsync.net:addressbook-backup-rs",
                 ])
                 .output()
                 .expect("rsync command failed to start");
+
+            // Jane address book
+
+            let _cmd = Command::new("rsync")
+                .args([
+                    "-a",
+                    "-r",
+                    "-q",
+                    "--delete",
+                    "/usr/home/ancnet1/py-backup/bak-files/address-book-backup-dir/JaneAddressFolder",
+                    "fm1364@fm1364.rsync.net:addressbook-backup-rs",
+                ])
+                .output()
+                .expect("rsync command failed to start");
+
+            message_data = "Jane address backup is DONE".to_string();
+            write_msg(&mut msg_vec, message_data);
+
+            // Baikal address book:  /usr/home/ancnet1/public_html/anc123.com/baikal94a
+
+            zip_in_file = "/usr/home/ancnet1/public_html/anc123.com/baikal94a".to_string();
+            zip_out_file_name = "baikal94a-rs-".to_string();
+            message_data = "baikal backup is DONE".to_string();
+            rsync_dir = "web-backup-baikal-rs".to_string();
+            bak_bootstrap(zip_in_file, zip_out_file_name, &rsync_dir);
+            write_msg(&mut msg_vec, message_data);
         } // end addressabok
 
-        if line == "jack" {
-            // println!("we got jack");
-        }
-    } //for loop
+        //=== NEXT SITE==========
+
+        if line == "put next site here" {} // end next site
+    } // end for loop
 
     //*********************** END LOOP *********************************
     //*********************** END LOOP *********************************
@@ -347,11 +377,11 @@ fn main() {
         .truncate(true)
         .open(SWITCH_FILE);
 
+    // Write message to a the crontab file
+
     let current_local_done: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
     let msg_date_done = current_local_done.format("%c");
 
-    //println!("Date: {}",msg_date_done);
-    //println!("Email Sent");
     println!("---GOOD EOJ---");
     println!("Date: {}", msg_date_done);
 }
