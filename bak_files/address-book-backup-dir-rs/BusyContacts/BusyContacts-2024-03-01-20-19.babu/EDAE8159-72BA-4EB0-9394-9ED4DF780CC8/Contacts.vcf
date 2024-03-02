@@ -289,12 +289,12 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Philip Bestic
 N:Bestic;Philip;;;
 ORG:Beach Medicine
-item2.EMAIL;PREF=1:Phil <pbestic@beachmedicine.org>
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:Phil <pbestic@beachmedicine.org>
+item1.X-ABLabel:email
 TEL;PREF=1:(843) 215-5492
 TEL:(843) 215-5512
-item1.ADR;PREF=1:;;1120 Glenns Bay Rd Ste 101;Surfside Beach;SC;29575;
-item1.X-ABADR:us
+item2.ADR;PREF=1:;;1120 Glenns Bay Rd Ste 101;Surfside Beach;SC;29575;
+item2.X-ABADR:us
 NOTE:Passed away November 20\, 2020\n\n\n• 12/29/19\, 7:26 AM - Got note… v
  ia gmail address.\n• 12/28/19\, 11:18 PM - holiday card returned\n\nMother
   in CA: 714-644-4745\n\n\nI got your Christmas card.\nI'm glad to see you'
@@ -864,17 +864,17 @@ ORG:Main Street Power Mail
 EMAIL;TYPE=HOME;PREF=1:jennifer@mspowermail.com
 TEL;TYPE=WORK;PREF=1:866-540-6797 x118
 TEL;TYPE=WORK;TYPE=FAX:317-758-5514
-item1.ADR;TYPE=WORK;PREF=1:;;400 S. Main Street\nP.O. Box 4;Sheridan;IN;460
+item2.ADR;TYPE=WORK;PREF=1:;;400 S. Main Street\nP.O. Box 4;Sheridan;IN;460
  69;
-item1.X-ABADR:us
+item2.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:Lead Generation Account Manager\nMail out 2/28/2012\ninquiry on above 
  3-13-2012\n\n\n\n
 REV:20240204T172945Z
 UID:eb162d19-00cc-4e68-831e-1bbda7098b33
-item2.URL;PREF=1:www.mspowermail.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:www.mspowermail.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:AE1CD9CD-E4A6-47E8-BC5B-48E7FE821E39
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -957,18 +957,18 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Alphagraphics
 N:;;;;
 ORG:Alphagraphics
-item2.EMAIL;PREF=1:"Usha R. Datla" <udatla@alphagraphics.com>
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:"Usha R. Datla" <udatla@alphagraphics.com>
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:916-221-4333
 TEL;TYPE=WORK;TYPE=FAX:916-221-4334
-item1.ADR;TYPE=WORK;PREF=1:;;3068 Sunrise Blvd #F;Rancho Cordova;CA;95742;
-item1.X-ABADR:us
+item3.ADR;TYPE=WORK;PREF=1:;;3068 Sunrise Blvd #F;Rancho Cordova;CA;95742;
+item3.X-ABADR:us
 KIND:org
 NOTE:Usha R. Datla\, Owner\n
 REV:20240204T172945Z
 UID:4ad1df76-4ce1-408f-8c2c-5f3afbfa5255
-item3.URL;PREF=1:www.agranchocordova.com
-item3.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.agranchocordova.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:48301275-4596-4520-BF38-E4E958CB3FD5
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -1295,8 +1295,8 @@ ORG:Daniel Ryan Insurance Agency
 EMAIL;TYPE=HOME;PREF=1:danieljryan@sbcglobal.net
 EMAIL;TYPE=WORK:dryan@pexausa.com
 TEL;TYPE=WORK;PREF=1:916-672-1970
-item2.ADR;TYPE=WORK;PREF=1:;;137 Dunstable Way;Folsom;CA;95630;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;137 Dunstable Way;Folsom;CA;95630;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 NOTE:\n\n\nUsed to be with MassMutual. Now service writer with Folsom Lake 
  Honda.\n916-458-0181 HONDA\n\nspoke about Moy approval 3-26-10\n\n12-21-20
@@ -1306,8 +1306,8 @@ NOTE:\n\n\nUsed to be with MassMutual. Now service writer with Folsom Lake
  \nwww.farmersagent.com/dryan2 \ndryan2@farmersagent.com \n
 REV:20240204T172944Z
 UID:BCA9BC1B-5B2C-4431-9F8F-C90F0FD9E278
-item1.URL;PREF=1:pexausa.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:pexausa.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:34EE8FCF-1127-4079-9EFD-F83DB87F79C9
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -1781,8 +1781,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Pair Networks\, Inc.
 N:;;;;
 ORG:Pair Networks\, Inc.
-item1.EMAIL;PREF=1:management@pair.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:management@pair.com
+item2.X-ABLabel:email
 item3.EMAIL:dedicated@pair.com
 item3.X-ABLabel:email
 EMAIL;TYPE=WORK:paypal@pairnetworks.com
@@ -2016,8 +2016,8 @@ NOTE:• 1/7/24\, 3:51 PM - zzzzz\n\nthe-smtp smtp@mailanc2.net t7+77\nnew-sm
  D === 1/18/24
 REV:20240204T172944Z
 UID:88BD93EE-0117-4263-A994-D68F644C5263
-item2.URL;PREF=1:https://ipadd.info/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:https://ipadd.info/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:FD23AD7A-6A55-4070-B39B-395605709B41
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -2618,8 +2618,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Soliloquy
 N:;;;;
 ORG:Soliloquy
-item2.EMAIL;PREF=1:Thomas Griffin <support@soliloquywp.com>
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:Thomas Griffin <support@soliloquywp.com>
+item1.X-ABLabel:email
 CATEGORIES:NewMedia
 KIND:org
 NOTE:\n===== USE THIS=======\nProfessional License:\nPayment Key:	8bf197748
@@ -2629,8 +2629,8 @@ NOTE:\n===== USE THIS=======\nProfessional License:\nPayment Key:	8bf197748
  tp://soliloquywp.com/docs/\n
 REV:20240204T172946Z
 UID:3c7e5110-a376-4f1b-a9a2-4a8b3843d6d6
-item1.URL;PREF=1:http://soliloquywp.com/members-area/
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://soliloquywp.com/members-area/
+item2.X-ABLabel:_$!<HomePage>!$_
 URL;TYPE=HOME:http://charlestonfooddirectory.com
 X-BUSYMAC-LOCAL-LINK-ID:A6B33F28-D369-4098-A447-83E906FEE7C9
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
@@ -2742,8 +2742,8 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Anita Jones
 N:Jones;Anita;;;
-item2.EMAIL;PREF=1:anotherjonesgraphics@gmail.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:anotherjonesgraphics@gmail.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:503-234-6252
 ADR;TYPE=WORK;PREF=1:;;4889 Alex Lane\, Apt. 2;Missoula;MT;59803;
 CATEGORIES:NewMedia
@@ -2758,8 +2758,8 @@ NOTE:Graphic designer referred by Sharon Castlen\n\n11-30-2014\n\nMy hourly
  15 - spoke about her website which cost her $114/MO for. \n\n
 REV:20240204T172944Z
 UID:5493c70e-90ef-4d9e-894e-732b8c528706
-item1.URL;PREF=1:http://www.anotherjones.com/
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.anotherjones.com/
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:7ADC33A2-E59D-4BCF-B97B-95E5BD9FB82F
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -3386,16 +3386,16 @@ EMAIL;TYPE=HOME:Kisimulw@aol.com
 EMAIL;TYPE=WORK:terry@tdmins.com
 TEL;TYPE=WORK;PREF=1:983-2561
 TEL;TYPE=WORK;TYPE=FAX:916-983-2573
-item2.ADR;TYPE=WORK;PREF=1:;;381 South Lexington\, Suite 104;Folsom;CA;9563
+item1.ADR;TYPE=WORK;PREF=1:;;381 South Lexington\, Suite 104;Folsom;CA;9563
  0;
-item2.X-ABADR:us
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:\nTerry D. McNeil\, MBA\nJenny Baker\n
 REV:20240204T172944Z
 UID:03380585-25F9-4BDC-8D23-6FCAB57FB658
-item1.URL;PREF=1:www.tdmins.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.tdmins.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:80E14D07-4646-4FC0-8A0B-1CB7828B225B
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -3455,14 +3455,14 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Seven Corners
 N:;;;;
 ORG:Seven Corners
-item2.EMAIL;PREF=1:Greg.Jung@sevencorners.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:Greg.Jung@sevencorners.com
+item1.X-ABLabel:email
 EMAIL:Joshua.DeJong@sevencorners.com
 TEL;TYPE=WORK;PREF=1:800.335.0611
 TEL;TYPE=WORK:317.575.2652 x3354
 TEL;TYPE=WORK;TYPE=FAX:317.575.2870
-item1.ADR;TYPE=WORK;PREF=1:;;303 Congressional Boulevard;Carmel;IN;46032;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;303 Congressional Boulevard;Carmel;IN;46032;
+item2.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:• 2/27/23\, 12:38 PM - \n\nYour Certificate Number: 2RTB22-AOS-124580.
@@ -3705,12 +3705,12 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:GoLeads
 N:;;;;
 ORG:GoLeads
-item2.EMAIL;PREF=1:Nick Kinney <Nick.Kinney@goleads.com>
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:Nick Kinney <Nick.Kinney@goleads.com>
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:402-334-1824
 TEL;TYPE=WORK;TYPE=FAX:402-991-7701
-item1.ADR;TYPE=WORK;PREF=1:;;10824 Old Mill Road Suite 8;Omaha;NE;68154;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;10824 Old Mill Road Suite 8;Omaha;NE;68154;
+item2.X-ABADR:us
 KIND:org
 NOTE:www.goleads.com\n\nme77\, t7+77 (lower)\nme@adamsblake.com\n\nNick Kin
  ney\nAccount Executive\nGoLeads\n10824 Old Mill Road Suite 8\nOmaha\, NE 6
@@ -3906,15 +3906,15 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Barry Ross
 N:Ross;Barry;;;
 ORG:Ross & Ross International
-item2.EMAIL;PREF=1:Barry Ross <vendor@rossross.com>
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:Barry Ross <vendor@rossross.com>
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:650-866-5517
 ADR;TYPE=WORK;PREF=1:;;PO BOX 8179;Foster City;CA;94404;
 NOTE:Friend from EDS
 REV:20240204T172944Z
 UID:48D37D94-4F6C-4721-B55A-5E7763FE354E
-item1.URL;PREF=1:rossross.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:rossross.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:611828D6-E9D9-497C-B907-6EFBF383D296
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -4033,16 +4033,16 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Precision Limo
 N:;;;;
 ORG:Precision Limo
-item1.EMAIL;PREF=1:precisioncarsny@gmail.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:precisioncarsny@gmail.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:212-858-9757
 KIND:org
 NOTE:NY limo service\n\ntrav99@anc123.com\nT7+77pre$\n\n\nPrevious driver: 
  Asad\n
 REV:20240204T172945Z
 UID:f1a6db14-0c2b-4a69-814f-68ad66fea660
-item2.URL;PREF=1:https://www.precisioncarsny.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:https://www.precisioncarsny.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:E73CC20D-C2B3-4DE7-B042-9772059353F8
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -4179,15 +4179,15 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Allison Bell
 N:Bell;Allison;;;
 ORG:Think Advisor
-item2.EMAIL;PREF=1:abell@alm.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:abell@alm.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:201-526-1243
 NOTE:• 10/16/18\, 11:01 AM - https://www.thinkadvisor.com/author/profile/Al
  lison-Bell/\n\n\n\n\n\n
 REV:20240204T172944Z
 UID:BA2B4883-7251-446C-B0F0-BD116381BC6F
-item1.URL;PREF=1:https://www.thinkadvisor.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:https://www.thinkadvisor.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:2583C5E5-42D5-4D91-9604-BA7B2A33E897
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -4770,14 +4770,14 @@ ORG:Wade Lae Corp
 EMAIL;TYPE=WORK;PREF=1:david@wadelawcorp.com
 TEL;TYPE=WORK;TYPE=FAX;PREF=1:800) 481-0256
 TEL;TYPE=WORK:(800) 835-2634
-item2.ADR;TYPE=WORK;PREF=1:;;2400 Professional Drive   Suite 100;Roseville;
+item1.ADR;TYPE=WORK;PREF=1:;;2400 Professional Drive   Suite 100;Roseville;
  CA;95661;
-item2.X-ABADR:us
+item1.X-ABADR:us
 NOTE:Lawyer for estate planning and trusts\n\n
 REV:20240204T172944Z
 UID:20441C23-047D-4EEE-839F-09FE7A1AFF5B
-item1.URL;PREF=1:http://www.wadelawcorp.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.wadelawcorp.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:B83FEB6B-6B8E-4527-991D-E94F2F8D9D47
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -5352,16 +5352,16 @@ TEL;TYPE=WORK;PREF=1:971-1971
 TEL;TYPE=WORK;TYPE=FAX:484-1352
 TEL;TYPE=WORK;TYPE=FAX:916-676-0860 (Beach)
 TEL;TYPE=HOME:916-676-0844 x 33 (Beach)
-item1.ADR;TYPE=WORK;PREF=1:;;PMP #205\n5150 Fair Oaks #101;Carmichael;CA;95
+item2.ADR;TYPE=WORK;PREF=1:;;PMP #205\n5150 Fair Oaks #101;Carmichael;CA;95
  608;
-item1.X-ABADR:us
+item2.X-ABADR:us
 ADR;TYPE=WORK:;;7520 Greenback Lane;Citrus Heights;CA;95610;
 CATEGORIES:Insurance
 NOTE:Now with Beach & O'Neill
 REV:20240204T172945Z
 UID:01EBBC77-A62E-4605-B79D-5C0A7C28EDCA
-item2.URL;PREF=1:www.beachandoneill.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:www.beachandoneill.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:2499C83F-DDE6-4400-9F2C-C75E68190BE1
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -5542,8 +5542,8 @@ item3.EMAIL;PREF=1:agent.support@anthem.com
 item3.X-ABLabel:email
 TEL;PREF=1:916-201-8501
 TEL;TYPE=WORK:916-517-5276
-item2.ADR;PREF=1:;;PO Box 2418;Carmichael;CA;95609;
-item2.X-ABADR:us
+item1.ADR;PREF=1:;;PO Box 2418;Carmichael;CA;95609;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:• 1/31/24\, 7:11 AM - \n\nAll 2023 1099s were mailed no later than Jan
@@ -5585,8 +5585,8 @@ NOTE:• 1/31/24\, 7:11 AM - \n\nAll 2023 1099s were mailed no later than Jan
  netools/find-doctor\n \n
 REV:20240204T172944Z
 UID:4FEF8632-5E25-429C-A835-C3CD5DA6C574
-item1.URL;PREF=1:http://anthem.com/ca/home-brokers.html
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://anthem.com/ca/home-brokers.html
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:61E50671-B85D-4D05-B7BD-536FCC0356C9
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -5836,8 +5836,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:MacLoggerDX
 N:;;;;
 ORG:MacLoggerDX
-item2.EMAIL;PREF=1:support@dogparksoftware.com 
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:support@dogparksoftware.com 
+item1.X-ABLabel:email
 CATEGORIES:Ham Radio
 KIND:org
 NOTE:\nCall Sign: K6AAI\, MacLoggerDX V6 Registration Number: \nE9CD-9FA0-B
@@ -5851,8 +5851,8 @@ NOTE:\nCall Sign: K6AAI\, MacLoggerDX V6 Registration Number: \nE9CD-9FA0-B
  n
 REV:20240204T172945Z
 UID:41e65a3b-70e0-4203-9638-740ee09fd0bf
-item1.URL;PREF=1:https://www.dogparksoftware.com/MacLoggerDX.html
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:https://www.dogparksoftware.com/MacLoggerDX.html
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:52F692EC-D470-4DED-9CE3-BAE731C71EAE
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -6104,13 +6104,13 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Gloria Wilcox
 N:Wilcox;Gloria;;;
-item1.EMAIL;PREF=1:glowilx@aol.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:glowilx@aol.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;TYPE=FAX;PREF=1:929-9345
 TEL;TYPE=CELL:612-1156
 TEL;TYPE=WORK:929-4041
-item2.ADR;TYPE=WORK;PREF=1:;;720 Howe Ave (closed);Sacramento;CA;95865;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;720 Howe Ave (closed);Sacramento;CA;95865;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 NOTE:910 Fallen Leaf Way Sacramento\, CA 95864
 REV:20240204T172945Z
@@ -7329,12 +7329,12 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Becky Pate
 N:Pate;Becky;;;
 ORG:Central Plains Book
-item2.EMAIL;PREF=1:bpate@centralplainsbook.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:bpate@centralplainsbook.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:877-278-2726
 TEL;TYPE=WORK;TYPE=FAX:620-442-6748
-item1.ADR;TYPE=WORK;PREF=1:;;105 East 5th Avenue;Arkansas City;KS;67005;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;105 East 5th Avenue;Arkansas City;KS;67005;
+item2.X-ABADR:us
 NOTE:Sales Manager \nwww.sun-graphics.com
 REV:20240204T172943Z
 UID:1EB33E3C-B53D-4E28-AD57-B8FF46D35E89
@@ -7635,16 +7635,16 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Pavlus Travel
 N:Romo;Kathy;;;
 ORG:Pavlus Travel
-item1.EMAIL;PREF=1:kathy@pavlustravel.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:kathy@pavlustravel.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:866-843-4834
 ADR;TYPE=WORK;PREF=1:;;2033 Wyoming Blvd NE;Albuquerque;NM;87112;
 KIND:org
 NOTE:Kathy Romo\nBooked Tauck: 5% rebate\n
 REV:20240204T172946Z
 UID:8C1183A4-ED2E-4159-9D24-24973CEFB4D0
-item2.URL;PREF=1:http://www.cheapertravel.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.cheapertravel.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:B9C838AE-871E-47AD-9B5A-AE76412C6FB7
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -7696,8 +7696,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Enterprise Car Rental
 N:;;;;
 ORG:Enterprise Car Rental
-item1.EMAIL;PREF=1:kevin.c.parisi@erac.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:kevin.c.parisi@erac.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:1 (916) 985-0260
 item3.TEL:855-287-4216
 item3.X-ABLabel:extend
@@ -7714,8 +7714,8 @@ NOTE:• 9/19/23\, 11:23 AM - \nYour Verification Code for a $0.00 transactio
  07-6666\n\n
 REV:20240204T172946Z
 UID:4b95e2a5-e72d-4b74-8c15-11f98f6d598a
-item2.URL;PREF=1:http://www.enterprise.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.enterprise.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:4B5C2387-5568-47B0-8410-20DBF3C0B400
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -8316,8 +8316,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Triple Creek Ranch
 N:;;;;
 ORG:Triple Creek Ranch
-item1.EMAIL;PREF=1:Info@TripleCreekRanch.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:Info@TripleCreekRanch.com
+item2.X-ABLabel:email
 EMAIL;TYPE=WORK:jennifer@triplecreekranch.com
 EMAIL;TYPE=HOME:activities@triplecreekranch.com 
 EMAIL;TYPE=WORK:frontdesk@triplecreekranch.com
@@ -8335,8 +8335,8 @@ NOTE:Jennifer O'Donohue\nMarketing & Sales Director\n\n\njennifer@triplecre
  com
 REV:20240204T172945Z
 UID:9742f1a1-7167-464a-b5ee-3107c98d8353
-item2.URL;PREF=1:http://www.triplecreekranch.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.triplecreekranch.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:64BDFEFA-8EC7-41E5-BC1B-E979D7D42D17
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -8572,13 +8572,13 @@ FN:Sindy Kirsch
 N:Kirsch;Sindy;;;
 ORG:Lyon Real Estate
 TEL;TYPE=CELL;PREF=1:(916) 730-7705
-item1.ADR;TYPE=WORK;PREF=1:;;2801 J Street;Sacramento;CA;95816;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;2801 J Street;Sacramento;CA;95816;
+item2.X-ABADR:us
 NOTE:Coldwell Banker\n
 REV:20240204T172944Z
 UID:1D0B0E59-A9EA-4342-8E32-132EF4477953
-item2.URL;PREF=1:http://www.SindySellsSac.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.SindySellsSac.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:71827BC5-FE36-4E02-BB21-F7D2D68C6A60
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -8661,13 +8661,13 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Aflac
 N:White;Barry;;;
 ORG:Aflac
-item1.EMAIL;PREF=1:barry_white@us.aflac.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:barry_white@us.aflac.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:564-7288
 TEL;TYPE=WORK;TYPE=FAX:564-5530
-item2.ADR;TYPE=WORK;PREF=1:;;1555 River Park Drive Suite 213;Sacramento;CA;
+item1.ADR;TYPE=WORK;PREF=1:;;1555 River Park Drive Suite 213;Sacramento;CA;
  95758;
-item2.X-ABADR:us
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:Barry White\nState Sales Coordinator\nAflac California North Valley\n\
@@ -8766,8 +8766,8 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Alice Walker
 N:Walker;Alice;;;
-item2.EMAIL;PREF=1:alice@alicewalkerbatik.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:alice@alicewalkerbatik.com
+item1.X-ABLabel:email
 item3.EMAIL:alice@answer123.com
 item3.X-ABLabel:email
 item4.EMAIL:alicewalkerbatik@icloud.com
@@ -8867,8 +8867,8 @@ NOTE:• 4/20/23\, 5:28 PM - Teamview: partner ID:  219 451 406\n\n• 4/19/23\
  oked.\n\n
 REV:20240204T172944Z
 UID:88D71CC8-E42F-45FA-AAFA-6C41E1F08FF3
-item1.URL;PREF=1:http://alicecoxwalker.wordpress.com/
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://alicecoxwalker.wordpress.com/
+item2.X-ABLabel:_$!<HomePage>!$_
 URL;TYPE=HOME:alicewalkerbatik.com
 X-BUSYMAC-LOCAL-LINK-ID:AA026301-5063-45B3-B33E-63480AF92FBD
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
@@ -9619,12 +9619,12 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Tom Adams
 N:Adams;Tom;;;
-item2.EMAIL;PREF=1:tomadams@iname.com
-item2.X-ABLabel:Email
+item1.EMAIL;PREF=1:tomadams@iname.com
+item1.X-ABLabel:Email
 TEL;TYPE=CELL;PREF=1:(916) 600-7211
 TEL;TYPE=HOME:933-1374
-item1.ADR;TYPE=HOME;PREF=1:;;941 Kings Canyon Dr;El Dorado Hills;CA;95762;
-item1.X-ABADR:us
+item2.ADR;TYPE=HOME;PREF=1:;;941 Kings Canyon Dr;El Dorado Hills;CA;95762;
+item2.X-ABADR:us
 NOTE:• 2/2/19\, 1:06 PM - Oh my gosh! ... Yes\, I'm here! ... I am even abl
  e to leave the house on my own.  … When we last talked you were writing an
  d publishing (I have your books) … I had my dreams and schemes and unpubli
@@ -10371,8 +10371,8 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Diane Templeton
 N:Templeton;Diane;;;
-item2.EMAIL;PREF=1:dianetjafra@comcast.net
-item2.X-ABLabel:email
+item3.EMAIL;PREF=1:dianetjafra@comcast.net
+item3.X-ABLabel:email
 TEL;TYPE=CELL;PREF=1:916-863-7754
 TEL;TYPE=WORK:916-835-4868
 item1.ADR;TYPE=WORK;PREF=1:;;8464 Sunset Ave.;Fair Oaks;CA;95628;
@@ -10380,8 +10380,8 @@ item1.X-ABADR:us
 NOTE:Mayor of Fair Oaks\nJafra Rep
 REV:20240204T172945Z
 UID:59C71731-66FD-452F-9287-B23CE2806C2F
-item3.URL;PREF=1:http://www.myjafra.com/dtempleton
-item3.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.myjafra.com/dtempleton
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:419176D5-347E-4CB4-8100-EBB6480D1D44
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -10565,16 +10565,16 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Camille DeSalme
 N:DeSalme;Camille;;;
 ORG:An Eye For Editing
-item2.EMAIL;PREF=1:AnEyeforEditing@gmail.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:AnEyeforEditing@gmail.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:817-874-4578
 CATEGORIES:NewMedia
 NOTE:Professional copyediting and proofreading\nAuthor of the forthcoming b
  ook "Tea & Cookies"\nEditor\n\n
 REV:20240204T172945Z
 UID:d91ecd71-c18c-4e83-a5bf-509213d26227
-item1.URL;PREF=1:www.AnEyeforEditing.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.AnEyeforEditing.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:8151F962-B1F5-418F-91B5-6B343197AFC2
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -10714,14 +10714,14 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Art Jetter & Company
 N:;;;;
 ORG:Art Jetter & Company
-item1.EMAIL;PREF=1:rick.kurtzuba@jetter.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:rick.kurtzuba@jetter.com
+item2.X-ABLabel:email
 item3.EMAIL:Karen@jetter.com
 item3.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:800-228-0008
 TEL;TYPE=WORK:402-330-2900
-item2.ADR;TYPE=WORK;PREF=1:;;11305 Chicago Circle;Omaha;NE;68154;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;11305 Chicago Circle;Omaha;NE;68154;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:\nShay Treptow\nDirector of Annuity Sales\n800-228-0008   Ext:1126\n\n
@@ -10953,8 +10953,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Lake Appliance Repair
 N:;;;;
 ORG:Lake Appliance Repair
-item1.EMAIL;PREF=1:alex@lakeappliancerepair.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:alex@lakeappliancerepair.com
+item2.X-ABLabel:email
 item3.EMAIL:Service@LakeApplianceRepair.com
 item3.X-ABLabel:email
 item4.EMAIL:Owner@LakeApplianceRepair.com
@@ -10968,8 +10968,8 @@ NOTE:• 5/27/21\, 5:04 PM - Appointment screw up. Call from Jessica.\n\nJess
  brother in law started company.\n\nRefrigerator repair  3-23-2018\n\n\n
 REV:20240204T172943Z
 UID:4db654dc-cf98-4766-9f29-7961110c9a21
-item2.URL;PREF=1:https://lakeappliancerepair.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:https://lakeappliancerepair.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:D51449C6-9D2A-412F-BE30-60A9BE73C6A7
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -11013,8 +11013,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Kathy Ferrari
 N:Ferrari;Kathy;;;
 ORG:APPS Para Medical Services
-item1.EMAIL;PREF=1:kathyf@appsnorcal.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:kathyf@appsnorcal.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:888-764-9201
 CATEGORIES:Insurance
 KIND:org
@@ -11022,8 +11022,8 @@ NOTE:Kathy Ferrari\nAccount Manager\nAPPS Para Medical Services\n888-764-92
  01\nKathyF@appsnorcal.com\nwww.appslive.com\n
 REV:20240204T172944Z
 UID:441BA40F-3926-4A96-BEF7-2957872B2547
-item2.URL;PREF=1:http://www.appslive.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.appslive.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:49AF3E17-222D-4AD5-B061-593D81A67991
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -11197,8 +11197,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Ritter Insurance Marketing
 N:Dietz;Dave;;;
 ORG:Ritter Insurance Marketing
-item2.EMAIL;PREF=1:daved@ritterim.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:daved@ritterim.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:800-769-1847 x213
 TEL;TYPE=WORK:717-540-3720 x213
 TEL;TYPE=WORK;TYPE=FAX:717-651-1462
@@ -11214,8 +11214,8 @@ NOTE:New:\n\nuser: broker@ancins\n\npass T7+77rit$\n\nUser broker@ancins.co
  769-1847\njason.meyers@ritterim.com\nwww.twitter.com/RitterIM_West\n 
 REV:20240204T172945Z
 UID:0CE11D84-CA6A-43A1-A799-540BD95415EA
-item1.URL;PREF=1:www.ritterim.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.ritterim.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:33593FF8-06FB-4BCE-A0D5-2525AF943CDD
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -11874,15 +11874,15 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Folsom Chamber
 N:Field;Sue;;;
 ORG:Folsom Chamber
-item2.EMAIL;PREF=1:sfield@folsomchamber.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:sfield@folsomchamber.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:(916) 985-2698
 KIND:org
 NOTE:Sue Fields - membership\n
 REV:20240204T172943Z
 UID:44E22695-F9D1-470F-839A-D7A308A19335
-item1.URL;PREF=1:http://www.folsomchamber.com/
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.folsomchamber.com/
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:52011000-6836-4B8C-954C-019AC7164E84
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -12154,74 +12154,75 @@ item8.X-ABLabel:imsg
 TEL;TYPE=CELL;PREF=1:434-826-0069
 TEL;TYPE=WORK:434-263-4818
 ADR;TYPE=HOME;PREF=1:;;1060 Old Ridge Road;Lovingston;VA;22949;
-NOTE:• 9/12/20\, 11:28 AM - \n\nHere is the zoom link\, it is the same thro
- ughout the semester!\n\nhttps://us02web.zoom.us/j/74034165080?pwd=L2MwZ1lk
- OUdxb3hiY0lZVkYrSFZ6UT09\nPasscode: bhakti\n\n==========================\n
- • 10/11/19\, 8:57 PM - acdas@bookwrights.com\n\n==========================
- ===\n• 9/4/19\, 9:55 AM - \n\nThe Bhaktivedanta Center\, Inc.\nEIN: 84-225
- 2997\nBank of America Financial Center\n2103 Barracks Rd\, Charlottesville
- \, VA 22903\nAccount #: 435047340314\nRouting #: 051000017\n\nEIN: 84-2252
- 997\n==============\n\nMP b-day: 3/10/51\nAC b-day 7-1-50\nMP-iD-2man95040
- 3man+1\n\n——279-50-4038**——\n\nFor checks: Candace Long and Jonathan Long 
- \n\nBhakti Paypal:\nbhakti@bhaktivedantacenter.com\n\n====================
- ====\nPAIR DOMAINS:\n\nBookwrights\nAikido108\n\n=================\n======
- ===============================\nPAIR NETWORKS  \n========================
- =============\n\nWeb Hosting Plan:            Package 1 \n\nUsername:     
-  mayapriya108 \nPassword:        wZ2WKsrD  - old\n   use: Aikido108 - old\
- nuse: An_aikidoshodaniam108\nServer Name:              mayapriya108.pairse
- rver.com\n\nBilling Account Number:      151580 \nSign up Key:     ae918f5
- bc4 \n\nSSH\n\nssh  mayapriya@mayapriya108.pairserver.com\npw:  An_aikidos
- hodaniam10 \n\nMAIL:\n--Incoming--\nHostname: mayapriya108.mail.pairserver
- .com\nUsername: [full email address]\nPassword: [mailbox password] Aikido1
- 08\nSSL: On (IMAP Port 993\, POP Port 995)\n\n\n--Outgoing--\nHostname: ma
- yapriya108.mail.pairserver.com\nUsername: [full email address]\nPassword: 
- [mailbox password] Aikido108\nSSL: On (Port 465 or 587)\n\nacdas@bookwrigh
- ts.com\npw: JivaGoswami108\n\n\n\n \n====================\nFOR NEW bookwri
- ghts.com WP2 SITE\n====================\n\nWordPress:\nhttp://bookwrights.
- com/wp2/wp-admin\nuser: mayapriya@108\npass: mayapriya$108\n\nDatabase Nam
- e:	mayapriya108_wp2\nDatabase Server:	db153.pair.com\nFull Access Username
- \n\nUsername:	1029687_3\nPassword:	AEQpRWpA\n\nRead/Write Username\n\nUser
- name:	1029687_3_w\nPassword:	6qbnVYcS\nRead Only Username\n\nThis username
-  has read only access to the database.\nUsername:	1029687_3_r\nPassword:	z
- zLP4Qv3\n\n\n\n=====================\nBookwrightsPress\n==================
- ==\n\nWordPress: mayapriya108\, Aikido108\nhttps://www.bookwrightspress.co
- m/wp1/wp-admin\n\ndefine('DB_NAME'\, 'mayapriya108_BookwrightsPress');\n\n
- /** MySQL database username */\ndefine('DB_USER'\, '1029687_4');\n\n/** My
- SQL database password */\ndefine('DB_PASSWORD'\, '5dmdhnD3');\n\n/** MySQL
-  hostname */\ndefine('DB_HOST'\, 'db98a.pair.com');\n\n/** Database Charse
- t to use in creating database tables. */\ndefine('DB_CHARSET'\, 'utf8mb4')
- ;\n\n\n\n\n\n=====================\n\n==============\nBHAKTI AND CLUB  DAT
- ABASE\n===============\n\nWordPress: \nhttp://bhaktiyogaclubs.com/wp/wp-ad
- min\nadmin\, loser2\n\n\nDatabase Name:	mayapriya108_bhaktivedantacenter\n
- Database Server:	db153.pair.com\n\nFull Access Username\n\nUsername:	10296
- 87_2\nPassword:	VhMimcey\n\nRead/Write Username\n\nUsername:	1029687_2_w\n
- Password:	6TjsgJrM\n\nRead Only Username\n\nUsername:	1029687_2_r\nPasswor
- d:	ch7Aq58G\n==========\n\n\n\n\n\nMayapriyaPaypal and Apple:\nmayapriya@b
- ookwrights.com\n\n\nEMAIL\n\nmpdd@bhaktivedantacenter.com and acdas@ have 
- HKHKKKHH108 as pw.\n\nmpl@newmediawebsitedesign.com\nloser2\n\nGoDaddy for
-  Bookwrights\nCustomer #: 17030224\nPW: loser2\n\n\nWordPress Login:\nbook
- wrights.com/wp/wp-admin\nadmin\, loser2\nakimet key: 5c6855c78598\n\n\n\n\
- nEMAIL:\n\nMailbox: mayapriya@bookwrights.com\n\nUsername:	mayapriya@bookw
- rights.com\nand info@bookwrights.com\npass: Aikido108\nPlease use the comp
- lete e-mail address when logging in to this mailbox.\n\n\n\n\n\n\n\nGoDadd
- y account \ncustomer # 64204332\nuser# mayapriya\npw: Aikido108\n\n≈\n\n==
- =========\n\n\n\n\n==============\nSister: Suzanne Fields-Rabb 512-348-350
- 8\nSuzanne Rabb <suziqrev@gmail.com>\n \n\nDanial Payne: Cell 972-375-7446
-  (nephew)\npayned08@alum.darden.edu\n=====\n\n\n\n=========\nMeg Pappas (s
- ister in law)\n508-432-3283\n10 Wildwood Ave\nHarwich\, MA 02645\n\n======
- \nbank number: 051000017\nmy number: 000011500214\n======\n\n\n\n\n\n=====
- ==============\n\n\n\nspamarrest\nbookwrights\,udog\n\n\n\n\n\nREGISTRY LO
- GINS\n====================\nNetwork Solutions: bookwrights.com\nuser:28053
- 089\npass: Aikido108\n\n\nbhaktivedantacenter.com\n GoDaddy: 17030224\, lo
- ser2\n\nbhaktiyogaclubs\nGoDaddy: \ncustomer # 64204332\nuser# mayapriya\n
- pw: Aikido108\n\n===============================\n\nESPO CRM database radi
- oqsl:\nuser: mayapriya\npw: underdog108\n\n\n\n\n\n\n=====================
- \nOLD OLD OLD -DO NOT USE\n=====================\nBOOKWRIGHTS SITE DATABAS
- E\n===================\nDatabase Name:	mayapriya108_bookwrights\nDatabaseS
- erver:	db153.pair.com\n\nFull Access Username\n\n\nUsername:	1029687\nPass
- word:	4bsrHYE7\n\nRead/Write Username\n\nUsername:	1029687_w\nPassword:	fM
- JWb86P\n\n\nRead Only Username\n\nUsername:	1029687_r\nPassword:	9V2pEpwm\
- n\n-end-\n\n    mm\n
+NOTE:• 3/1/24\, 7:40 AM - For Paypal use mayapriya.long@gmail.com\n\n• 9/12
+ /20\, 11:28 AM - \n\nHere is the zoom link\, it is the same throughout the
+  semester!\n\nhttps://us02web.zoom.us/j/74034165080?pwd=L2MwZ1lkOUdxb3hiY0
+ lZVkYrSFZ6UT09\nPasscode: bhakti\n\n==========================\n• 10/11/19
+ \, 8:57 PM - acdas@bookwrights.com\n\n=============================\n• 9/4
+ /19\, 9:55 AM - \n\nThe Bhaktivedanta Center\, Inc.\nEIN: 84-2252997\nBank
+  of America Financial Center\n2103 Barracks Rd\, Charlottesville\, VA 2290
+ 3\nAccount #: 435047340314\nRouting #: 051000017\n\nEIN: 84-2252997\n=====
+ =========\n\nMP b-day: 3/10/51\nAC b-day 7-1-50\nMP-iD-2man950403man+1\n\n
+ ——279-50-4038**——\n\nFor checks: Candace Long and Jonathan Long \n\nBhakti
+  Paypal:\nbhakti@bhaktivedantacenter.com\n\n========================\nPAIR
+  DOMAINS:\n\nBookwrights\nAikido108\n\n=================\n================
+ =====================\nPAIR NETWORKS  \n==================================
+ ===\n\nWeb Hosting Plan:            Package 1 \n\nUsername:      mayapriya
+ 108 \nPassword:        wZ2WKsrD  - old\n   use: Aikido108 - old\nuse: An_a
+ ikidoshodaniam108\nServer Name:              mayapriya108.pairserver.com\n
+ \nBilling Account Number:      151580 \nSign up Key:     ae918f5bc4 \n\nSS
+ H\n\nssh  mayapriya@mayapriya108.pairserver.com\npw:  An_aikidoshodaniam10
+  \n\nMAIL:\n--Incoming--\nHostname: mayapriya108.mail.pairserver.com\nUser
+ name: [full email address]\nPassword: [mailbox password] Aikido108\nSSL: O
+ n (IMAP Port 993\, POP Port 995)\n\n\n--Outgoing--\nHostname: mayapriya108
+ .mail.pairserver.com\nUsername: [full email address]\nPassword: [mailbox p
+ assword] Aikido108\nSSL: On (Port 465 or 587)\n\nacdas@bookwrights.com\npw
+ : JivaGoswami108\n\n\n\n \n====================\nFOR NEW bookwrights.com W
+ P2 SITE\n====================\n\nWordPress:\nhttp://bookwrights.com/wp2/wp
+ -admin\nuser: mayapriya@108\npass: mayapriya$108\n\nDatabase Name:	mayapri
+ ya108_wp2\nDatabase Server:	db153.pair.com\nFull Access Username\n\nUserna
+ me:	1029687_3\nPassword:	AEQpRWpA\n\nRead/Write Username\n\nUsername:	1029
+ 687_3_w\nPassword:	6qbnVYcS\nRead Only Username\n\nThis username has read 
+ only access to the database.\nUsername:	1029687_3_r\nPassword:	zzLP4Qv3\n\
+ n\n\n=====================\nBookwrightsPress\n====================\n\nWord
+ Press: mayapriya108\, Aikido108\nhttps://www.bookwrightspress.com/wp1/wp-a
+ dmin\n\ndefine('DB_NAME'\, 'mayapriya108_BookwrightsPress');\n\n/** MySQL 
+ database username */\ndefine('DB_USER'\, '1029687_4');\n\n/** MySQL databa
+ se password */\ndefine('DB_PASSWORD'\, '5dmdhnD3');\n\n/** MySQL hostname 
+ */\ndefine('DB_HOST'\, 'db98a.pair.com');\n\n/** Database Charset to use i
+ n creating database tables. */\ndefine('DB_CHARSET'\, 'utf8mb4');\n\n\n\n\
+ n\n=====================\n\n==============\nBHAKTI AND CLUB  DATABASE\n===
+ ============\n\nWordPress: \nhttp://bhaktiyogaclubs.com/wp/wp-admin\nadmin
+ \, loser2\n\n\nDatabase Name:	mayapriya108_bhaktivedantacenter\nDatabase S
+ erver:	db153.pair.com\n\nFull Access Username\n\nUsername:	1029687_2\nPass
+ word:	VhMimcey\n\nRead/Write Username\n\nUsername:	1029687_2_w\nPassword:	
+ 6TjsgJrM\n\nRead Only Username\n\nUsername:	1029687_2_r\nPassword:	ch7Aq58
+ G\n==========\n\n\n\n\n\nMayapriyaPaypal and Apple:\nmayapriya@bookwrights
+ .com\n\n\nEMAIL\n\nmpdd@bhaktivedantacenter.com and acdas@ have HKHKKKHH10
+ 8 as pw.\n\nmpl@newmediawebsitedesign.com\nloser2\n\nGoDaddy for Bookwrigh
+ ts\nCustomer #: 17030224\nPW: loser2\n\n\nWordPress Login:\nbookwrights.co
+ m/wp/wp-admin\nadmin\, loser2\nakimet key: 5c6855c78598\n\n\n\n\nEMAIL:\n\
+ nMailbox: mayapriya@bookwrights.com\n\nUsername:	mayapriya@bookwrights.com
+ \nand info@bookwrights.com\npass: Aikido108\nPlease use the complete e-mai
+ l address when logging in to this mailbox.\n\n\n\n\n\n\n\nGoDaddy account 
+ \ncustomer # 64204332\nuser# mayapriya\npw: Aikido108\n\n≈\n\n===========\
+ n\n\n\n\n==============\nSister: Suzanne Fields-Rabb 512-348-3508\nSuzanne
+  Rabb <suziqrev@gmail.com>\n \n\nDanial Payne: Cell 972-375-7446 (nephew)\
+ npayned08@alum.darden.edu\n=====\n\n\n\n=========\nMeg Pappas (sister in l
+ aw)\n508-432-3283\n10 Wildwood Ave\nHarwich\, MA 02645\n\n======\nbank num
+ ber: 051000017\nmy number: 000011500214\n======\n\n\n\n\n\n===============
+ ====\n\n\n\nspamarrest\nbookwrights\,udog\n\n\n\n\n\nREGISTRY LOGINS\n====
+ ================\nNetwork Solutions: bookwrights.com\nuser:28053089\npass:
+  Aikido108\n\n\nbhaktivedantacenter.com\n GoDaddy: 17030224\, loser2\n\nbh
+ aktiyogaclubs\nGoDaddy: \ncustomer # 64204332\nuser# mayapriya\npw: Aikido
+ 108\n\n===============================\n\nESPO CRM database radioqsl:\nuse
+ r: mayapriya\npw: underdog108\n\n\n\n\n\n\n=====================\nOLD OLD 
+ OLD -DO NOT USE\n=====================\nBOOKWRIGHTS SITE DATABASE\n=======
+ ============\nDatabase Name:	mayapriya108_bookwrights\nDatabaseServer:	db1
+ 53.pair.com\n\nFull Access Username\n\n\nUsername:	1029687\nPassword:	4bsr
+ HYE7\n\nRead/Write Username\n\nUsername:	1029687_w\nPassword:	fMJWb86P\n\n
+ \nRead Only Username\n\nUsername:	1029687_r\nPassword:	9V2pEpwm\n\n-end-\n
+ \n
 PHOTO:data:image/jpeg;base64\,/9j/4AAQSkZJRgABAgEASABIAAD/wAARCAJYAlgDASIAA
  hEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQ
  AAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0N
@@ -14114,7 +14115,7 @@ PHOTO:data:image/jpeg;base64\,/9j/4AAQSkZJRgABAgEASABIAAD/wAARCAJYAlgDASIAA
  bf9dH/nXqUsNTbqSt1OOPwoRWdZJYok3IqCNs9sHgj8atwbJZN88mwL8vIP+sHUn2I6VFB/rbv
  6r/6HSN92X/rp/wCy1jPRcvl+pyVKkrM0YNMtzLDMHzDKcInfr0PvW/8A2Raf88WrMtP9XYf9d
  v612VcmIqy5jaS0R//Z
-REV:20240204T172943Z
+REV:20240301T154322Z
 UID:A1A8F64E-D162-40FF-92FA-888E52A2A70A
 item1.URL;PREF=1:http://bhaktivedantacenter.com
 item1.X-ABLabel:_$!<HomePage>!$_
@@ -14300,14 +14301,14 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Steve Soren
 N:Soren;Steve;;;
 ORG:Unify
-item3.EMAIL;PREF=1:ssoren@unify.com
-item3.X-ABLabel:email
+item2.EMAIL;PREF=1:ssoren@unify.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:916-218-4733
 TEL;TYPE=CELL:916-802-5785
 TEL;TYPE=WORK;TYPE=FAX:916-218-4378
-item2.ADR;TYPE=WORK;PREF=1:;;1420 Rocky Ridge Drive #380;Roseville;CA;95661
+item3.ADR;TYPE=WORK;PREF=1:;;1420 Rocky Ridge Drive #380;Roseville;CA;95661
  ;
-item2.X-ABADR:us
+item3.X-ABADR:us
 NOTE:VP Business Development\nNeighbor\nRuns Gov. Programs\, IT.
 REV:20240204T172945Z
 UID:fb6cdf40-c768-4e2b-abc9-a9a8f22721a7
@@ -14322,8 +14323,8 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Helen Sperling
 N:Sperling;Helen;;;
-item2.EMAIL;PREF=1:hgsperling@bellsouth.net
-item2.X-ABLabel:Email
+item1.EMAIL;PREF=1:hgsperling@bellsouth.net
+item1.X-ABLabel:Email
 item3.EMAIL:hgs88@answer123.com
 item3.X-ABLabel:Email
 TEL;TYPE=WORK;PREF=1:561-626-8920
@@ -14557,8 +14558,8 @@ NOTE:• 1/15/24\, 11:43 AM - re-save\n\n• 12/4/18\, 7:11 PM - Fifi Hacker-Bu
  oo.com\, sperlingjack@yahoo.com\n\n===  END April 13\, 2018  ===\n\n
 REV:20240204T172946Z
 UID:242e808b-534f-40f4-b2c3-e1322ed4cde4
-item1.URL;PREF=1:http://www.answer123.com/sperling-data.pdf
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.answer123.com/sperling-data.pdf
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:58055C44-B61E-4704-9A2A-322803E80B7B
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -14929,14 +14930,14 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:John Petrowski
 N:Petrowski;John;;;
-item1.EMAIL;PREF=1:healthagent67@gmail.com
-item1.X-ABLabel:email
+item3.EMAIL;PREF=1:healthagent67@gmail.com
+item3.X-ABLabel:email
 TEL;TYPE=HOME;PREF=1:843-732-0682
 TEL;TYPE=CELL:(410) 533-3111
 item4.TEL:843-571-6910
 item4.X-ABLabel:auto dealer
-item3.ADR;TYPE=WORK;PREF=1:;;111 Scrapbook Lane;Summerville;SC;29483;
-item3.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;111 Scrapbook Lane;Summerville;SC;29483;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 NOTE:• 11/8/18\, 11:33 PM - Sent note about BJ closing.\n\nwife: Lisa Carol
   Petrowski (Tiberia)\nhttps://www.facebook.com/lisa.t.petrowski\n\nSS212-9
@@ -15375,17 +15376,17 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Core Care
 N:;;;;
 ORG:Core Care
-item2.EMAIL;PREF=1:service@core-care.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:service@core-care.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:916-567-1260
-item1.ADR;TYPE=WORK;PREF=1:;;2340 Harvard Street;Sacramento;CA;95815;
-item1.X-ABADR:us
+item3.ADR;TYPE=WORK;PREF=1:;;2340 Harvard Street;Sacramento;CA;95815;
+item3.X-ABADR:us
 KIND:org
 NOTE:Apple repair service
 REV:20240204T172944Z
 UID:fe932602-be57-4846-a31b-486cad01087d
-item3.URL;PREF=1:www.core-care.com
-item3.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.core-care.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:65B4423E-9B5B-4C23-A9CD-F4364D84C121
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -15539,8 +15540,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Jon Mitnick
 N:Mitnick;Jon;;;
 ORG:E&R Airport Limo
-item2.EMAIL;PREF=1:jon.mitnick@comcast.net
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:jon.mitnick@comcast.net
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:561-584-4128
 TEL;TYPE=CELL:561-317-3153
 KIND:org
@@ -15549,8 +15550,8 @@ NOTE:Driver in Palm Beach. Referred by Marge Quig\n\nCar service. Airport.
  all us at 561 317 3153 (cell)
 REV:20240204T172944Z
 UID:5855782C-18E9-4BFA-81EF-414CEDB9E520
-item1.URL;PREF=1:http://www.eandrtransportation.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.eandrtransportation.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:A1D0CAB3-AE20-4219-AF97-7DEB33A0B3E8
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -15636,8 +15637,8 @@ ORG:SMUD Utility
 item2.EMAIL;PREF=1:Renee.Taylor@smud.org
 item2.X-ABLabel:email
 EMAIL;TYPE=HOME:customerservices@smud.org
-item1.TEL;PREF=1:1 (888) 456-7683
-item1.X-ABLabel:Outage
+item3.TEL;PREF=1:1 (888) 456-7683
+item3.X-ABLabel:Outage
 ADR;TYPE=HOME;PREF=1:;;6301 S Street;Sacramento;CA;95817;
 KIND:org
 NOTE:• 3/17/23\, 11:13 AM - Smud Plugedin\nac1@ans\nT7+77smud$\n\n• 1/6/22\
@@ -15669,8 +15670,8 @@ NOTE:• 3/17/23\, 11:13 AM - Smud Plugedin\nac1@ans\nT7+77smud$\n\n• 1/6/22\
  n\n\n—————————\n-end-\n\n====\nPLUGGED IN \nac99@answer\nT7+77plug-\n
 REV:20240204T172945Z
 UID:41A0BF63-9979-4881-BEBD-A4549F35B05B
-item3.URL;PREF=1:https://www.smud.org
-item3.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:https://www.smud.org
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:3928FD5C-A691-405D-9323-A62F1A908CA3
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -16805,8 +16806,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Generations Law - Reynolds Law\, LLP
 N:;;;;
 ORG:Generations Law - Reynolds Law\, LLP
-item2.EMAIL;PREF=1:trudy@generationslaw.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:trudy@generationslaw.com
+item1.X-ABLabel:email
 EMAIL;TYPE=WORK:susan@generationslaw.com
 TEL;TYPE=WORK;PREF=1:916-679-5550
 TEL;TYPE=WORK;TYPE=FAX:916-679-5560
@@ -16821,8 +16822,8 @@ NOTE:\nDouglas C. Spletter\n\nTrudy Nearn\, Owner\nTax estate attorney\n\nM
  n916.679-5560 fax\nwww.reynoldslawllp.com\n
 REV:20240204T172944Z
 UID:7A85E7C2-B80C-4F02-BF7A-561387B91ABC
-item1.URL;PREF=1:http://www.generationslaw.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.generationslaw.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:95753F94-2EEF-45D0-9B50-7335991785F9
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -16880,8 +16881,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Cathy Smallhouse
 N:Smallhouse;Cathy;;;
 ORG:Roseville Bank of Commerce
-item3.EMAIL;PREF=1:Cathy.Smallhouse@surewest.net
-item3.X-ABLabel:email
+item1.EMAIL;PREF=1:Cathy.Smallhouse@surewest.net
+item1.X-ABLabel:email
 EMAIL;TYPE=WORK:cathys@rosevillebankofcommerce.com
 TEL;TYPE=CELL;PREF=1:916-955-9871
 TEL;TYPE=MAIN:916-772-0131
@@ -16892,8 +16893,8 @@ item2.ADR;TYPE=WORK;PREF=1:;;1504 Eureka Road #100;Roseville;CA;95661;
 item2.X-ABADR:us
 REV:20240204T172945Z
 UID:3754CFDD-836C-48CC-A6C5-5F5EEB7BD2B0
-item1.URL;PREF=1:www.rosevillebankofcommerce.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item3.URL;PREF=1:www.rosevillebankofcommerce.com
+item3.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:B300876E-5A68-4D8D-A0FA-646021111032
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -16990,8 +16991,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Forethought
 N:;;;;
 ORG:Forethought
-item2.EMAIL;PREF=1:final.expense@forethought.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:final.expense@forethought.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:888-606-6372
 CATEGORIES:Insurance
 KIND:org
@@ -17002,8 +17003,8 @@ NOTE:agent number 114420\n\nme77\, t7+77\n\nThank you for registering with
  il us at ask_us@forethought.com.\n\n
 REV:20240204T172945Z
 UID:f9b67f0c-7c53-4b7d-a4a8-95bf22df8c7f
-item1.URL;PREF=1:www.forethought.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.forethought.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:16176CBD-E21B-4EE9-B913-D50746ECCDF4
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -17159,8 +17160,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Andrew Martonyi
 N:Martonyi;Andrew;;;
 ORG:Schoolside Press
-item1.EMAIL;PREF=1:books@geographybooksforkids.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:books@geographybooksforkids.com
+item2.X-ABLabel:email
 EMAIL:andrew@geographybooksforkids.com
 TEL;TYPE=WORK;PREF=1:775-453-9100
 TEL;TYPE=CELL:18186932188
@@ -17168,8 +17169,8 @@ NOTE:• 1/16/19\, 11:43 AM - Use mobile phone\n\nLittle Man In the Map books
  \n\nandrew@geographybooksforkids.com
 REV:20240204T172946Z
 UID:324be37a-cb79-4a48-ac71-847d4446898b
-item2.URL;PREF=1:http://geographybooksforkids.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://geographybooksforkids.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:4AC077B0-EB2B-4044-8A70-CDA793EF2040
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -17430,16 +17431,16 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Vicki Lansky
 N:Lansky;Vicki;;;
 ORG:Book Peddlers • Practical Parenting
-item1.EMAIL;PREF=1:vickilee@aol.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:vickilee@aol.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:952-544-1154
 TEL;TYPE=WORK;TYPE=FAX:952-544-1153
 ADR;TYPE=WORK;PREF=1:;;2828 Hedberg Drive;Minnetonka;MN;55305;
 NOTE:Has apt. in NYC she rents. $165 night.
 REV:20240204T172944Z
 UID:AFA74E4D-899F-4849-8113-748AB7CA373E
-item2.URL;PREF=1:www.bookpeddlers.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:www.bookpeddlers.com
+item1.X-ABLabel:_$!<HomePage>!$_
 URL;TYPE=HOME:www.practicalparenting.com
 X-BUSYMAC-LOCAL-LINK-ID:5FC32E65-0ED3-4069-9245-A402FB4AB9AA
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
@@ -17558,13 +17559,13 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Oxford Life
 N:;;;;
 ORG:Oxford Life
-item3.EMAIL;PREF=1:contracting@oxfordlife.com
-item3.X-ABLabel:email
+item2.EMAIL;PREF=1:contracting@oxfordlife.com
+item2.X-ABLabel:email
 EMAIL;TYPE=HOME:Scottoverstreet@oxfordlife.com
 TEL;TYPE=WORK;PREF=1:800-308-2318
 TEL;TYPE=WORK;TYPE=FAX:602-277-5901
-item2.ADR;TYPE=WORK;PREF=1:;;2721 N. Central Ave.;Phoenix;AZ;85004;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;2721 N. Central Ave.;Phoenix;AZ;85004;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:\nAgent ID OA12602\n\nUsername: acanton77\nPassword: tek7iah77\n\n5-17
@@ -17584,8 +17585,8 @@ NOTE:\nAgent ID OA12602\n\nUsername: acanton77\nPassword: tek7iah77\n\n5-17
  ntation to contracting@oxfordlife.com or via fax at 1-866-295-6232. \n
 REV:20240204T172945Z
 UID:b14b2bad-4517-48ed-8646-2df5b2c3d8e2
-item1.URL;PREF=1:http://www.oxfordlife.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item3.URL;PREF=1:http://www.oxfordlife.com
+item3.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:9CF60AC3-84A0-4822-BC05-7347CB5FA881
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -17633,15 +17634,15 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:ExamOne
 N:Skalisky;Debbie;;;
 ORG:ExamOne
-item2.EMAIL;PREF=1:debbieskalisky@sbcglobal.net
-item2.X-ABLabel:email
+item3.EMAIL;PREF=1:debbieskalisky@sbcglobal.net
+item3.X-ABLabel:email
 EMAIL;TYPE=WORK:debbie.l.skalisky@examone.com
 EMAIL;TYPE=OTHER:sacramento@examone.com
 TEL;TYPE=WORK;PREF=1:916-786-5890
 TEL;TYPE=WORK;TYPE=FAX:916-786-5806
 TEL;TYPE=CELL:916-201-2844
-item3.ADR;TYPE=WORK;PREF=1:;;720 Sunrise Ave 102-C;Roseville;CA;95661;
-item3.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;720 Sunrise Ave 102-C;Roseville;CA;95661;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:Debbie Skalisky\, Sales Manager\nThanks! The best email to use for me 
@@ -17654,8 +17655,8 @@ NOTE:Debbie Skalisky\, Sales Manager\nThanks! The best email to use for me
  \nDebbie Skalisky\, Sales Manager\n\n 
 REV:20240204T172945Z
 UID:3CF17414-5847-4F73-B916-C15027E1CABC
-item1.URL;PREF=1:www.sacramento.examone.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.sacramento.examone.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:BC2E0B2D-3F96-4094-924A-45B235C6C0E1
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -18931,47 +18932,49 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Khalilah Dann
 N:Dann;Khalilah;;;
 TITLE:M.D.
+EMAIL;PREF=1:khalilah.dann@discoverhealthmd.com
 TEL;TYPE=WORK;PREF=1:916-967-4030
 TEL;TYPE=CELL:(916) 572-4720
 item1.ADR;TYPE=WORK;PREF=1:;;6500 Coyle Ave #1;Carmichael;CA;95608;
 item1.X-ABADR:us
-NOTE:• 2/2/24\, 3:36 PM - Made appt. for Feb. 8\n\n\n• 2/2/24\, 1:01 PM - S
- andi gone\n• 10/17/23\, 12:26 PM - Dr. Reda has left. Now at https://www.t
- homasredamd.com/\n\nClosed for lunch from 12 to 2 pm\n• 8/3/23\, 2:02 PM -
-  \nSandie Moreno\nDiscover Health | Carmichael\nMedical Assistant\nP: 916-
- 967-4030 | F: 916-967-4060\n6500 Coyle Ave #1\, Carmichael\, CA 95608\n\n\
- n• 3/17/23\, 3:54 PM - \nhttps://25975-1.portal.athenahealth.com/\n\n\nDoc
- tor who took over Dr. Lou Nishimura practice\n\nSandie Moreno - blood and 
- office manager.\n\n\n\n=======  ATHENA =======\n\n\nuser: ac99@anc\npw. T7
- +77athena$\n\n\n\n\n\n\n ======Member billing =======\n—old—\nDiscover Hea
- lth Medical Group 2\, Inc\n990 Columbus Avenue\nSan Francisco\, CA 94133-2
- 310\n1 (415) 732-7029\nbilling@discoverhealthmd.com\n\n——— new——\nPayable 
- to: Discover Health Medical Group 2 (or DHMG2)\n4575 Webb Bridge Rd\nUnit 
- 4890\nAlpharetta\, GA 30005\n\n\nKrista Mitchell Phone: 415-732-7029 billi
- ng@discoverhealthmd.com\n\n\nhttps://myidentity.platform.athenahealth.com/
- oauth2/auset0ja9xZ2Hniep296/v1/authorize?client%5Fid=0oaku1tngsTH20pA1296&
- idp=&nonce=dd225060e9ad84e4ca4a611616b0e9e65c936e03c1edac60bae40523e802946
- 5&prompt=&redirect%5Furi=https%3A%2F%2Foauth%2Eportal%2Eathenahealth%2Ecom
- %2Foauthresponse%2Ephp&response%5Ftype=code&scope=openid%20email%20communi
- cator%2Eexternal%5Faccounts%2Eread&state=%7B%22LANGUAGE%22%3A%22en%22%2C%2
- 2COMMUNICATORBRANDID%22%3A%221%22%2C%22ANTIFORGERYTOKEN%22%3A%2268b9643a2f
- 28d4b82a6bf172bcfe2aff6ad0725f0b459cbd0d8fcdfc704afed8%22%2C%22PRACTICEID%
- 22%3A%2225975%22%2C%22IDENTITYPROVIDER%22%3A%22patient%5Fidentity%22%2C%22
- PORTALREDIRECTURL%22%3A%22https%3A%5C%2F%5C%2F25975%2D1%2Eportal%2Eathenah
- ealth%2Ecom%5C%2F%22%7D\n\n\nDr. Dann comes to us with an impressive backg
- round.  She completed her undergraduate degree at Wellesley College\, her 
- Medical Doctorate (MD) at the University of Maryland\, and completed her P
- rimary Care Residency at the University of North Carolina at Chapel Hill. 
- She also holds a Masters of Public Health degree (MPH) from The George Was
- hington University.  Since graduating from her residency at UNC\, she has 
- practiced as a family medicine physician in a variety of healthcare settin
- gs in primary care and hospital medicine in Pennsylvania\, Connecticut\, a
- nd California. She has cared for patients of all ages and from diverse bac
- kgrounds. She has over twelve years of experience helping patients prevent
- \, monitor\, and manage chronic diseases\, as well as providing general pr
- imary care. She is well-prepared to exceed your expectations as a member o
- f our concierge practice.\n\n-end-\n
-REV:20240204T172946Z
+NOTE:• 2/2/24\, 3:36 PM - Made appt. for Feb. 8\n\nkhalilah.dann@discoverhe
+ althmd.com\n\n\n• 2/2/24\, 1:01 PM - Sandi gone\n• 10/17/23\, 12:26 PM - D
+ r. Reda has left. Now at https://www.thomasredamd.com/\n\nClosed for lunch
+  from 12 to 2 pm\n• 8/3/23\, 2:02 PM - \nSandie Moreno\nDiscover Health | 
+ Carmichael\nMedical Assistant\nP: 916-967-4030 | F: 916-967-4060\n6500 Coy
+ le Ave #1\, Carmichael\, CA 95608\n\n\n• 3/17/23\, 3:54 PM - \nhttps://259
+ 75-1.portal.athenahealth.com/\n\n\nDoctor who took over Dr. Lou Nishimura 
+ practice\n\nSandie Moreno - blood and office manager.\n\n\n\n=======  ATHE
+ NA =======\n\n\nuser: ac99@anc\npw. T7+77athena$\n\n\n\n\n\n\n ======Membe
+ r billing =======\n—old—\nDiscover Health Medical Group 2\, Inc\n990 Colum
+ bus Avenue\nSan Francisco\, CA 94133-2310\n1 (415) 732-7029\nbilling@disco
+ verhealthmd.com\n\n——— new——\nPayable to: Discover Health Medical Group 2 
+ (or DHMG2)\n4575 Webb Bridge Rd\nUnit 4890\nAlpharetta\, GA 30005\n\n\nKri
+ sta Mitchell Phone: 415-732-7029 billing@discoverhealthmd.com\n\n\nhttps:/
+ /myidentity.platform.athenahealth.com/oauth2/auset0ja9xZ2Hniep296/v1/autho
+ rize?client%5Fid=0oaku1tngsTH20pA1296&idp=&nonce=dd225060e9ad84e4ca4a61161
+ 6b0e9e65c936e03c1edac60bae40523e8029465&prompt=&redirect%5Furi=https%3A%2F
+ %2Foauth%2Eportal%2Eathenahealth%2Ecom%2Foauthresponse%2Ephp&response%5Fty
+ pe=code&scope=openid%20email%20communicator%2Eexternal%5Faccounts%2Eread&s
+ tate=%7B%22LANGUAGE%22%3A%22en%22%2C%22COMMUNICATORBRANDID%22%3A%221%22%2C
+ %22ANTIFORGERYTOKEN%22%3A%2268b9643a2f28d4b82a6bf172bcfe2aff6ad0725f0b459c
+ bd0d8fcdfc704afed8%22%2C%22PRACTICEID%22%3A%2225975%22%2C%22IDENTITYPROVID
+ ER%22%3A%22patient%5Fidentity%22%2C%22PORTALREDIRECTURL%22%3A%22https%3A%5
+ C%2F%5C%2F25975%2D1%2Eportal%2Eathenahealth%2Ecom%5C%2F%22%7D\n\n\nDr. Dan
+ n comes to us with an impressive background.  She completed her undergradu
+ ate degree at Wellesley College\, her Medical Doctorate (MD) at the Univer
+ sity of Maryland\, and completed her Primary Care Residency at the Univers
+ ity of North Carolina at Chapel Hill. She also holds a Masters of Public H
+ ealth degree (MPH) from The George Washington University.  Since graduatin
+ g from her residency at UNC\, she has practiced as a family medicine physi
+ cian in a variety of healthcare settings in primary care and hospital medi
+ cine in Pennsylvania\, Connecticut\, and California. She has cared for pat
+ ients of all ages and from diverse backgrounds. She has over twelve years 
+ of experience helping patients prevent\, monitor\, and manage chronic dise
+ ases\, as well as providing general primary care. She is well-prepared to 
+ exceed your expectations as a member of our concierge practice.\n\n-end-\n
+ i
+REV:20240228T212219Z
 UID:4B2FD2B3-196E-4F5E-A3F6-2817441EF519
 X-BUSYMAC-LOCAL-LINK-ID:27AC776F-5614-4337-8205-F7EFACA68099
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
@@ -18980,128 +18983,130 @@ X-BUSYMAC-NOTES:data:application/x-nsarchive;base64\,YnBsaXN0MDDUAQIDBAUGBw
  pYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZl
  ctEICVRyb290gAGvEBsLDBUZICkuMTc4Pj9CSElRUlVbX2Bmamtvc3dVJG51bGzUDQ4PEBESEx
  RYTlNTdHJpbmdfEA9OU0F0dHJpYnV0ZUluZm9cTlNBdHRyaWJ1dGVzViRjbGFzc4ACgBiABIAa
- 0hAWFxhZTlMuc3RyaW5ngANvEQnwICIAIAAyAC8AMgAvADIANAAsACAAMwA6ADMANgAgAFAATQ
- AgAC0AIABNAGEAZABlACAAYQBwAHAAdAAuACAAZgBvAHIAIABGAGUAYgAuACAAOAAKAAoACiAi
- ACAAMgAvADIALwAyADQALAAgADEAOgAwADEAIABQAE0AIAAtACAAUwBhAG4AZABpACAAZwBvAG
- 4AZQAKICIAIAAxADAALwAxADcALwAyADMALAAgADEAMgA6ADIANgAgAFAATQAgAC0AIABEAHIA
- LgAgAFIAZQBkAGEAIABoAGEAcwAgAGwAZQBmAHQALgAgAE4AbwB3ACAAYQB0ACAAaAB0AHQAcA
- BzADoALwAvAHcAdwB3AC4AdABoAG8AbQBhAHMAcgBlAGQAYQBtAGQALgBjAG8AbQAvAAoACgBD
- AGwAbwBzAGUAZAAgAGYAbwByACAAbAB1AG4AYwBoACAAZgByAG8AbQAgADEAMgAgAHQAbwAgAD
- IAIABwAG0ACiAiACAAOAAvADMALwAyADMALAAgADIAOgAwADIAIABQAE0AIAAtACAACgBTAGEA
- bgBkAGkAZQAgAE0AbwByAGUAbgBvAAoARABpAHMAYwBvAHYAZQByACAASABlAGEAbAB0AGgAIA
- B8ACAAQwBhAHIAbQBpAGMAaABhAGUAbAAKAE0AZQBkAGkAYwBhAGwAIABBAHMAcwBpAHMAdABh
- AG4AdAAKAFAAOgAgADkAMQA2AC0AOQA2ADcALQA0ADAAMwAwACAAfAAgAEYAOgCgADkAMQA2AC
- 0AOQA2ADcALQA0ADAANgAwAAoANgA1ADAAMAAgAEMAbwB5AGwAZQAgAEEAdgBlACAAIwAxACwA
- IABDAGEAcgBtAGkAYwBoAGEAZQBsACwAIABDAEEAIAA5ADUANgAwADgACgAKAAogIgAgADMALw
- AxADcALwAyADMALAAgADMAOgA1ADQAIABQAE0AIAAtACAACgBoAHQAdABwAHMAOgAvAC8AMgA1
- ADkANwA1AC0AMQAuAHAAbwByAHQAYQBsAC4AYQB0AGgAZQBuAGEAaABlAGEAbAB0AGgALgBjAG
- 8AbQAvAAoACgAKAEQAbwBjAHQAbwByACAAdwBoAG8AIAB0AG8AbwBrACAAbwB2AGUAcgAgAEQA
- cgAuACAATABvAHUAIABOAGkAcwBoAGkAbQB1AHIAYQAgAHAAcgBhAGMAdABpAGMAZQAKAAoAUw
- BhAG4AZABpAGUAIABNAG8AcgBlAG4AbwAgAC0AIABiAGwAbwBvAGQAIABhAG4AZAAgAG8AZgBm
- AGkAYwBlACAAbQBhAG4AYQBnAGUAcgAuAAoACgAKAAoAPQA9AD0APQA9AD0APQAgACAAQQBUAE
- gARQBOAEEAIAA9AD0APQA9AD0APQA9AAoACgAKAHUAcwBlAHIAOgAgAGEAYwA5ADkAQABhAG4A
- YwAKAHAAdwAuACAAVAA3ACsANwA3AGEAdABoAGUAbgBhACQACgAKAAoACgAKAAoACgAgAD0APQ
- A9AD0APQA9AE0AZQBtAGIAZQByACAAYgBpAGwAbABpAG4AZwAgAD0APQA9AD0APQA9AD0ACiAU
- AG8AbABkIBQACgBEAGkAcwBjAG8AdgBlAHIAIABIAGUAYQBsAHQAaAAgAE0AZQBkAGkAYwBhAG
- wAIABHAHIAbwB1AHAAIAAyACwAIABJAG4AYwAKADkAOQAwACAAQwBvAGwAdQBtAGIAdQBzACAA
- QQB2AGUAbgB1AGUACgBTAGEAbgAgAEYAcgBhAG4AYwBpAHMAYwBvACwAIABDAEEAIAA5ADQAMQ
- AzADMALQAyADMAMQAwAAoAMQAgACgANAAxADUAKQAgADcAMwAyAC0ANwAwADIAOQAKAGIAaQBs
- AGwAaQBuAGcAQABkAGkAcwBjAG8AdgBlAHIAaABlAGEAbAB0AGgAbQBkAC4AYwBvAG0ACgAKIB
- QgFCAUACAAbgBlAHcgFCAUAAoAUABhAHkAYQBiAGwAZQAgAHQAbwA6ACAARABpAHMAYwBvAHYA
- ZQByACAASABlAGEAbAB0AGgAIABNAGUAZABpAGMAYQBsACAARwByAG8AdQBwACAAMgAgACgAbw
- ByACAARABIAE0ARwAyACkACgA0ADUANwA1ACAAVwBlAGIAYgAgAEIAcgBpAGQAZwBlACAAUgBk
- AAoAVQBuAGkAdAAgADQAOAA5ADAACgBBAGwAcABoAGEAcgBlAHQAdABhACwAIABHAEEAIAAzAD
- AAMAAwADUACgAKAAoASwByAGkAcwB0AGEAIABNAGkAdABjAGgAZQBsAGwAIABQAGgAbwBuAGUA
- OgAgADQAMQA1AC0ANwAzADIALQA3ADAAMgA5ACAAYgBpAGwAbABpAG4AZwBAAGQAaQBzAGMAbw
- B2AGUAcgBoAGUAYQBsAHQAaABtAGQALgBjAG8AbQAKAAoACgBoAHQAdABwAHMAOgAvAC8AbQB5
- AGkAZABlAG4AdABpAHQAeQAuAHAAbABhAHQAZgBvAHIAbQAuAGEAdABoAGUAbgBhAGgAZQBhAG
- wAdABoAC4AYwBvAG0ALwBvAGEAdQB0AGgAMgAvAGEAdQBzAGUAdAAwAGoAYQA5AHgAWgAyAEgA
- bgBpAGUAcAAyADkANgAvAHYAMQAvAGEAdQB0AGgAbwByAGkAegBlAD8AYwBsAGkAZQBuAHQAJQ
- A1AEYAaQBkAD0AMABvAGEAawB1ADEAdABuAGcAcwBUAEgAMgAwAHAAQQAxADIAOQA2ACYAaQBk
- AHAAPQAmAG4AbwBuAGMAZQA9AGQAZAAyADIANQAwADYAMABlADkAYQBkADgANABlADQAYwBhAD
- QAYQA2ADEAMQA2ADEANgBiADAAZQA5AGUANgA1AGMAOQAzADYAZQAwADMAYwAxAGUAZABhAGMA
- NgAwAGIAYQBlADQAMAA1ADIAMwBlADgAMAAyADkANAA2ADUAJgBwAHIAbwBtAHAAdAA9ACYAcg
- BlAGQAaQByAGUAYwB0ACUANQBGAHUAcgBpAD0AaAB0AHQAcABzACUAMwBBACUAMgBGACUAMgBG
- AG8AYQB1AHQAaAAlADIARQBwAG8AcgB0AGEAbAAlADIARQBhAHQAaABlAG4AYQBoAGUAYQBsAH
- QAaAAlADIARQBjAG8AbQAlADIARgBvAGEAdQB0AGgAcgBlAHMAcABvAG4AcwBlACUAMgBFAHAA
- aABwACYAcgBlAHMAcABvAG4AcwBlACUANQBGAHQAeQBwAGUAPQBjAG8AZABlACYAcwBjAG8AcA
- BlAD0AbwBwAGUAbgBpAGQAJQAyADAAZQBtAGEAaQBsACUAMgAwAGMAbwBtAG0AdQBuAGkAYwBh
- AHQAbwByACUAMgBFAGUAeAB0AGUAcgBuAGEAbAAlADUARgBhAGMAYwBvAHUAbgB0AHMAJQAyAE
- UAcgBlAGEAZAAmAHMAdABhAHQAZQA9ACUANwBCACUAMgAyAEwAQQBOAEcAVQBBAEcARQAlADIA
- MgAlADMAQQAlADIAMgBlAG4AJQAyADIAJQAyAEMAJQAyADIAQwBPAE0ATQBVAE4ASQBDAEEAVA
- BPAFIAQgBSAEEATgBEAEkARAAlADIAMgAlADMAQQAlADIAMgAxACUAMgAyACUAMgBDACUAMgAy
- AEEATgBUAEkARgBPAFIARwBFAFIAWQBUAE8ASwBFAE4AJQAyADIAJQAzAEEAJQAyADIANgA4AG
- IAOQA2ADQAMwBhADIAZgAyADgAZAA0AGIAOAAyAGEANgBiAGYAMQA3ADIAYgBjAGYAZQAyAGEA
- ZgBmADYAYQBkADAANwAyADUAZgAwAGIANAA1ADkAYwBiAGQAMABkADgAZgBjAGQAZgBjADcAMA
- A0AGEAZgBlAGQAOAAlADIAMgAlADIAQwAlADIAMgBQAFIAQQBDAFQASQBDAEUASQBEACUAMgAy
- ACUAMwBBACUAMgAyADIANQA5ADcANQAlADIAMgAlADIAQwAlADIAMgBJAEQARQBOAFQASQBUAF
- kAUABSAE8AVgBJAEQARQBSACUAMgAyACUAMwBBACUAMgAyAHAAYQB0AGkAZQBuAHQAJQA1AEYA
- aQBkAGUAbgB0AGkAdAB5ACUAMgAyACUAMgBDACUAMgAyAFAATwBSAFQAQQBMAFIARQBEAEkAUg
- BFAEMAVABVAFIATAAlADIAMgAlADMAQQAlADIAMgBoAHQAdABwAHMAJQAzAEEAJQA1AEMAJQAy
- AEYAJQA1AEMAJQAyAEYAMgA1ADkANwA1ACUAMgBEADEAJQAyAEUAcABvAHIAdABhAGwAJQAyAE
- UAYQB0AGgAZQBuAGEAaABlAGEAbAB0AGgAJQAyAEUAYwBvAG0AJQA1AEMAJQAyAEYAJQAyADIA
- JQA3AEQACgAKAAoARAByAC4AIABEAGEAbgBuACAAYwBvAG0AZQBzACAAdABvACAAdQBzACAAdw
- BpAHQAaAAgAGEAbgAgAGkAbQBwAHIAZQBzAHMAaQB2AGUAIABiAGEAYwBrAGcAcgBvAHUAbgBk
- AC4AoAAgAFMAaABlACAAYwBvAG0AcABsAGUAdABlAGQAIABoAGUAcgAgAHUAbgBkAGUAcgBnAH
- IAYQBkAHUAYQB0AGUAIABkAGUAZwByAGUAZQAgAGEAdAAgAFcAZQBsAGwAZQBzAGwAZQB5ACAA
- QwBvAGwAbABlAGcAZQAsACAAaABlAHIAIABNAGUAZABpAGMAYQBsACAARABvAGMAdABvAHIAYQ
- B0AGUAIAAoAE0ARAApACAAYQB0ACAAdABoAGUAIABVAG4AaQB2AGUAcgBzAGkAdAB5ACAAbwBm
- ACAATQBhAHIAeQBsAGEAbgBkACwAIABhAG4AZAAgAGMAbwBtAHAAbABlAHQAZQBkACAAaABlAH
- IAIABQAHIAaQBtAGEAcgB5ACAAQwBhAHIAZQAgAFIAZQBzAGkAZABlAG4AYwB5ACAAYQB0ACAA
- dABoAGUAIABVAG4AaQB2AGUAcgBzAGkAdAB5ACAAbwBmACAATgBvAHIAdABoACAAQwBhAHIAbw
- BsAGkAbgBhACAAYQB0ACAAQwBoAGEAcABlAGwAIABIAGkAbABsAC4AIABTAGgAZQAgAGEAbABz
- AG8AIABoAG8AbABkAHMAIABhACAATQBhAHMAdABlAHIAcwAgAG8AZgAgAFAAdQBiAGwAaQBjAC
- AASABlAGEAbAB0AGgAIABkAGUAZwByAGUAZQAgACgATQBQAEgAKQAgAGYAcgBvAG0AIABUAGgA
- ZQAgAEcAZQBvAHIAZwBlACAAVwBhAHMAaABpAG4AZwB0AG8AbgAgAFUAbgBpAHYAZQByAHMAaQ
- B0AHkALgCgACAAUwBpAG4AYwBlACAAZwByAGEAZAB1AGEAdABpAG4AZwAgAGYAcgBvAG0AIABo
- AGUAcgAgAHIAZQBzAGkAZABlAG4AYwB5ACAAYQB0ACAAVQBOAEMALAAgAHMAaABlACAAaABhAH
- MAIABwAHIAYQBjAHQAaQBjAGUAZAAgAGEAcwAgAGEAIABmAGEAbQBpAGwAeQAgAG0AZQBkAGkA
- YwBpAG4AZQAgAHAAaAB5AHMAaQBjAGkAYQBuACAAaQBuACAAYQAgAHYAYQByAGkAZQB0AHkAIA
- BvAGYAIABoAGUAYQBsAHQAaABjAGEAcgBlACAAcwBlAHQAdABpAG4AZwBzACAAaQBuACAAcABy
- AGkAbQBhAHIAeQAgAGMAYQByAGUAIABhAG4AZAAgAGgAbwBzAHAAaQB0AGEAbAAgAG0AZQBkAG
- kAYwBpAG4AZQAgAGkAbgAgAFAAZQBuAG4AcwB5AGwAdgBhAG4AaQBhACwAIABDAG8AbgBuAGUA
- YwB0AGkAYwB1AHQALAAgAGEAbgBkACAAQwBhAGwAaQBmAG8AcgBuAGkAYQAuACAAUwBoAGUAIA
- BoAGEAcwAgAGMAYQByAGUAZAAgAGYAbwByACAAcABhAHQAaQBlAG4AdABzACAAbwBmACAAYQBs
- AGwAIABhAGcAZQBzACAAYQBuAGQAIABmAHIAbwBtACAAZABpAHYAZQByAHMAZQAgAGIAYQBjAG
- sAZwByAG8AdQBuAGQAcwAuACAAUwBoAGUAIABoAGEAcwAgAG8AdgBlAHIAIAB0AHcAZQBsAHYA
- ZQAgAHkAZQBhAHIAcwAgAG8AZgAgAGUAeABwAGUAcgBpAGUAbgBjAGUAIABoAGUAbABwAGkAbg
- BnACAAcABhAHQAaQBlAG4AdABzACAAcAByAGUAdgBlAG4AdAAsACAAbQBvAG4AaQB0AG8AcgAs
- ACAAYQBuAGQAIABtAGEAbgBhAGcAZQAgAGMAaAByAG8AbgBpAGMAIABkAGkAcwBlAGEAcwBlAH
- MALAAgAGEAcwAgAHcAZQBsAGwAIABhAHMAIABwAHIAbwB2AGkAZABpAG4AZwAgAGcAZQBuAGUA
- cgBhAGwAIABwAHIAaQBtAGEAcgB5ACAAYwBhAHIAZQAuACAAUwBoAGUAIABpAHMAIAB3AGUAbA
- BsAC0AcAByAGUAcABhAHIAZQBkACAAdABvACAAZQB4AGMAZQBlAGQAIAB5AG8AdQByACAAZQB4
- AHAAZQBjAHQAYQB0AGkAbwBuAHMAIABhAHMAIABhACAAbQBlAG0AYgBlAHIAIABvAGYAIABvAH
- UAcgAgAGMAbwBuAGMAaQBlAHIAZwBlACAAcAByAGEAYwB0AGkAYwBlAC4ACgAKAC0AZQBuAGQA
- LQAK0hobHB1aJGNsYXNzbmFtZVgkY2xhc3Nlc18QD05TTXV0YWJsZVN0cmluZ6McHh9YTlNTdH
- JpbmdYTlNPYmplY3TSIRAiKFpOUy5vYmplY3RzpSMkJSYngAWAB4AMgBGAFIAX0yohECssLVdO
- Uy5rZXlzoKCABtIaGy8wXE5TRGljdGlvbmFyeaIvH9MqIRAyNC2hM4AIoTWACYAGVk5TTGlua9
- M5EDo7PD1XTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAuACl8QHWh0dHBzOi8vd3d3LnRob21hc3Jl
- ZGFtZC5jb20v0hobQEFVTlNVUkyiQB/TKiEQQ0UtoUSADaFGgA6ABlZOU0ZvbnTUSktMEE1OT1
- BWTlNTaXplWE5TZkZsYWdzVk5TTmFtZSNAKgAAAAAAABAQgA+AEF1IZWx2ZXRpY2FOZXVl0hob
- U1RWTlNGb250olMf0yohEFZYLaEzgAihWYASgAbTORA6OzxegACAC4ATXxAjbWFpbHRvOmJpbG
- xpbmdAZGlzY292ZXJoZWFsdGhtZC5jb23TKiEQYWMtoTOACKFkgBWABtM5EDo7PGmAAIALgBZf
- EQLeaHR0cHM6Ly9teWlkZW50aXR5LnBsYXRmb3JtLmF0aGVuYWhlYWx0aC5jb20vb2F1dGgyL2
- F1c2V0MGphOXhaMkhuaWVwMjk2L3YxL2F1dGhvcml6ZT9jbGllbnQlNUZpZD0wb2FrdTF0bmdz
- VEgyMHBBMTI5NiZpZHA9Jm5vbmNlPWRkMjI1MDYwZTlhZDg0ZTRjYTRhNjExNjE2YjBlOWU2NW
- M5MzZlMDNjMWVkYWM2MGJhZTQwNTIzZTgwMjk0NjUmcHJvbXB0PSZyZWRpcmVjdCU1RnVyaT1o
- dHRwcyUzQSUyRiUyRm9hdXRoJTJFcG9ydGFsJTJFYXRoZW5haGVhbHRoJTJFY29tJTJGb2F1dG
- hyZXNwb25zZSUyRXBocCZyZXNwb25zZSU1RnR5cGU9Y29kZSZzY29wZT1vcGVuaWQlMjBlbWFp
- bCUyMGNvbW11bmljYXRvciUyRWV4dGVybmFsJTVGYWNjb3VudHMlMkVyZWFkJnN0YXRlPSU3Qi
- UyMkxBTkdVQUdFJTIyJTNBJTIyZW4lMjIlMkMlMjJDT01NVU5JQ0FUT1JCUkFORElEJTIyJTNB
- JTIyMSUyMiUyQyUyMkFOVElGT1JHRVJZVE9LRU4lMjIlM0ElMjI2OGI5NjQzYTJmMjhkNGI4Mm
- E2YmYxNzJiY2ZlMmFmZjZhZDA3MjVmMGI0NTljYmQwZDhmY2RmYzcwNGFmZWQ4JTIyJTJDJTIy
- UFJBQ1RJQ0VJRCUyMiUzQSUyMjI1OTc1JTIyJTJDJTIySURFTlRJVFlQUk9WSURFUiUyMiUzQS
- UyMnBhdGllbnQlNUZpZGVudGl0eSUyMiUyQyUyMlBPUlRBTFJFRElSRUNUVVJMJTIyJTNBJTIy
- aHR0cHMlM0ElNUMlMkYlNUMlMkYyNTk3NSUyRDElMkVwb3J0YWwlMkVhdGhlbmFoZWFsdGglMk
- Vjb20lNUMlMkYlMjIlN0TSGhtsbV5OU011dGFibGVBcnJheaNsbh9XTlNBcnJhedJwEHFyV05T
- LmRhdGFPEBZ8AB0BmwMABQLDAgAcAwMA3gUE9wYAgBnSGht0dV1OU011dGFibGVEYXRho3R2H1
- ZOU0RhdGHSGht4eV8QGU5TTXV0YWJsZUF0dHJpYnV0ZWRTdHJpbmejensfXxAZTlNNdXRhYmxl
- QXR0cmlidXRlZFN0cmluZ18QEk5TQXR0cmlidXRlZFN0cmluZwAIABEAGgAkACkAMgA3AEkATA
- BRAFMAcQB3AIAAiQCbAKgArwCxALMAtQC3ALwAxgDIFKwUsRS8FMUU1xTbFOQU7RTyFP0VAxUF
- FQcVCRULFQ0VDxUWFR4VHxUgFSIVJxU0FTcVPhVAFUIVRBVGFUgVTxVWFV4VahVsFW4VcBWQFZ
- UVmxWeFaUVpxWpFasVrRWvFbYVvxXGFc8V1hXfFeEV4xXlFfMV+BX/FgIWCRYLFg0WDxYRFhMW
- GhYcFh4WIBZGFk0WTxZRFlMWVRZXFl4WYBZiFmQZRhlLGVoZXhlmGWsZcxmMGY4ZkxmhGaUZrB
- mxGc0Z0RntAAAAAAAAAgEAAAAAAAAAfAAAAAAAAAAAAAAAAAAAGgI=
+ 0hAWFxhZTlMuc3RyaW5ngANvEQoVICIAIAAyAC8AMgAvADIANAAsACAAMwA6ADMANgAgAFAATQ
+ AgAC0AIABNAGEAZABlACAAYQBwAHAAdAAuACAAZgBvAHIAIABGAGUAYgAuACAAOAAKAAoAawBo
+ AGEAbABpAGwAYQBoAC4AZABhAG4AbgBAAGQAaQBzAGMAbwB2AGUAcgBoAGUAYQBsAHQAaABtAG
+ QALgBjAG8AbQAKAAoACiAiACAAMgAvADIALwAyADQALAAgADEAOgAwADEAIABQAE0AIAAtACAA
+ UwBhAG4AZABpACAAZwBvAG4AZQAKICIAIAAxADAALwAxADcALwAyADMALAAgADEAMgA6ADIANg
+ AgAFAATQAgAC0AIABEAHIALgAgAFIAZQBkAGEAIABoAGEAcwAgAGwAZQBmAHQALgAgAE4AbwB3
+ ACAAYQB0ACAAaAB0AHQAcABzADoALwAvAHcAdwB3AC4AdABoAG8AbQBhAHMAcgBlAGQAYQBtAG
+ QALgBjAG8AbQAvAAoACgBDAGwAbwBzAGUAZAAgAGYAbwByACAAbAB1AG4AYwBoACAAZgByAG8A
+ bQAgADEAMgAgAHQAbwAgADIAIABwAG0ACiAiACAAOAAvADMALwAyADMALAAgADIAOgAwADIAIA
+ BQAE0AIAAtACAACgBTAGEAbgBkAGkAZQAgAE0AbwByAGUAbgBvAAoARABpAHMAYwBvAHYAZQBy
+ ACAASABlAGEAbAB0AGgAIAB8ACAAQwBhAHIAbQBpAGMAaABhAGUAbAAKAE0AZQBkAGkAYwBhAG
+ wAIABBAHMAcwBpAHMAdABhAG4AdAAKAFAAOgAgADkAMQA2AC0AOQA2ADcALQA0ADAAMwAwACAA
+ fAAgAEYAOgCgADkAMQA2AC0AOQA2ADcALQA0ADAANgAwAAoANgA1ADAAMAAgAEMAbwB5AGwAZQ
+ AgAEEAdgBlACAAIwAxACwAIABDAGEAcgBtAGkAYwBoAGEAZQBsACwAIABDAEEAIAA5ADUANgAw
+ ADgACgAKAAogIgAgADMALwAxADcALwAyADMALAAgADMAOgA1ADQAIABQAE0AIAAtACAACgBoAH
+ QAdABwAHMAOgAvAC8AMgA1ADkANwA1AC0AMQAuAHAAbwByAHQAYQBsAC4AYQB0AGgAZQBuAGEA
+ aABlAGEAbAB0AGgALgBjAG8AbQAvAAoACgAKAEQAbwBjAHQAbwByACAAdwBoAG8AIAB0AG8Abw
+ BrACAAbwB2AGUAcgAgAEQAcgAuACAATABvAHUAIABOAGkAcwBoAGkAbQB1AHIAYQAgAHAAcgBh
+ AGMAdABpAGMAZQAKAAoAUwBhAG4AZABpAGUAIABNAG8AcgBlAG4AbwAgAC0AIABiAGwAbwBvAG
+ QAIABhAG4AZAAgAG8AZgBmAGkAYwBlACAAbQBhAG4AYQBnAGUAcgAuAAoACgAKAAoAPQA9AD0A
+ PQA9AD0APQAgACAAQQBUAEgARQBOAEEAIAA9AD0APQA9AD0APQA9AAoACgAKAHUAcwBlAHIAOg
+ AgAGEAYwA5ADkAQABhAG4AYwAKAHAAdwAuACAAVAA3ACsANwA3AGEAdABoAGUAbgBhACQACgAK
+ AAoACgAKAAoACgAgAD0APQA9AD0APQA9AE0AZQBtAGIAZQByACAAYgBpAGwAbABpAG4AZwAgAD
+ 0APQA9AD0APQA9AD0ACiAUAG8AbABkIBQACgBEAGkAcwBjAG8AdgBlAHIAIABIAGUAYQBsAHQA
+ aAAgAE0AZQBkAGkAYwBhAGwAIABHAHIAbwB1AHAAIAAyACwAIABJAG4AYwAKADkAOQAwACAAQw
+ BvAGwAdQBtAGIAdQBzACAAQQB2AGUAbgB1AGUACgBTAGEAbgAgAEYAcgBhAG4AYwBpAHMAYwBv
+ ACwAIABDAEEAIAA5ADQAMQAzADMALQAyADMAMQAwAAoAMQAgACgANAAxADUAKQAgADcAMwAyAC
+ 0ANwAwADIAOQAKAGIAaQBsAGwAaQBuAGcAQABkAGkAcwBjAG8AdgBlAHIAaABlAGEAbAB0AGgA
+ bQBkAC4AYwBvAG0ACgAKIBQgFCAUACAAbgBlAHcgFCAUAAoAUABhAHkAYQBiAGwAZQAgAHQAbw
+ A6ACAARABpAHMAYwBvAHYAZQByACAASABlAGEAbAB0AGgAIABNAGUAZABpAGMAYQBsACAARwBy
+ AG8AdQBwACAAMgAgACgAbwByACAARABIAE0ARwAyACkACgA0ADUANwA1ACAAVwBlAGIAYgAgAE
+ IAcgBpAGQAZwBlACAAUgBkAAoAVQBuAGkAdAAgADQAOAA5ADAACgBBAGwAcABoAGEAcgBlAHQA
+ dABhACwAIABHAEEAIAAzADAAMAAwADUACgAKAAoASwByAGkAcwB0AGEAIABNAGkAdABjAGgAZQ
+ BsAGwAIABQAGgAbwBuAGUAOgAgADQAMQA1AC0ANwAzADIALQA3ADAAMgA5ACAAYgBpAGwAbABp
+ AG4AZwBAAGQAaQBzAGMAbwB2AGUAcgBoAGUAYQBsAHQAaABtAGQALgBjAG8AbQAKAAoACgBoAH
+ QAdABwAHMAOgAvAC8AbQB5AGkAZABlAG4AdABpAHQAeQAuAHAAbABhAHQAZgBvAHIAbQAuAGEA
+ dABoAGUAbgBhAGgAZQBhAGwAdABoAC4AYwBvAG0ALwBvAGEAdQB0AGgAMgAvAGEAdQBzAGUAdA
+ AwAGoAYQA5AHgAWgAyAEgAbgBpAGUAcAAyADkANgAvAHYAMQAvAGEAdQB0AGgAbwByAGkAegBl
+ AD8AYwBsAGkAZQBuAHQAJQA1AEYAaQBkAD0AMABvAGEAawB1ADEAdABuAGcAcwBUAEgAMgAwAH
+ AAQQAxADIAOQA2ACYAaQBkAHAAPQAmAG4AbwBuAGMAZQA9AGQAZAAyADIANQAwADYAMABlADkA
+ YQBkADgANABlADQAYwBhADQAYQA2ADEAMQA2ADEANgBiADAAZQA5AGUANgA1AGMAOQAzADYAZQ
+ AwADMAYwAxAGUAZABhAGMANgAwAGIAYQBlADQAMAA1ADIAMwBlADgAMAAyADkANAA2ADUAJgBw
+ AHIAbwBtAHAAdAA9ACYAcgBlAGQAaQByAGUAYwB0ACUANQBGAHUAcgBpAD0AaAB0AHQAcABzAC
+ UAMwBBACUAMgBGACUAMgBGAG8AYQB1AHQAaAAlADIARQBwAG8AcgB0AGEAbAAlADIARQBhAHQA
+ aABlAG4AYQBoAGUAYQBsAHQAaAAlADIARQBjAG8AbQAlADIARgBvAGEAdQB0AGgAcgBlAHMAcA
+ BvAG4AcwBlACUAMgBFAHAAaABwACYAcgBlAHMAcABvAG4AcwBlACUANQBGAHQAeQBwAGUAPQBj
+ AG8AZABlACYAcwBjAG8AcABlAD0AbwBwAGUAbgBpAGQAJQAyADAAZQBtAGEAaQBsACUAMgAwAG
+ MAbwBtAG0AdQBuAGkAYwBhAHQAbwByACUAMgBFAGUAeAB0AGUAcgBuAGEAbAAlADUARgBhAGMA
+ YwBvAHUAbgB0AHMAJQAyAEUAcgBlAGEAZAAmAHMAdABhAHQAZQA9ACUANwBCACUAMgAyAEwAQQ
+ BOAEcAVQBBAEcARQAlADIAMgAlADMAQQAlADIAMgBlAG4AJQAyADIAJQAyAEMAJQAyADIAQwBP
+ AE0ATQBVAE4ASQBDAEEAVABPAFIAQgBSAEEATgBEAEkARAAlADIAMgAlADMAQQAlADIAMgAxAC
+ UAMgAyACUAMgBDACUAMgAyAEEATgBUAEkARgBPAFIARwBFAFIAWQBUAE8ASwBFAE4AJQAyADIA
+ JQAzAEEAJQAyADIANgA4AGIAOQA2ADQAMwBhADIAZgAyADgAZAA0AGIAOAAyAGEANgBiAGYAMQ
+ A3ADIAYgBjAGYAZQAyAGEAZgBmADYAYQBkADAANwAyADUAZgAwAGIANAA1ADkAYwBiAGQAMABk
+ ADgAZgBjAGQAZgBjADcAMAA0AGEAZgBlAGQAOAAlADIAMgAlADIAQwAlADIAMgBQAFIAQQBDAF
+ QASQBDAEUASQBEACUAMgAyACUAMwBBACUAMgAyADIANQA5ADcANQAlADIAMgAlADIAQwAlADIA
+ MgBJAEQARQBOAFQASQBUAFkAUABSAE8AVgBJAEQARQBSACUAMgAyACUAMwBBACUAMgAyAHAAYQ
+ B0AGkAZQBuAHQAJQA1AEYAaQBkAGUAbgB0AGkAdAB5ACUAMgAyACUAMgBDACUAMgAyAFAATwBS
+ AFQAQQBMAFIARQBEAEkAUgBFAEMAVABVAFIATAAlADIAMgAlADMAQQAlADIAMgBoAHQAdABwAH
+ MAJQAzAEEAJQA1AEMAJQAyAEYAJQA1AEMAJQAyAEYAMgA1ADkANwA1ACUAMgBEADEAJQAyAEUA
+ cABvAHIAdABhAGwAJQAyAEUAYQB0AGgAZQBuAGEAaABlAGEAbAB0AGgAJQAyAEUAYwBvAG0AJQ
+ A1AEMAJQAyAEYAJQAyADIAJQA3AEQACgAKAAoARAByAC4AIABEAGEAbgBuACAAYwBvAG0AZQBz
+ ACAAdABvACAAdQBzACAAdwBpAHQAaAAgAGEAbgAgAGkAbQBwAHIAZQBzAHMAaQB2AGUAIABiAG
+ EAYwBrAGcAcgBvAHUAbgBkAC4AoAAgAFMAaABlACAAYwBvAG0AcABsAGUAdABlAGQAIABoAGUA
+ cgAgAHUAbgBkAGUAcgBnAHIAYQBkAHUAYQB0AGUAIABkAGUAZwByAGUAZQAgAGEAdAAgAFcAZQ
+ BsAGwAZQBzAGwAZQB5ACAAQwBvAGwAbABlAGcAZQAsACAAaABlAHIAIABNAGUAZABpAGMAYQBs
+ ACAARABvAGMAdABvAHIAYQB0AGUAIAAoAE0ARAApACAAYQB0ACAAdABoAGUAIABVAG4AaQB2AG
+ UAcgBzAGkAdAB5ACAAbwBmACAATQBhAHIAeQBsAGEAbgBkACwAIABhAG4AZAAgAGMAbwBtAHAA
+ bABlAHQAZQBkACAAaABlAHIAIABQAHIAaQBtAGEAcgB5ACAAQwBhAHIAZQAgAFIAZQBzAGkAZA
+ BlAG4AYwB5ACAAYQB0ACAAdABoAGUAIABVAG4AaQB2AGUAcgBzAGkAdAB5ACAAbwBmACAATgBv
+ AHIAdABoACAAQwBhAHIAbwBsAGkAbgBhACAAYQB0ACAAQwBoAGEAcABlAGwAIABIAGkAbABsAC
+ 4AIABTAGgAZQAgAGEAbABzAG8AIABoAG8AbABkAHMAIABhACAATQBhAHMAdABlAHIAcwAgAG8A
+ ZgAgAFAAdQBiAGwAaQBjACAASABlAGEAbAB0AGgAIABkAGUAZwByAGUAZQAgACgATQBQAEgAKQ
+ AgAGYAcgBvAG0AIABUAGgAZQAgAEcAZQBvAHIAZwBlACAAVwBhAHMAaABpAG4AZwB0AG8AbgAg
+ AFUAbgBpAHYAZQByAHMAaQB0AHkALgCgACAAUwBpAG4AYwBlACAAZwByAGEAZAB1AGEAdABpAG
+ 4AZwAgAGYAcgBvAG0AIABoAGUAcgAgAHIAZQBzAGkAZABlAG4AYwB5ACAAYQB0ACAAVQBOAEMA
+ LAAgAHMAaABlACAAaABhAHMAIABwAHIAYQBjAHQAaQBjAGUAZAAgAGEAcwAgAGEAIABmAGEAbQ
+ BpAGwAeQAgAG0AZQBkAGkAYwBpAG4AZQAgAHAAaAB5AHMAaQBjAGkAYQBuACAAaQBuACAAYQAg
+ AHYAYQByAGkAZQB0AHkAIABvAGYAIABoAGUAYQBsAHQAaABjAGEAcgBlACAAcwBlAHQAdABpAG
+ 4AZwBzACAAaQBuACAAcAByAGkAbQBhAHIAeQAgAGMAYQByAGUAIABhAG4AZAAgAGgAbwBzAHAA
+ aQB0AGEAbAAgAG0AZQBkAGkAYwBpAG4AZQAgAGkAbgAgAFAAZQBuAG4AcwB5AGwAdgBhAG4AaQ
+ BhACwAIABDAG8AbgBuAGUAYwB0AGkAYwB1AHQALAAgAGEAbgBkACAAQwBhAGwAaQBmAG8AcgBu
+ AGkAYQAuACAAUwBoAGUAIABoAGEAcwAgAGMAYQByAGUAZAAgAGYAbwByACAAcABhAHQAaQBlAG
+ 4AdABzACAAbwBmACAAYQBsAGwAIABhAGcAZQBzACAAYQBuAGQAIABmAHIAbwBtACAAZABpAHYA
+ ZQByAHMAZQAgAGIAYQBjAGsAZwByAG8AdQBuAGQAcwAuACAAUwBoAGUAIABoAGEAcwAgAG8Adg
+ BlAHIAIAB0AHcAZQBsAHYAZQAgAHkAZQBhAHIAcwAgAG8AZgAgAGUAeABwAGUAcgBpAGUAbgBj
+ AGUAIABoAGUAbABwAGkAbgBnACAAcABhAHQAaQBlAG4AdABzACAAcAByAGUAdgBlAG4AdAAsAC
+ AAbQBvAG4AaQB0AG8AcgAsACAAYQBuAGQAIABtAGEAbgBhAGcAZQAgAGMAaAByAG8AbgBpAGMA
+ IABkAGkAcwBlAGEAcwBlAHMALAAgAGEAcwAgAHcAZQBsAGwAIABhAHMAIABwAHIAbwB2AGkAZA
+ BpAG4AZwAgAGcAZQBuAGUAcgBhAGwAIABwAHIAaQBtAGEAcgB5ACAAYwBhAHIAZQAuACAAUwBo
+ AGUAIABpAHMAIAB3AGUAbABsAC0AcAByAGUAcABhAHIAZQBkACAAdABvACAAZQB4AGMAZQBlAG
+ QAIAB5AG8AdQByACAAZQB4AHAAZQBjAHQAYQB0AGkAbwBuAHMAIABhAHMAIABhACAAbQBlAG0A
+ YgBlAHIAIABvAGYAIABvAHUAcgAgAGMAbwBuAGMAaQBlAHIAZwBlACAAcAByAGEAYwB0AGkAYw
+ BlAC4ACgAKAC0AZQBuAGQALQAKAGnSGhscHVokY2xhc3NuYW1lWCRjbGFzc2VzXxAPTlNNdXRh
+ YmxlU3RyaW5noxweH1hOU1N0cmluZ1hOU09iamVjdNIhECIoWk5TLm9iamVjdHOlIyQlJieABY
+ AHgAyAEYAUgBfTKiEQKywtV05TLmtleXOgoIAG0hobLzBcTlNEaWN0aW9uYXJ5oi8f0yohEDI0
+ LaEzgAihNYAJgAZWTlNMaW5r0zkQOjs8PVdOUy5iYXNlW05TLnJlbGF0aXZlgACAC4AKXxAdaH
+ R0cHM6Ly93d3cudGhvbWFzcmVkYW1kLmNvbS/SGhtAQVVOU1VSTKJAH9MqIRBDRS2hRIANoUaA
+ DoAGVk5TRm9udNRKS0wQTU5PUFZOU1NpemVYTlNmRmxhZ3NWTlNOYW1lI0AqAAAAAAAAEBCAD4
+ AQXUhlbHZldGljYU5ldWXSGhtTVFZOU0ZvbnSiUx/TKiEQVlgtoTOACKFZgBKABtM5EDo7PF6A
+ AIALgBNfECNtYWlsdG86YmlsbGluZ0BkaXNjb3ZlcmhlYWx0aG1kLmNvbdMqIRBhYy2hM4AIoW
+ SAFYAG0zkQOjs8aYAAgAuAFl8RAt5odHRwczovL215aWRlbnRpdHkucGxhdGZvcm0uYXRoZW5h
+ aGVhbHRoLmNvbS9vYXV0aDIvYXVzZXQwamE5eFoySG5pZXAyOTYvdjEvYXV0aG9yaXplP2NsaW
+ VudCU1RmlkPTBvYWt1MXRuZ3NUSDIwcEExMjk2JmlkcD0mbm9uY2U9ZGQyMjUwNjBlOWFkODRl
+ NGNhNGE2MTE2MTZiMGU5ZTY1YzkzNmUwM2MxZWRhYzYwYmFlNDA1MjNlODAyOTQ2NSZwcm9tcH
+ Q9JnJlZGlyZWN0JTVGdXJpPWh0dHBzJTNBJTJGJTJGb2F1dGglMkVwb3J0YWwlMkVhdGhlbmFo
+ ZWFsdGglMkVjb20lMkZvYXV0aHJlc3BvbnNlJTJFcGhwJnJlc3BvbnNlJTVGdHlwZT1jb2RlJn
+ Njb3BlPW9wZW5pZCUyMGVtYWlsJTIwY29tbXVuaWNhdG9yJTJFZXh0ZXJuYWwlNUZhY2NvdW50
+ cyUyRXJlYWQmc3RhdGU9JTdCJTIyTEFOR1VBR0UlMjIlM0ElMjJlbiUyMiUyQyUyMkNPTU1VTk
+ lDQVRPUkJSQU5ESUQlMjIlM0ElMjIxJTIyJTJDJTIyQU5USUZPUkdFUllUT0tFTiUyMiUzQSUy
+ MjY4Yjk2NDNhMmYyOGQ0YjgyYTZiZjE3MmJjZmUyYWZmNmFkMDcyNWYwYjQ1OWNiZDBkOGZjZG
+ ZjNzA0YWZlZDglMjIlMkMlMjJQUkFDVElDRUlEJTIyJTNBJTIyMjU5NzUlMjIlMkMlMjJJREVO
+ VElUWVBST1ZJREVSJTIyJTNBJTIycGF0aWVudCU1RmlkZW50aXR5JTIyJTJDJTIyUE9SVEFMUk
+ VESVJFQ1RVUkwlMjIlM0ElMjJodHRwcyUzQSU1QyUyRiU1QyUyRjI1OTc1JTJEMSUyRXBvcnRh
+ bCUyRWF0aGVuYWhlYWx0aCUyRWNvbSU1QyUyRiUyMiU3RNIaG2xtXk5TTXV0YWJsZUFycmF5o2
+ xuH1dOU0FycmF50nAQcXJXTlMuZGF0YU8QF6ABAB0BmwMABQLDAgAcAwMA3gUE+AYAgBnSGht0
+ dV1OU011dGFibGVEYXRho3R2H1ZOU0RhdGHSGht4eV8QGU5TTXV0YWJsZUF0dHJpYnV0ZWRTdH
+ JpbmejensfXxAZTlNNdXRhYmxlQXR0cmlidXRlZFN0cmluZ18QEk5TQXR0cmlidXRlZFN0cmlu
+ ZwAIABEAGgAkACkAMgA3AEkATABRAFMAcQB3AIAAiQCbAKgArwCxALMAtQC3ALwAxgDIFPYU+x
+ UGFQ8VIRUlFS4VNxU8FUcVTRVPFVEVUxVVFVcVWRVgFWgVaRVqFWwVcRV+FYEViBWKFYwVjhWQ
+ FZIVmRWgFagVtBW2FbgVuhXaFd8V5RXoFe8V8RXzFfUV9xX5FgAWCRYQFhkWIBYpFisWLRYvFj
+ 0WQhZJFkwWUxZVFlcWWRZbFl0WZBZmFmgWahaQFpcWmRabFp0WnxahFqgWqhasFq4ZkBmVGaQZ
+ qBmwGbUZvRnXGdkZ3hnsGfAZ9xn8GhgaHBo4AAAAAAAAAgEAAAAAAAAAfAAAAAAAAAAAAAAAAA
+ AAGk0=
 END:VCARD
 BEGIN:VCARD
 VERSION:4.0
@@ -21283,8 +21288,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:TeleContact Resource Services
 N:Coenen;Kelvin;;;
 ORG:TeleContact Resource Services
-item2.EMAIL;PREF=1:kcoenen@eContactLive.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:kcoenen@eContactLive.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:209-548-4303
 TEL;TYPE=WORK:800-551-0567 ext 4303
 TEL;TYPE=WORK;TYPE=FAX:209-576-0619
@@ -21293,8 +21298,8 @@ KIND:org
 NOTE:Kelvin Coenen\nSenior Accounts Manager\n \n
 REV:20240204T172944Z
 UID:9A3AA2CF-3D93-4459-A446-55A28694EA8C
-item1.URL;PREF=1:www.econtactlive.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:www.econtactlive.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:08368C5B-AE05-43BA-9372-11C47EE0CC8E
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -21363,13 +21368,13 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Western Health Advantage
 N:Fisher;Angela;;;
 ORG:Western Health Advantage
-item1.EMAIL;PREF=1:A.Fisher@westernhealth.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:A.Fisher@westernhealth.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;TYPE=FAX;PREF=1:916-568-1338
 TEL;TYPE=WORK:916-563-2247
-item2.ADR;TYPE=WORK;PREF=1:;;2349 Gateway Oaks Drive\, Suite 100;Sacramento
+item1.ADR;TYPE=WORK;PREF=1:;;2349 Gateway Oaks Drive\, Suite 100;Sacramento
  ;CA;95833;
-item2.X-ABADR:us
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:• 12/19/23\, 10:07 AM - \n\nYour broker account temporary password is:
@@ -21484,12 +21489,12 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:K2A Marketing
 N:;;;;
 ORG:K2A Marketing
-item1.EMAIL;PREF=1:brenda@k2a.us
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:brenda@k2a.us
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:638-2879
 TEL;TYPE=WORK;TYPE=FAX:852-6490
-item2.ADR;TYPE=HOME;PREF=1:;;9812 Old Winery Place #5;Sacramento;CA;95827;
-item2.X-ABADR:us
+item1.ADR;TYPE=HOME;PREF=1:;;9812 Old Winery Place #5;Sacramento;CA;95827;
+item1.X-ABADR:us
 KIND:org
 NOTE:Patty Blagburn\nBrenda Butler\nJustin Kennedy - owner\n(father now in 
  R.E.)\n\nPrinting\n\n\n
@@ -21644,13 +21649,13 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:John Carson
 N:Carson;John;;;
 ORG:Dentist
-item1.EMAIL;PREF=1:carson@domain.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:carson@domain.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:965-7444
 TEL;TYPE=WORK;TYPE=FAX:916-965-9372
-item2.ADR;TYPE=WORK;PREF=1:;;10425 Fair Oaks Boulevard\, Suite 102;Fair Oak
+item1.ADR;TYPE=WORK;PREF=1:;;10425 Fair Oaks Boulevard\, Suite 102;Fair Oak
  s;CA;95628;
-item2.X-ABADR:us
+item1.X-ABADR:us
 NOTE:Perodontist  - gum\n
 REV:20240204T172944Z
 UID:36A43020-85C5-4C41-B09F-083613AD0CEB
@@ -21776,11 +21781,11 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Portamedic
 N:;;;;
 ORG:Portamedic
-item1.EMAIL;PREF=1:br288@portamedic.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:br288@portamedic.com
+item2.X-ABLabel:email
 TEL;TYPE=OTHER;PREF=1:800-344-3926
-item2.ADR;TYPE=WORK;PREF=1:;;3001 Coffee Road #2;Modesto;CA;95355;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;3001 Coffee Road #2;Modesto;CA;95355;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:My ID: 1291142\n\nAmanda (Modseto office)\n\nApril Gandy\nBranch Manag
@@ -21842,8 +21847,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Diana Schmitz
 N:Schmitz;Diana;;;
 ORG:DI and LTC Insurance Services
-item1.EMAIL;PREF=1:diana@di-ltc.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:diana@di-ltc.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:800-924-2294
 TEL;TYPE=WORK;TYPE=FAX:415-472-7637
 ADR;TYPE=WORK;PREF=1:;;4302 Redwood Highway\, Suite 400;San Rafael;CA;94903
@@ -21854,8 +21859,8 @@ NOTE:Long term care insurance GA\n\nLTC quote 4-11-11\n\nJack B. Schmitz\,
  CLU\, ChFC\, CASL
 REV:20240204T172944Z
 UID:7F7EB61A-412A-4D9D-90CC-17BBBB240A2B
-item2.URL;PREF=1:http://www.DI-LTC.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.DI-LTC.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:769F47EE-12C8-4BFF-841D-CB69C868D7E1
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -21866,13 +21871,13 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Apple Store
 N:/ Arden Fair Business;Roseville;;;
 ORG:Apple Store
-item2.EMAIL;PREF=1:rosevillebusiness@apple.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:rosevillebusiness@apple.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:916-872-2509 biz team Roseville
 TEL;TYPE=WORK:916) 872-2506 Roseville
 TEL;TYPE=WORK:916-643-0960 Arden
-item1.ADR;TYPE=WORK;PREF=1:;;1689 Arden Way;Sacramento;CA;95815;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;1689 Arden Way;Sacramento;CA;95815;
+item2.X-ABADR:us
 KIND:org
 NOTE:• 1/22/24\, 1:39 PM - \n\nSammi Maenner (She\, Her\, Hers)\nBusiness P
  ro\nrosevillebusiness@apple.com\n(916)-872-2509\n\n\n\n• 11/10/23\, 1:16 P
@@ -22202,16 +22207,16 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:IM Global
 N:;;;;
 ORG:IM Global
-item2.EMAIL;PREF=1:george.bernier@imglobal.com
-item2.X-ABLabel:email
+item3.EMAIL;PREF=1:george.bernier@imglobal.com
+item3.X-ABLabel:email
 item4.EMAIL:producer@imglobal.com
 item4.X-ABLabel:email
 TEL;TYPE=HOME;PREF=1:317.655.4505
 TEL;TYPE=OTHER:317.655.4500
 TEL;TYPE=WORK:800.628.4664
-item1.ADR;TYPE=WORK;PREF=1:;;2960 North Meridian Street;Indianapolis;IN;462
+item2.ADR;TYPE=WORK;PREF=1:;;2960 North Meridian Street;Indianapolis;IN;462
  08;
-item1.X-ABADR:us
+item2.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:IMG PRODUCER CODE: 56503\nInternational Medical Group\nWebsite: www.im
@@ -22222,8 +22227,8 @@ NOTE:IMG PRODUCER CODE: 56503\nInternational Medical Group\nWebsite: www.im
  II80764756\n\nCANTON\, ALAN	41884445		\nSCHWEITZER\, JANE	41884446
 REV:20240204T172944Z
 UID:E2BBED6E-99C0-431D-A368-C59F7C1B0C27
-item3.URL;PREF=1:www.imglobal.com
-item3.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:www.imglobal.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:2BB2A287-51E5-4ED3-AD24-B8ABFF8D62F3
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -22596,8 +22601,8 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Marty Maskall
 N:Maskall;Marty;;;
-item1.EMAIL;PREF=1:mmaskall@gmail.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:mmaskall@gmail.com
+item2.X-ABLabel:email
 TEL;PREF=1:916-425-5137
 CATEGORIES:Toast
 NOTE:• 5/28/20\, 6:58 PM - \n Temporary\n            916-425-5137\n        
@@ -22606,8 +22611,8 @@ NOTE:• 5/28/20\, 6:58 PM - \n Temporary\n            916-425-5137\n
  765\, FO (temporary address)
 REV:20240204T172943Z
 UID:A7FBC419-D1F7-47C7-813A-CF1A4F577C86
-item2.URL;PREF=1:www.folsomecohousing.org
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:www.folsomecohousing.org
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:8F68FBF6-21F8-45A6-BFC7-079B3CAFD1FB
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -23439,16 +23444,16 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Debra Scarpa
 N:Scarpa;Debra;;;
 ORG:Designs By Friday
-item1.EMAIL;PREF=1:debra@designbyfriday.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:debra@designbyfriday.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:916.532.6136
 TEL;TYPE=WORK;TYPE=FAX:916.608.8633
 ADR;TYPE=WORK;PREF=1:;;2014 Ahoy Court;El Dorado Hills;CA;95762;
 NOTE:Web designer. \n\n10/12/2012 about Adobe Biz Cat
 REV:20240204T172945Z
 UID:307cde66-433d-46b9-9b0a-6af9d8e56671
-item2.URL;PREF=1:http://www.designbyfriday.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.designbyfriday.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:21E8820A-7C7B-4C4B-B7E2-141F5F00EEC8
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -23515,11 +23520,11 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Amy McKenzie
 N:McKenzie;Amy;;;
-item2.EMAIL;PREF=1:amy.mckenzie02@gmail.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:amy.mckenzie02@gmail.com
+item1.X-ABLabel:email
 TEL;TYPE=CELL;PREF=1:1(916) 261-4688
-item1.ADR;TYPE=WORK;PREF=1:;;302 Bluebird Lane;Folsom;CA;95630;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;302 Bluebird Lane;Folsom;CA;95630;
+item2.X-ABADR:us
 NOTE:• 2/3/23\, 5:32 PM - Middle: Ellen\n\n\n\nDOB: 03/11/1960\nSS: 557-53-
  5394\nBoA-rt: 121000358\nboa-act: 000623600828\n\n\nMicrosoft acct:\namy.m
  ckenzie02@gmail.com\nSteven23!\n\nLAPTOP:  9181\n\n==================\n\ni
@@ -23773,8 +23778,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Tordis Isselhardt
 N:Isselhardt;Tordis;;;
 ORG:Images from the Past
-item1.EMAIL;PREF=1:tordisi@sover.net
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:tordisi@sover.net
+item2.X-ABLabel:email
 EMAIL:tordis@imagesfromthepast.com
 EMAIL:karl@bjornkin.com
 TEL;TYPE=CELL:802-688-4528
@@ -23823,8 +23828,8 @@ NOTE:• 9/15/23\, 3:51 PM - \nscp -r wp1  /usr/home/tisselhardt/public_html/
   Username\nUsername:	1045237_2_r\nPassword:	3LZcNLv4JU67Ht3C
 REV:20240204T172945Z
 UID:D44F61FC-20B0-446F-B353-FA0922D6E1A6
-item2.URL;PREF=1:http://www.imagesfromthepast.com/coback.html
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.imagesfromthepast.com/coback.html
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:47E79A4F-B217-4F8B-B8D3-15D6B7618BF9
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -24126,8 +24131,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Lisa J. Berg & Associates
 N:Berg;Lisa;;;
 ORG:Lisa J. Berg & Associates
-item1.EMAIL;PREF=1:reception@ljbfiduciary.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:reception@ljbfiduciary.com
+item2.X-ABLabel:email
 EMAIL:Dana@ljbfiduciary.com
 TEL;TYPE=WORK;PREF=1:916.706.0482
 TEL;TYPE=WORK;TYPE=FAX:916.706.0531
@@ -24140,8 +24145,8 @@ NOTE:• 11/11/20\, 9:14 AM - retiring next year. wrote her saying we went in
  nt\nOffice hours: Mon.-Thur.\, 7:30 am-4:30 pm
 REV:20240204T172944Z
 UID:9b5c245e-aa6f-4267-9fe1-c8c2cff8540c
-item2.URL;PREF=1:http://www.ljbfiduciary.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.ljbfiduciary.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:49199BFD-8C9B-4EEC-8931-5F3B5B6FE676
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -24168,8 +24173,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Laurie Moore
 N:Moore;Laurie;;;
 ORG:LL Moore Insurance Solutions
-item1.EMAIL;PREF=1:laurie@llmoore.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:laurie@llmoore.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;TYPE=FAX;PREF=1:866-299-4182
 TEL;TYPE=WORK:916-817-6410
 ADR;TYPE=WORK;PREF=1:;;705-2 E. Bidwell St. #344;Folsom;CA;95630;
@@ -24177,8 +24182,8 @@ CATEGORIES:Insurance
 NOTE:Agent met at Anthem seminar\n\nP.O. Box 250 Folsom\, CA 95763\n
 REV:20240204T172945Z
 UID:4FC5680F-FECD-4A68-A65B-D75C1910E96D
-item2.URL;PREF=1:https://www.llmoore.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:https://www.llmoore.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:EF28941B-DA80-4BFF-84BE-FA0B337DA573
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -24375,8 +24380,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:TruChoice Financial
 N:Petersen;Dave;;;
 ORG:TruChoice Financial
-item2.EMAIL:dpetersen@truchoicefinancial.com
-item2.X-ABLabel:email
+item1.EMAIL:dpetersen@truchoicefinancial.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:800.237.0263 ext. 222
 TEL;TYPE=CELL:916.679.0279
 CATEGORIES:Insurance
@@ -24385,8 +24390,8 @@ NOTE:• 2/9/23\, 9:33 AM - Sent him info.\n• 2/6/23\, 1:56 PM - Called about
   annuity\n\n
 REV:20240204T172945Z
 UID:6EE6CD6D-2B3B-4DDE-ACAB-B099473555CD
-item1.URL;PREF=1:https://truchoicefinancial.com/
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:https://truchoicefinancial.com/
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:D7C42EB5-209C-449C-B60E-3FEE208D3FED
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -26007,8 +26012,8 @@ VERSION:4.0
 PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Marston Wong\, DDS
 N:Wong\, DDS;Marston;;;
-item2.EMAIL;PREF=1:info@creeksideendo.net
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:info@creeksideendo.net
+item1.X-ABLabel:email
 TEL;TYPE=HOME;PREF=1:916-791-0169
 TEL;TYPE=WORK;TYPE=FAX:(916) 983-7981
 TEL;TYPE=WORK:(916) 983-7700
@@ -26017,8 +26022,8 @@ item3.X-ABADR:us
 NOTE:Endodontics
 REV:20240204T172944Z
 UID:95160A3A-FBFA-40E0-A502-1E97BE236E95
-item1.URL;PREF=1:creeksideendo.net
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:creeksideendo.net
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:9A0DEC68-D31B-4EF5-A120-1E7B54903F77
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -26074,8 +26079,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:WiTopia
 N:;;;;
 ORG:WiTopia
-item1.EMAIL;PREF=1:support@witopia.net
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:support@witopia.net
+item2.X-ABLabel:email
 KIND:org
 NOTE:user: ac99@anc123.com\npass: t7+77wito (not whole word)\n\nVPN on iPho
  ne secret: witopia\n\nAccount w00711686\n\nOrder Number:	ORD201508100501\n
@@ -26083,8 +26088,8 @@ NOTE:user: ac99@anc123.com\npass: t7+77wito (not whole word)\n\nVPN on iPho
  46.35.35\n216.146.36.36\n\n(firstof these and then google works well)\n
 REV:20240204T172944Z
 UID:c511508f-9552-43a7-83b9-a91963a191a7
-item2.URL;PREF=1:https://www.witopia.net/support/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:https://www.witopia.net/support/
+item1.X-ABLabel:_$!<HomePage>!$_
 URL;TYPE=HOME:https://www.witopia.net/support/vpn-dns-guide/
 X-BUSYMAC-LOCAL-LINK-ID:5C56F138-B88F-436C-98CA-A9516E7C1CF0
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
@@ -26147,8 +26152,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:PlugNPay
 N:;Support;;;
 ORG:PlugNPay
-item1.EMAIL;PREF=1:Donna Mongelli <donna@plugnpay.com>
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:Donna Mongelli <donna@plugnpay.com>
+item2.X-ABLabel:email
 item3.EMAIL:Sales@plugnpay.com
 item3.X-ABLabel:email
 item4.EMAIL:Support@plugnpay.com
@@ -26156,8 +26161,8 @@ item4.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:631-761-0159
 TEL;TYPE=WORK;TYPE=FAX:631-360-1213
 TEL;TYPE=WORK:1-800-945-2538
-item2.ADR;TYPE=WORK;PREF=1:;;1363-26 Veterans Highway;Hauppauge;NY;11788;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;1363-26 Veterans Highway;Hauppauge;NY;11788;
+item1.X-ABADR:us
 KIND:org
 NOTE:\n\nFrom ARB: merchant # is: 431235815  Adams-Blake Publishing\n\nFor 
  NewMedia Payment Screen:\n\nhttps://pay1.plugnpay.com/bpl/adamsblake\,payt
@@ -26600,13 +26605,13 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Lombardy Hotel
 N:Castellanos;Al;;;
 ORG:Lombardy Hotel
-item1.EMAIL;PREF=1:acastellanos@lombardyhotel.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:acastellanos@lombardyhotel.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:212-753-8600
 TEL;TYPE=WORK;TYPE=FAX:212-754-5683
 TEL;TYPE=OTHER:1-800-223-5254
-item3.ADR;TYPE=WORK;PREF=1:;;111 East 56th Street;New York;NY;10022;
-item3.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;111 East 56th Street;New York;NY;10022;
+item1.X-ABADR:us
 KIND:org
 NOTE:Between Park and Lex\n\n\nAlberto Castellanos\nFront Office Manager\nT
  he Lombardy Hotel\nNew York\, N.Y. 10022\n1-800-223-5254\n1-212-753-8600\n
@@ -26614,8 +26619,8 @@ NOTE:Between Park and Lex\n\n\nAlberto Castellanos\nFront Office Manager\nT
  5277\n\n\n\n
 REV:20240204T172945Z
 UID:a0420cbc-cdd9-4ba3-a536-5aad912bd43e
-item2.URL;PREF=1:www.lombardyhotel.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item3.URL;PREF=1:www.lombardyhotel.com
+item3.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:C3E6E482-637D-450D-93D2-F982D66F348C
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -27909,9 +27914,9 @@ TEL;TYPE=CELL;PREF=1:916-591-1676
 TEL;TYPE=WORK;TYPE=FAX:(916) 437-1594
 TEL;TYPE=WORK:(916) 437-1590
 TEL;TYPE=HOME:916-484-0283
-item1.ADR;TYPE=WORK;PREF=1:;;3550 Watt Ave.\, Suite 140;Sacramento;CA;95821
+item2.ADR;TYPE=WORK;PREF=1:;;3550 Watt Ave.\, Suite 140;Sacramento;CA;95821
  ;
-item1.X-ABADR:us
+item2.X-ABADR:us
 item3.ADR;TYPE=HOME:;;5236 Bellwood Way;Carmichael;CA;95608;
 item3.X-ABADR:us
 CATEGORIES:Insurance
@@ -27919,8 +27924,8 @@ NOTE:Now with Questar Capital\n\nMary - Exec. Assist\n\nHome:\nTitus D Garr
  ett\n5236 Bellwood Way\nCarmichael\, CA 95608\n(916) 484-0283\n\n
 REV:20240204T172945Z
 UID:62422EC0-B35B-44DD-80C6-7613ECA73C3F
-item2.URL;PREF=1:www.woodmenfinancialresources.com
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:www.woodmenfinancialresources.com
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:7C68DA79-843D-4634-842B-C16CF7E434E2
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -28079,8 +28084,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:David Spencer
 N:Spencer;David;;;
 ORG:SacAutos - Pageweavers
-item1.EMAIL;PREF=1:dave@sacautos.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:dave@sacautos.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:(916) 801-5868
 ADR;TYPE=WORK;PREF=1:;;2131 Promontory Point Lane;Gold River;CA;95670;
 CATEGORIES:NewMedia
@@ -28089,8 +28094,8 @@ NOTE:5-16-2014 contact\nWeb designer in Fair Oaks\n\nOct. 27\, 2014 called
  r. Split with partner. Has co-lo facility downtown. Does web work.\n\n
 REV:20240204T172946Z
 UID:78741309-68de-4a05-8d35-f79ce128a820
-item2.URL;PREF=1:http://www.sacautos.com/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://www.sacautos.com/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:1C138C31-C1A8-416D-BA48-3E97E2835C17
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -28392,8 +28397,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Aerial Printing - QSL Cards
 N:Webb;John;;;
 ORG:Aerial Printing - QSL Cards
-item2.EMAIL;PREF=1:Sales@QSLpostcards.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:Sales@QSLpostcards.com
+item1.X-ABLabel:email
 item3.EMAIL:webbs@swva.net
 item3.X-ABLabel:Email
 TEL;TYPE=CELL;PREF=1:(540) 505-0404
@@ -28404,8 +28409,8 @@ KIND:org
 NOTE:\nJohn & Leslie Webb (AK4AT & KJ4WJN)\n\n
 REV:20240204T172945Z
 UID:c432b15a-54fc-494e-8637-fd6c67dd7478
-item1.URL;PREF=1:http://QSLpostcards.com
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://QSLpostcards.com
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:0BB8A2ED-1472-4DAA-BB20-86C66499FC9B
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -28866,8 +28871,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Old Port Cove  LPT1253
 N:;;;;
 ORG:Old Port Cove  LPT1253
-item2.EMAIL;PREF=1:office@lptopc.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:office@lptopc.com
+item1.X-ABLabel:email
 EMAIL;TYPE=HOME:PPatterson@miamimanagement.com
 EMAIL;TYPE=WORK:kimk@lptopc.com
 item4.EMAIL:maintenance@opclpt.com
@@ -28935,8 +28940,8 @@ NOTE:• 10/14/19\, 1:28 PM - \n\nKaren Mazurek\nSenior Property Manager | Ca
  \, 308701\n===================================\n
 REV:20240204T172945Z
 UID:8eb1dec5-4ab2-423f-a60b-515260e7f870
-item1.URL;PREF=1:https://lptopc.com/
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:https://lptopc.com/
+item2.X-ABLabel:_$!<HomePage>!$_
 URL:http://answer123.com/lpt1253/
 X-BUSYMAC-LOCAL-LINK-ID:E0CFC9DB-3EBF-4573-82DA-B48AE35F8841
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
@@ -28979,12 +28984,12 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Broadley Plumbing
 N:Broadley;Ross;;;
 ORG:Broadley Plumbing
-item2.EMAIL;PREF=1:rjb6095@yahoo.com
-item2.X-ABLabel:email
+item1.EMAIL;PREF=1:rjb6095@yahoo.com
+item1.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:1 (916) 967-5216
 TEL;TYPE=CELL:9165391315
-item1.ADR;TYPE=WORK;PREF=1:;;4020 Main;Fair Oaks;CA;95628;
-item1.X-ABADR:us
+item2.ADR;TYPE=WORK;PREF=1:;;4020 Main;Fair Oaks;CA;95628;
+item2.X-ABADR:us
 KIND:org
 NOTE:• 3/2/22\, 3:33 PM - new garbage disposal\n\n• 12/28/20\, 3:24 PM - Ca
  lled for upstairs sink on right\n\n• 7/2/19\, 9:34 AM - called for valve .
@@ -29713,8 +29718,8 @@ FN:Jane W. Brown
 N:Brown;Jane;W.;;
 ORG:Trust & Estate Lawyer (Linda Ashley);Private Wealth Services
 TITLE:Shareholder
-item1.EMAIL;PREF=1:jbrown@gunster.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:jbrown@gunster.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:(561) 650-0585
 TEL;TYPE=WORK;TYPE=FAX:(561) 650-0655
 ADR;TYPE=HOME;PREF=1:;;212 Murray Road;West Palm Beach;FL;33405;
@@ -29727,8 +29732,8 @@ NOTE:Estate lawyer in Florida. Referred by Nancy Carter\n\n\n151 Royal Palm
  ry Number: (561) 655-1980
 REV:20240204T172946Z
 UID:1669a251-079a-47a4-b02c-0f8d04cd6995
-item2.URL;PREF=1:http://gunster.com/staff/attorneys/jane-w-brown/
-item2.X-ABLabel:_$!<HomePage>!$_
+item1.URL;PREF=1:http://gunster.com/staff/attorneys/jane-w-brown/
+item1.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:AACC99DD-1507-4521-87CF-BD1624A3038F
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -29841,8 +29846,8 @@ EMAIL;TYPE=OTHER:Dennis McCoy <ddmccoy@bizjournals.com>
 EMAIL;TYPE=OTHER:manderson@bizjournals.com
 TEL;TYPE=MAIN;PREF=1:916-447-7661
 TEL;TYPE=WORK;TYPE=FAX:916-444-7779
-item2.ADR;TYPE=WORK;PREF=1:;;1400 X Street;Sacramento;CA;95818;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;1400 X Street;Sacramento;CA;95818;
+item1.X-ABADR:us
 KIND:org
 NOTE:Delania: Circulation\n \n\nKathy Robertson\nSenior reporter\nSacrament
  o Business Journal\n916-558-7869\n\n\n\n\nhttp://sacramento.bizjournals.co
@@ -29850,8 +29855,8 @@ NOTE:Delania: Circulation\n \n\nKathy Robertson\nSenior reporter\nSacrament
  Anderson\n\n\nacct: 010854388\n\nac99@anc\nt7+77
 REV:20240204T172946Z
 UID:396F607F-0D6C-40E6-A10F-78781ED32664
-item1.URL;PREF=1:http://www.bizjournals.com/sacramento/about-us#r1
-item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL;PREF=1:http://www.bizjournals.com/sacramento/about-us#r1
+item2.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:13BAF8CB-79E7-41E4-A5DC-F50CE0ACA5A7
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -29918,8 +29923,8 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Pinney Insurance
 N:;Ramona;;;
 ORG:Pinney Insurance
-item1.EMAIL;PREF=1:phollenbach@pinneyinsurance.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:phollenbach@pinneyinsurance.com
+item2.X-ABLabel:email
 item3.EMAIL:ksewell@pinneyinsurance.com
 item3.X-ABLabel:email
 item4.EMAIL:blindboe@pinneyinsurance.com
@@ -29932,8 +29937,8 @@ item6.X-ABLabel:email
 TEL;TYPE=WORK;TYPE=FAX;PREF=1:916.773.4484
 TEL;TYPE=WORK:916-773-2800
 TEL;TYPE=OTHER:800.823.4852
-item2.ADR;TYPE=WORK;PREF=1:;;2266 Lava Ridge Ct #200;Roseville;CA;95661;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;2266 Lava Ridge Ct #200;Roseville;CA;95661;
+item1.X-ABADR:us
 CATEGORIES:Insurance
 KIND:org
 NOTE:Philip Hollenbach\nRamona Perry\n\n\nezlifesales.com\n\nLife/LTC/DI/An
@@ -30279,12 +30284,12 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Andrew Hotel of Great Neck
 N:;;;;
 ORG:Andrew Hotel of Great Neck
-item1.EMAIL;PREF=1:guestservices@andrewhotel.com
-item1.X-ABLabel:email
+item2.EMAIL;PREF=1:guestservices@andrewhotel.com
+item2.X-ABLabel:email
 TEL;TYPE=WORK;PREF=1:516.482.2900
 TEL;TYPE=WORK;TYPE=FAX:516.482.4643
-item2.ADR;TYPE=WORK;PREF=1:;;75 North Station Plaza;Great Neck;NY;11021;
-item2.X-ABADR:us
+item1.ADR;TYPE=WORK;PREF=1:;;75 North Station Plaza;Great Neck;NY;11021;
+item1.X-ABADR:us
 KIND:org
 NOTE:Catherine Muro\, 516-773-2493\, cmuro@andrewhotel.com
 REV:20240204T172943Z
@@ -31305,17 +31310,17 @@ PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
 FN:Paul Antonelli
 N:Antonelli;Paul;;;
 ORG:A Luxury Limo of Palm Beach Inc
-item2.EMAIL;PREF=1:paul@luxurylimo.net
-item2.X-ABLabel:email
-item3.TEL;PREF=1:561.601.3897
-item3.X-ABLabel:APPLE WATCH
+item1.EMAIL;PREF=1:paul@luxurylimo.net
+item1.X-ABLabel:email
+item2.TEL;PREF=1:561.601.3897
+item2.X-ABLabel:APPLE WATCH
 TEL;TYPE=CELL:561.622.5566
 NOTE:Limo in N. Palm Beach\n\n$50 + tip PBI\n\n5-8-2013: email reservations
  .\n\n666668888\n
 REV:20240204T172945Z
 UID:3320f433-398d-4c7e-84f4-6822a6042624
-item1.URL;PREF=1:http://luxurylimo.net/
-item1.X-ABLabel:_$!<HomePage>!$_
+item3.URL;PREF=1:http://luxurylimo.net/
+item3.X-ABLabel:_$!<HomePage>!$_
 X-BUSYMAC-LOCAL-LINK-ID:1221DD90-A6DD-49C2-8732-571C34499452
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
@@ -31947,4 +31952,24 @@ X-BUSYMAC-LOCAL-LINK-ID:8C65AC7E-65F9-4E37-B0C8-AC688660863D
 X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
 X-BUSYMAC-MODIFIED-BY:Alan Canton
 X-CREATED:20240222T215018Z
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+PRODID:-//BusyApps//BusyContacts 2024.1.2//EN
+FN:Lazboy
+N:;;;;
+ORG:Lazboy
+ADR;PREF=1:;;12190 Tributary Lane;Rancho Cordoba;CA;95670;
+KIND:org
+NOTE:Lazyboy\nProduct manual: https://content.la-z-boy.com/productassets/pr
+ oductmanuals/DOC014818.pdf\n\nAnnya Grif\nDianne Fleischer\n\nBought chair
+  around late December 2023\n\nSaid I didn't pay for 'haul away'. 
+REV:20240228T232004Z
+UID:F6C575C2-80FA-48DA-A4B0-DA4CD1FF0A93
+URL;PREF=1:https://www.la-z-boy.com/content/CustomerCare/productmanuals
+URL:https://content.la-z-boy.com/productassets/productmanuals/DOC014818.pdf
+X-BUSYMAC-LOCAL-LINK-ID:25C5E7DC-0A4C-47B1-8049-D3F7CF251755
+X-BUSYMAC-LOCAL-SHOW-DATES:TRUE
+X-BUSYMAC-MODIFIED-BY:Alan Canton
+X-CREATED:20240228T231143Z
 END:VCARD

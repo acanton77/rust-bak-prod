@@ -51,6 +51,12 @@ fn main() {
 
     // Put one-time run here
     // =========
+let mut commandx = Command::new("bash");
+commandx.arg("/usr/home/ancnet1/rs_bak_prod/bak_files/bash/test1.sh");
+commandx.output().expect("Failed to execute command");
+println!("--done--");
+return;
+
 
     //==========
 
@@ -63,6 +69,10 @@ fn main() {
     vec_switch_file.push("linode".to_string());
     vec_switch_file.push("ac_addressbook".to_string());
     vec_switch_file.push("chk_espo_ver".to_string());
+    vec_switch_file.push("jane".to_string());
+
+    vec_switch_file.push("baikal".to_string());
+
     //vec_switch_file.push("1test".to_string());
 
     //*** SORT THE VECTOR
@@ -330,8 +340,12 @@ fn main() {
                 ])
                 .output()
                 .expect("rsync command failed to start");
+        } // address book
 
-            // Jane address book
+
+            // ======Jane address book
+
+        if line == "jane" {
 
             let _cmd = Command::new("rsync")
                 .args([
@@ -347,9 +361,12 @@ fn main() {
 
             message_data = "Jane address backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
+        } // jane
 
-            // Baikal address book:  /usr/home/ancnet1/public_html/anc123.com/baikal94a
+        // ======Baikal address book:  
+        //usr/home/ancnet1/public_html/anc123.com/baikal94a
 
+        if line == "baikal" {
             zip_in_file = "/usr/home/ancnet1/public_html/anc123.com/baikal94a".to_string();
             zip_out_file_name = "baikal94a-rs-".to_string();
             message_data = "baikal backup is DONE".to_string();
