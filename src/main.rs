@@ -51,12 +51,27 @@ fn main() {
 
     // Put one-time run here
     // =========
-let mut commandx = Command::new("bash");
-commandx.arg("/usr/home/ancnet1/rs_bak_prod/bak_files/bash/test1.sh");
-commandx.output().expect("Failed to execute command");
-println!("--done--");
-return;
+    /*
+        let tex = "this is some special text";
 
+    let mut commandx = Command::new("bash");
+
+    commandx.args([
+                        "/usr/home/ancnet1/rs_bak_prod/bak_files/bash/test1.sh",
+                        "var to script",
+                        "var-2222 to script",
+                        tex,
+                        //LINODE_DIR
+                    ]);
+
+
+
+
+    commandx.output().expect("Failed to execute command");
+    println!("--done--");
+    return;
+
+     */
 
     //==========
 
@@ -104,14 +119,27 @@ return;
 
         // Do a crontab dump to file -- see global constant
         if line == "linode" {
-            let file_lin = File::create(LINODE_DIR).unwrap();
-            let stdio = Stdio::from(file_lin);
+            /*
+                       let file_lin = File::create(LINODE_DIR).unwrap();
+                       let stdio = Stdio::from(file_lin);
 
-            let _cmd3 = Command::new("/usr/bin/crontab")
-                .stdout(stdio)
-                .args(["-l"])
-                .output()
-                .expect("crontab command failed to start");
+                       let _cmd3 = Command::new("/usr/bin/crontab")
+                           .stdout(stdio)
+                           .args(["-l"])
+                           .output()
+                           .expect("crontab command failed to start");
+            */
+
+            // use a script since we need to save output... easier in script
+
+            let mut commandx = Command::new("bash");
+            commandx.args([
+                "/usr/home/ancnet1/rs_bak_prod/bak_files/bash/linode-cron.sh",
+                LINODE_DIR,
+            ]);
+            commandx.output().expect("Failed to execute command");
+
+            // zip the Linode docs dir
 
             zip_in_file = "/usr/home/ancnet1/rs_bak_prod/bak_files/Linode-Docs".to_string();
             zip_out_file_name = "linode-docs-rs-".to_string();
@@ -342,11 +370,9 @@ return;
                 .expect("rsync command failed to start");
         } // address book
 
-
-            // ======Jane address book
+        // ======Jane address book
 
         if line == "jane" {
-
             let _cmd = Command::new("rsync")
                 .args([
                     "-a",
@@ -363,7 +389,7 @@ return;
             write_msg(&mut msg_vec, message_data);
         } // jane
 
-        // ======Baikal address book:  
+        // ======Baikal address book:
         //usr/home/ancnet1/public_html/anc123.com/baikal94a
 
         if line == "baikal" {

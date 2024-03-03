@@ -1,4 +1,4 @@
-# Edit this file to introduce tasks to be run by cron.xxxxx
+# Edit this file to introduce tasks to be run by cron.
 # 
 # Each task to run has to be defined through a single line
 # indicating with different fields when the task will be run
@@ -66,7 +66,7 @@ MAILTO=ac99@answer123.com
 #07  09   * * *   echo "TEST Cron jobs are done-TEST....  $(date) ."
 #06  14 *  * *  /usr/home/ancnet1/py-backup/dec-31-del.sh >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
-# TEST RUST PROD
+# TEST RUST PROD  01 03
 01  03  * * * /usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt
 
 
