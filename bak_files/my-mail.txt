@@ -2,6 +2,5 @@ To: ANC <ac99@answer123.com>
 From: PY Send Msg Backup <ac99@anc123.com>
 Subject: test sendmail
 THIS IS THE MESSAGE LINE 1
-this is the msg line 2
-last last last line
+this is the msg line 3
 
