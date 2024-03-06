@@ -1,4 +1,4 @@
-// RS_BAK_PROD -- RUST-bbbbbb
+// RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
