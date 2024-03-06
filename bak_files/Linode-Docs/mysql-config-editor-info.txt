@@ -1,0 +1,41 @@
+#FOR MYSQL DUMP SEE HOW WE SET UP NO-PROMPT FILE IN MYSQL --login-path
+
+# see /usr/local/bin/mysql_config_editor set --login-path=artfromamy --host=vdb2b.pair.com --user=ancnet1_3 --port=3306 --password
+
+Enter the command above with the parameters for the database. You will be prompted for the password. 
+
+When done try 
+
+
+ancnet1@www1:~/public_html$ /usr/local/bin/mysql_config_editor print --all
+
+[espocrm]
+user = ancnet1
+password = *****
+host = vdb2a.pair.com
+port = 3306
+[espocrmbak]
+user = ancnet1_5
+password = *****
+host = db176.pair.com
+port = 3306
+[piwigo]
+user = ancnet1_4
+password = *****
+host = vdb2b.pair.com
+port = 3306
+[artfromamy]
+user = ancnet1_3
+password = *****
+host = vdb2b.pair.com
+port = 3306
+[shop]
+user = ancnet1_7
+password = *****
+host = db176.pair.com
+port = 3306
+# https://www.pair.com/support/kb/how-to-set-up-automated-database-backups-on-ubuntu/
+# https://www.prisma.io/dataguide/mysql/tools/mysql-config-editor
+# https://virtual-dba.com/blog/how-to-use-mysql-config-editor/
+
+Get the particular database login from wp-config or BusyContact. 

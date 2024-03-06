@@ -1,0 +1,66 @@
+Update:
+
+All you need in the ssh config file is
+
+Host *   
+  IdentityFile /home/anc1/.ssh/id_ed25519
+ or 
+IdentityFile ~/.ssh/id_ed25519
+
+For root I just use the -i/home/anc1/.ssh/id_ed25519
+
+====================IGNORE THE REST=====================================
+ 
+If you run a shell script as root and you try to send a file or 'touch' a file to another server, root does not know any of your keys… not the ed25519 or the RSA, etc. It is 'keyless" and your job will fail.
+
+The reason is because root does not usually have its own keys or a config file in its /root/.ssh/ directory.
+
+You can make put keys in there or make a config file if you want but there is a better way.
+
+You can put the host connection info into a (global) file called /etc/ssh/ssh_config. The ssh program reads its keys from the following files in this order (from [https://man7.org/linux/man-pages/man5/ssh_config.5.html]):
+
+ssh(1) obtains configuration data from the following sources in the
+following order:
+1. command-line options
+2. user's configuration file (~/.ssh/config)
+3. system-wide configuration file (/etc/ssh/ssh_config)
+
+Since root does not see a command-line and does not have a /.ssh/config, it will get what it needs from what you put in the /etc/ssh/ssh_config file.
+
+(I hate having to run a job as root, but some functions such as truncating log files which are owned by root require running as root. I don't know if the logs have to be owned by root, but setting up a virtual host using Linode's instructions, that's what you get!)
+
+Hope this helps someone.(I wish I had known all of this before I upgraded to the ed25519 key)
+
+
+
+As I understand it there is no way to change the default of the "ssh" command using the RSA key. So you have to use the "i" option:
+
+ssh -i/home/anc1/.ssh/id_ed25519 abc@xyz.net touch zzz-test-6.txt
+
+If you don't want to use the "-i" option for a path to the key, you need to make and use the /.ssh/config file which is pretty easy.
+
+I had a ton of scripts that had in them:
+
+ssh abc@xyz.com [some command]
+
+I didn't want to go change each one so I used the wildcard * making the "Host" in config as: *xyz.com:
+
+Host *xyz.com
+HostName xyz.com
+user abc
+IdentityFile /home/yyy/.ssh/id_ed25519
+IdentitiesOnly yes
+
+( You cannot have Host abc@xyz.com. I think the @ sign screws things up… thus the use of the wildcard.)
+
+Doing this saved me an hour of work, maybe two… searching all my scripts for the rsync, ssh and scp commands used to do functions on remote servers I own by putting in the the '-i' option … or changing them all to a "host" name… like
+
+#***********************************************************************
+# THIS SCRIPT IS RUN BY ROOT which does not have a /.ssh/config file. 
+# The '-i /home/acanton/.ssh/id_ed25519'
+# line pointing to ed25510 key is put in /etc/ssh/ssh_config. 
+
+#The ssh program first reads the local .ssh/config
+#file and then the global /etc/ssh/ssh_config file.
+#***********************************************************************
+ 
