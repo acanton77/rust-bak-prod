@@ -186,6 +186,22 @@ fn main() {
 
 
 
+        //=== ANSWER123
+        //=== ANSWER123
+        //=== ANSWER123
+
+        if line == "answer123" {
+            zip_in_file = "/usr/home/ancnet1/public_html/answer123.com".to_string();
+            zip_out_file_name = "answer123.com-rs-".to_string();
+            message_data = "answer123 backup is DONE".to_string();
+            rsync_dir = "web-backup-answer123".to_string();
+            bak_bootstrap(zip_in_file, zip_out_file_name, &rsync_dir);
+            write_msg(&mut msg_vec, message_data);
+        } // end angelpup
+          //@
+
+
+
         //=== ARTFROMAMY
         //=== ARTFROMAMY
         //=== ARTFROMAMY
@@ -1032,7 +1048,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
 
     msg_final.push_str("\n");
 
-    msg_final.push_str("Errors:\n");
+    //msg_final.push_str("Errors:\n");
     msg_final.push_str("\n");
 
     //No errors found.
@@ -1051,9 +1067,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("SSH into Pair VPS\n");
     msg_final.push_str("cd /usr/home/ancnet1/rs_bak_prod/bak_files/bash\n");
     msg_final.push_str("./espo-prod-new-ver.sh \n\n");
-    
-    
-    
+
     msg_final.push_str("# To backup any site or file:\n");
     msg_final.push_str("Go to: https://anc123.com/switch3/index.php\n");
     msg_final.push_str("Enter the job/backups you want to run\n");
@@ -1065,8 +1079,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
 
 
     //*** Email code
-    
-    
+
     let email = Message::builder()
         .from("Pair-Rust-VPS <ac99@answer123.com>".parse().unwrap())
         .to("ANC <ac99@answer123.com>".parse().unwrap())

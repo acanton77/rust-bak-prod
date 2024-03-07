@@ -27,8 +27,8 @@
 MAILTO=ac99@answer123.com
 
 # for MAIL AFTER PYTHON JOB (BELOW) - 2:30 AM Pacific, 3:30 AM MTN
-30  03  * * *   echo "Python  jobs are done....  $(date) ."
-
+#30  03  * * *   echo "Python  jobs are done....  $(date) ."
+30  03  * * *   echo "Rust  jobs are done....  $(date) ."
 
 # for ESPOCRM
 #* * * * * cd /usr/home/ancnet1/public_html/anc123.com/espocrm2; /usr/www/cgi-bin/php81.cgi -f cron.php > /dev/null 2>&1
@@ -71,10 +71,10 @@ MAILTO=ac99@answer123.com
 
 
 # THIS IS THE NEW PYTHON BACKUP SYSTEM. ONE JOB DOES ALL. RUN AT 2 AM PACIFIC, 3 AM MTN
-00  03  * * *  /usr/home/ancnet1/py-backup/py_master.py >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
+#00  03  * * *  /usr/home/ancnet1/py-backup/py_master.py >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
 #Delete December Espo files
-55 23 31 12 *  /usr/home/ancnet1/py-backup/dec-31-del.sh >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
+#55 23 31 12 *  /usr/home/ancnet1/py-backup/dec-31-del.sh >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
 # DAILY BACKUP SCRIPTS
 
