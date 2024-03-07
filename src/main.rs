@@ -3,7 +3,7 @@
 // RS_BAK_PROD -- RUST
 
 // format code in BBEdit - find: //at-sign
-//replace: //ad-sign\n
+//replace: //at-sign\n
 
 #![allow(warnings)]
 
@@ -88,12 +88,14 @@ fn main() {
     //@
 
 
+
     //***********************LOOP *********************************
     //***********************LOOP *********************************
     //***********************LOOP *********************************
 
     //*** On all files and directories that we upload we append a timestamp.
     //@
+
 
 
     //=== 1TEST
@@ -827,21 +829,22 @@ fn bak_wordpress(
     log_path: String,
     rsync_dir: &String,
 ) {
+    //*** set up the timestamp
+
     let timestamp_new = get_timestamp().to_string();
     let current_local22: DateTime<Local> = Local::now();
     let custom_format22 = current_local22.format("%b %d %H:%M:%S");
 
-    // mysql dump
+    //*** set up the file name with timestamp and sql
 
     let mut dump_out_file: String = format!("{}{}", HOME_FILE_DIR.to_string(), dump_out_file_name);
-
     dump_out_file.push_str(&timestamp_new);
     dump_out_file.push_str(".sql");
 
     let mut dump_out_file2 = "--result-file=".to_string();
     dump_out_file2.push_str(&dump_out_file);
 
-    // zip the sql file
+    //*** dump database to the sql file -
 
     let _cmd = Command::new("/usr/local/bin/mysqldump")
         .args([
@@ -853,7 +856,7 @@ fn bak_wordpress(
         .output()
         .expect("mysql command failed to start");
 
-    //  zip up the database file
+    //  zip up the database file - zip file comes first, then the input file
 
     let mut db_zip: String = dump_out_file.to_string();
     let mut sql_in: String = dump_out_file.to_string();
@@ -865,7 +868,7 @@ fn bak_wordpress(
         .output()
         .expect("zip command failed to start");
 
-    //# Use SSH to remove previous  zip files on rsync datacenter
+    //*** Use SSH to remove previous  zip files on rsync datacenter
 
     let del_rsync_file: String = format!(
         "{}{}{}{}",
@@ -884,6 +887,7 @@ fn bak_wordpress(
         .output()
         .expect("ssh command failed to start");
 
+    //*** for debugging if needed
     //println!(
     // "stderr from  function: {}",
     //  String::from_utf8_lossy(&_cmd.stderr)
@@ -894,6 +898,8 @@ fn bak_wordpress(
     //  println!("{:?}", _cmd);
 
     // rsync the zip db zip file
+
+    //*** upload the sql zip file to datacenter
 
     let rsync_out = RSYNC_ADDRESS.to_string() + &rsync_dir.to_string();
 
@@ -907,6 +913,9 @@ fn bak_wordpress(
     fs::remove_file(db_zip);
     fs::remove_file(sql_in);
 } // end wordpress
+  //@
+
+
 
 //=== FUNCTION: CURRENT DATE ================
 //=== FUNCTION: CURRENT DATE ================
@@ -916,9 +925,15 @@ fn get_current_date() -> String {
     let msg_date1 = current_local.format("%Y-%m-%d %H:%M:%S:%3f %Z");
     msg_date1.to_string()
 } // end current date
+  //@
+
+
 
 //=== FUNCTION: TIME STAMP =======================
 //=== FUNCTION: TIME STAMP =======================
+//@
+
+
 
 fn get_timestamp() -> String {
     let milliseconds_timestamp: u128 = std::time::SystemTime::now()
@@ -931,17 +946,30 @@ fn get_timestamp() -> String {
 
     timestamp_string // return
 } // end time stamp
+  //@
+
+
 
 //=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
 //=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
+
+//*** This reads the switch file into a vector used to find out what sties
+//    to update via the big loop
 
 fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
     BufReader::new(File::open(filename)?).lines().collect()
 } // end create vec
+  //@
+
+
 
 // FUNCTION: WRITE MESSAGE TO MSG_VEC
 // FUNCTION: WRITE MESSAGE TO MSG_VEC
 // FUNCTION: WRITE MESSAGE TO MSG_VEC
+
+//*** Send the message string to vector that holds these for later reporting/email.
+//    The vector is a tupple formatted as timestamp, regular date, and message.
+//    Timestamp is used to sort these later on. It is removed.
 
 fn write_msg(msg_vec: &mut Vec<(String, String, String)>, message_data: String) {
     thread::sleep(Duration::from_millis(100));
@@ -953,6 +981,9 @@ fn write_msg(msg_vec: &mut Vec<(String, String, String)>, message_data: String) 
 // FUNCTION: SEND MAIL
 // FUNCTION: SEND MAIL
 // FUNCTION: SEND MAIL
+
+//*** Read the message vector and formats a string with all the content lines
+//    for the email to go out.
 
 fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<(String)>) {
     let mut msg_final = String::new();
@@ -974,6 +1005,8 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
 
     msg_final.push_str("\n");
 
+    //*** this is a loop to read the switch vector file to see what sites were backed  up
+
     for line in vec_switch_file {
         let newvalue2 = format!("{}\n", line);
         msg_final.push_str(&newvalue2);
@@ -987,15 +1020,15 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     let mut newvalue: String;
     let mut from_orig: String;
 
+    //*** We read the messages for each site done and add line numbers. We drop the
+    //    datestamp as can be seen in the format code.
+
     for line in msg_vec {
         num = num + 1;
         let mut num2: &str = &num.to_string();
         let newvalue = format!("   {}--  {}  {}\n", num2, line.1, line.2);
-
-        //println!("line is: {}",newvalue);
-
         msg_final.push_str(&newvalue);
-    } // end for line read loop
+    } // end for msg_vec line read loop
 
     msg_final.push_str("\n");
 
@@ -1025,22 +1058,13 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("The backup will be uploaded to rsync.net that night.\n\n");
 
     msg_final.push_str("-- End --\n");
+    //@
 
-    //msg_final.push_str("-------- END ----------\n");
 
-    // println!("========== START MSG FILE ==========");
 
-    // println!("{}", msg_final);
-    // println!("========== END MSG FILE ==========");
-
-    // Send the mail
-
-    //println!("msg_final is: {}",msg_final);
-
-    //*************************************************************
-    //*****************EMAIL CODE**********************************
-    //*************************************************************
-
+    //*** Email code
+    
+    
     let email = Message::builder()
         .from("Pair-Rust-VPS <ac99@answer123.com>".parse().unwrap())
         .to("ANC <ac99@answer123.com>".parse().unwrap())
@@ -1061,11 +1085,8 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
         .credentials(creds)
         .build();
 
-    // Send the email
+    // Send the email and write a message which will be in a file
 
-    //  mailer.send(&email).expect("mail should have been sent");
-
-    //   let mut a = 1;
     match mailer.send(&email) {
         Ok(_) => println!("Email sent successfully!"),
         // Ok(_) => a = 2,
