@@ -71,14 +71,13 @@ fn main() {
     vec_switch_file.push("jane".to_string());
     vec_switch_file.push("baikal".to_string());
 
-
     //*** SORT THE VECTOR - items are done in alpha order and so 1test will sort
     //    to the top if included in the switch file.
 
     vec_switch_file.sort();
 
     //*** DE-DUP THE VECTOR - We could get dupe espo or other jobs in the switch
-    //    file so we need to eliminate those. 
+    //    file so we need to eliminate those.
 
     vec_switch_file.dedup();
 
@@ -86,19 +85,23 @@ fn main() {
 
     message_data = "vec_switch and appends DONE".to_string();
     write_msg(&mut msg_vec, message_data);
-//@
+    //@
+
+
     //***********************LOOP *********************************
     //***********************LOOP *********************************
     //***********************LOOP *********************************
-    
-    //*** On all files and directories that we upload we append a timestamp. 
-//@
+
+    //*** On all files and directories that we upload we append a timestamp.
+    //@
+
+
     //=== 1TEST
     //=== 1TEST
     //=== 1TEST
 
     // Just send email if this is found in switch file
-    
+
     for line in &vec_switch_file {
         if line == "1test" {
             message_data = "test1 - mail only".to_string();
@@ -459,7 +462,7 @@ fn main() {
 
         // Do a crontab dump to file -- see global constant
         //*** Because we have to capture the output using a bash script is less complex
-        
+
         if line == "linode" {
             /*
                        let file_lin = File::create(LINODE_DIR).unwrap();
@@ -471,7 +474,6 @@ fn main() {
                            .output()
                            .expect("crontab command failed to start");
             */
-
 
             let mut commandx = Command::new("bash");
             commandx.args([
@@ -497,11 +499,11 @@ fn main() {
         //=== CHECK ESPO
         //=== CHECK ESPO
 
-        //*** Special logic to scrape web page to find latest version and compare 
+        //*** Special logic to scrape web page to find latest version and compare
         //    to what we had. We keep previous version in a .txt file
-        
+
         // Use curl to get the web page (probably should have used bash)
-        
+
         if line == "chk_espo_ver" {
             let _mycurl = Command::new("curl")
                 .args([
@@ -513,7 +515,7 @@ fn main() {
                 .expect("curl command failed to start");
 
             // Use grep to find the string
-            
+
             let cmdx = Command::new("/usr/bin/grep")
                 .args([
                     "-i",
@@ -524,7 +526,7 @@ fn main() {
                 .expect("grep command failed to start");
 
             // Left in println! for debugging if needed.
-            
+
             //println!("status: {}", cmdx.status);
             // println!("stdout: {}", String::from_utf8_lossy(&cmdx.stdout));
             // println!("err: {}", String::from_utf8_lossy(&cmdx.stderr));
@@ -538,7 +540,7 @@ fn main() {
             // prints out:  <h2>Latest Release EspoCRM 8.1.4 (February 07, 2024)</h2>
 
             // Get the previous version from the saved .txt file
-            
+
             let mut prev_ver1 = String::from("");
             prev_ver1 =
                 fs::read_to_string("/usr/home/ancnet1/rs_bak_prod/bak_files/prev-espo-ver.txt")
@@ -561,7 +563,6 @@ fn main() {
 
             //*** if new version, write the message. We don't do update. Done in
             //    another script the actually updates the Espo system.
-            
             } else {
                 message_data = "new espo version FOUND. -- Do the manual update. ".to_string();
                 write_msg(&mut msg_vec, message_data);
@@ -579,16 +580,15 @@ fn main() {
         //=== ADDRESS BOOKS==========
 
         if line == "ac_addressbook" {
-           
             // *** We upload the previously made vcf file. We get the directory with the
-            //     BusyContact files and we only keep the latest 4 of them. 
+            //     BusyContact files and we only keep the latest 4 of them.
 
             let mut my_vec: Vec<String> = Vec::new();
 
-            //*** The BusyContact address book has dir names with spaces. 
-            //    We open the dir with them and read them into some container 
+            //*** The BusyContact address book has dir names with spaces.
+            //    We open the dir with them and read them into some container
             //    called 'files'. We then replace those with spaces with - (dash)
-            
+
             for file in fs::read_dir(
                 "/usr/home/ancnet1/rs_bak_prod/bak_files/address-book-backup-dir-rs/BusyContacts",
             )
@@ -622,7 +622,7 @@ fn main() {
 
             // We are going to find out how many we have in the vec and then only keep
             // the top (newest) for files by deleting all the others.
-            
+
             let count = my_vec.len();
 
             for i in 4..count {
@@ -631,7 +631,7 @@ fn main() {
             }
 
             //*** write our mail message, touch a file to show date done and send up to datacenter
-            
+
             message_data = "address book backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
 
@@ -644,7 +644,7 @@ fn main() {
                 .expect("touch command failed to start");
 
             //*** Send the whole directory up to the datacenter
-            
+
             let _cmd = Command::new("rsync")
                 .args([
                     "-a",
@@ -717,20 +717,18 @@ fn main() {
         //=== NEXT SITE==========
 
         //if line == "put next site here" {
-        
+
         //} // end next site
-        
     } // end for LOOP
 
     //*********************** END LOOP *********************************
     //*********************** END LOOP *********************************
 
-
-//*** All done with processing so we call the send-mail function
+    //*** All done with processing so we call the send-mail function
 
     send_mail(&mut msg_vec, &vec_switch_file);
 
-//*** truncate switch file as we clean it out for next time.
+    //*** truncate switch file as we clean it out for next time.
 
     let file = OpenOptions::new()
         .write(true)
@@ -751,14 +749,14 @@ fn main() {
 // ****************** FUNCTIONS *************************************************
 //@
 
+
+
 //=== FUNCTION: BOOTSTRAP ================================================
 //=== FUNCTION: BOOTSTRAP ================================================
 
 fn bak_bootstrap(mut zip_in_file: String, mut zip_out_file_name: String, mut rsync_dir: &String) {
-  
-  
-  //** create the output file name that is zipped. 
-    
+    //** create the output file name that is zipped.
+
     let mut zip_out_file: String = format!("{}{}", HOME_FILE_DIR.to_string(), zip_out_file_name);
     let timestamp_new = get_timestamp().to_string();
 
@@ -793,7 +791,7 @@ fn bak_bootstrap(mut zip_in_file: String, mut zip_out_file_name: String, mut rsy
         .output()
         .expect("ssh command failed to start");
 
-// Left in for debugging if necessary
+    // Left in for debugging if necessary
     //println!(
     // "stderr from  function: {}",
     //  String::from_utf8_lossy(&_cmd.stderr)
@@ -816,7 +814,9 @@ fn bak_bootstrap(mut zip_in_file: String, mut zip_out_file_name: String, mut rsy
 
     fs::remove_file(zip_out_file);
 } //end bootstrap
-//@
+  //@
+
+
 
 //=== FUNCTION: WORDPRESS ===========================
 //=== FUNCTION: WORDPRESS ===========================
