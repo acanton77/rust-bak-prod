@@ -1,4 +1,4 @@
-// RS_BAK_PROD -- RUST chg: 3/6/2024
+// RS_BAK_PROD -- RUST chg: Wed Mar  6 20:34:44 PST 2024
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
@@ -1049,11 +1049,13 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
 
     msg_final.push_str("# To update ESPO to a new version:\n");
     msg_final.push_str("SSH into Pair VPS\n");
-    msg_final.push_str("cd /usr/home/ancnet1/py-backup (or \'py\')\n");
+    msg_final.push_str("cd /usr/home/ancnet1/rs_bak_prod/bak_files/bash\n");
     msg_final.push_str("./espo-prod-new-ver.sh \n\n");
-
+    
+    
+    
     msg_final.push_str("# To backup any site or file:\n");
-    msg_final.push_str("Go to: https://anc123.com/switch2/index.php\n");
+    msg_final.push_str("Go to: https://anc123.com/switch3/index.php\n");
     msg_final.push_str("Enter the job/backups you want to run\n");
     msg_final.push_str("The backup will be uploaded to rsync.net that night.\n\n");
 
