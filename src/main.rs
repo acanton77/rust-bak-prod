@@ -1,4 +1,4 @@
-// RS_BAK_PROD -- RUST chg: Thu Mar  7 11:20:13 PST 2024
+// RS_BAK_PROD -- RUST chg: Fri Mar  8 20:20:50 PST 2024
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
@@ -576,13 +576,13 @@ fn main() {
             // If no new version, all done, else
             if new_ver == prev_ver {
                 //println!("they are equal");
-                message_data = "new espo version NOT FOUND ".to_string();
+                message_data = "espo: new version NOT FOUND ".to_string();
                 write_msg(&mut msg_vec, message_data);
 
             //*** if new version, write the message. We don't do update. Done in
             //    another script the actually updates the Espo system.
             } else {
-                message_data = "new espo version FOUND. -- Do the manual update. ".to_string();
+                message_data = "espo: new version FOUND. -- Do the manual update. ".to_string();
                 write_msg(&mut msg_vec, message_data);
 
                 message_data = format!("version is: {}", new_ver.to_string());
@@ -732,6 +732,75 @@ fn main() {
 
 
 
+        //=== ANC123
+        //=== ANC123
+        //=== ANC123
+
+        if line == "anc123" {
+            let timestamp_anc123 = get_timestamp().to_string();
+            let mut anc123_zip_file = "/usr/home/ancnet1/rs_bak_prod/anc123.com-rs-".to_string();
+            anc123_zip_file.push_str(&timestamp_anc123);
+            anc123_zip_file.push_str(".zip");
+
+            let _cmd2 = Command::new("/usr/bin/zip")
+                .args([
+                    "-rq",
+                    &anc123_zip_file,
+                    "/usr/home/ancnet1/public_html/anc123.com",
+                    "-x",
+                    "/usr/home/ancnet1/public_html/anc123.com/baikal94a/*",
+                    "/usr/home/ancnet1/public_html/anc123.com/espocrm2/*",
+                    "/usr/home/ancnet1/public_html/anc123.com/piwigopix/*",
+                    "/usr/home/ancnet1/public_html/anc123.com/shop/*",
+                    "/usr/home/ancnet1/public_html/anc123.com/urls9296/*",
+                ])
+                .output()
+                .expect("zip command failed to start");
+
+            /*  NOT USED.
+                       let mut commandx = Command::new("bash");
+                       commandx.args([
+                           "/usr/home/ancnet1/rs_bak_prod/bak_files/bash/anc123.sh",
+                           &anc123_zip_file,
+                       ]);
+                       commandx.output().expect("Failed to execute espodb command");
+            */
+
+            //*** delete older files on datacenter via SSH rm command
+
+            let _cmd = Command::new("/usr/bin/ssh")
+                .args([
+                    SSH_RSYNC_ADDRESS.to_string(),
+                    " rm ".to_string(),
+                    "web-backup-anc123/*.zip".to_string(),
+                ])
+                .output()
+                .expect("ssh command failed to start");
+
+            // Send the zip up to the datacenter
+            let _cmd = Command::new("rsync")
+                .args([
+                    "-a",
+                    "-r",
+                    "-q",
+                    "--delete",
+                    &anc123_zip_file,
+                    "fm1364@fm1364.rsync.net:web-backup-anc123",
+                ])
+                .output()
+                .expect("rsync command failed to start");
+
+            message_data = "anc123 backup is DONE".to_string();
+            write_msg(&mut msg_vec, message_data);
+
+            //*** Delete the local .zip file
+
+            fs::remove_file(anc123_zip_file);
+        } // end anc123
+          //@
+
+
+
         //=== NEXT SITE==========
 
         //if line == "put next site here" {
@@ -741,7 +810,7 @@ fn main() {
 
     //*********************** END LOOP *********************************
     //*********************** END LOOP *********************************
-
+    //*********************** END LOOP *********************************
     //*** All done with processing so we call the send-mail function
 
     send_mail(&mut msg_vec, &vec_switch_file);
