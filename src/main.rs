@@ -1,6 +1,9 @@
-// RS_BAK_PROD -- RUST chg: Fri Mar  8 20:20:50 PST 2024
+// RS_BAK_PROD -- RUST 
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
+
+// Change Date: Tue Mar 12 08:14:26 PDT 2024
+// Change title of email
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
@@ -1152,9 +1155,9 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     let email = Message::builder()
         .from("Pair-Rust-VPS <ac99@answer123.com>".parse().unwrap())
         .to("ANC <ac99@answer123.com>".parse().unwrap())
-        .subject("Sending email with Rust - new")
-        .header(ContentType::TEXT_PLAIN)
-        .body(String::from(msg_final))
+        .subject("Backups --  Rust")
+        .header(ContentType::TEXT_PLAIN) // MUST HAVE THIS OR LINES TRUNCATE
+        .body(String::from(msg_final))  // GET FROM STRING ABOVE
         .unwrap();
 
     let creds = Credentials::new(
