@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date: Wed Mar 13 07:09:49 PDT 2024
-// Change case of espo
+// Change Date: Wed Mar 13 10:39:23 PDT 2024
+// Change case of jane
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
@@ -710,7 +710,7 @@ fn main() {
                 .output()
                 .expect("rsync command failed to start");
 
-            message_data = "Jane address backup is DONE".to_string();
+            message_data = "jane address backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
         } // jane
           //@
