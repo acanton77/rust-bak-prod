@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date: Tue Mar 12 08:14:26 PDT 2024
-// Change title of email
+// Change Date: Wed Mar 13 07:09:49 PDT 2024
+// Change case of espo
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
@@ -280,7 +280,7 @@ fn main() {
                 .output()
                 .expect("rsync command failed to start");
 
-            message_data = "Espo DB backup is DONE".to_string();
+            message_data = "espo: DB backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
         } // end espodb
           //@
