@@ -20,7 +20,7 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 
-# ALL TIMES ARE SET THREE HOURS IN ADVANCE - EASTERN  TIME SO THEY RUN EARLIER ON PACIFIC TIME
+# ALL TIMES ARE SET ONE HOUR IN ADVANCE - MTN - DENVER  TIME SO THEY RUN EARLIER ON PACIFIC TIME
 
 # m h  dom mon dow   command
 #CRON_TZ=America/Los_Angeles
@@ -28,6 +28,8 @@ MAILTO=ac99@answer123.com
 
 # for MAIL AFTER PYTHON JOB (BELOW) - 2:30 AM Pacific, 3:30 AM MTN
 #30  03  * * *   echo "Python  jobs are done....  $(date) ."
+
+# for MAIL AFTER RUST  JOB (BELOW) - 2:30 AM Pacific, 3:30 AM MTN
 30  03  * * *   echo "Rust  jobs are done....  $(date) ."
 
 # for ESPOCRM
@@ -66,17 +68,17 @@ MAILTO=ac99@answer123.com
 #07  09   * * *   echo "TEST Cron jobs are done-TEST....  $(date) ."
 #06  14 *  * *  /usr/home/ancnet1/py-backup/dec-31-del.sh >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
-# TEST RUST PROD  01 03
+# RUST PROD  01 03 - SET FOR MTN TIME... RUNS AT 2 AM PACIFIC TIME
 01  03  * * * /usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt
 
 
-# THIS IS THE NEW PYTHON BACKUP SYSTEM. ONE JOB DOES ALL. RUN AT 2 AM PACIFIC, 3 AM MTN
+# *** NOT RUN. USING RUST INSTEAD ** THIS IS THE NEW PYTHON BACKUP SYSTEM. ONE JOB DOES ALL. RUN AT 2 AM PACIFIC, 3 AM MTN
 #00  03  * * *  /usr/home/ancnet1/py-backup/py_master.py >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
 #Delete December Espo files
 #55 23 31 12 *  /usr/home/ancnet1/py-backup/dec-31-del.sh >> /usr/home/ancnet1/py-backup/bak-files/cron-error-py.txt 2>&1
 
-# DAILY BACKUP SCRIPTS
+# DAILY BACKUP SCRIPTS - ** NO LONGER USED - RUNNING RUST INSTEAD ***
 
 # Empty log and other files at 12:55 PST
 

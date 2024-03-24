@@ -8,6 +8,15 @@
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
 
+/* 
+Github
+
+git add -u or git add .
+git status
+git commit -m "something here commit"
+git push
+ */
+
 #![allow(warnings)]
 
 use chrono::{DateTime, Local, TimeZone, Utc};
