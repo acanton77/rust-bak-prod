@@ -1,14 +1,14 @@
-// RS_BAK_PROD -- RUST 
+// RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date: Wed Mar 13 10:39:23 PDT 2024
-// Change case of jane
+// Change Date:Sun Apr 14 15:22:21 MDT 2024
+// Add code for 2TEST - no daily but all others.
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
 
-/* 
+/*
 Github
 
 git add -u or git add .
@@ -93,7 +93,38 @@ fn main() {
 
     vec_switch_file.dedup();
 
-    //====write message for email ========================
+    //*** CHECK FOR 2TEST ENTRY IN VEC FILE - NO DAILY BUT ALL OTHERS - delete daily
+    //    entries in the vec-switch vector. Set switch and check it.
+
+    let mut hitx = 0;
+
+    for line in &vec_switch_file {
+        if line == "2test" {
+            hitx = 1;
+        }
+    }
+
+    //*** If 2test is entered switch was set above. Now delete all daily jobs from vector
+    //    by using the 'retain" method of the vector
+
+    if hitx == 1 {
+        vec_switch_file.retain(|x| {
+            *x != "linode"
+                && *x != "ac_addressbook"
+                && *x != "chk_espo_ver"
+                && *x != "jane"
+                && *x != "baikal"
+        });
+        //dbg!(&vec_switch_file);
+
+        message_data = "test2 - no daily".to_string();
+        write_msg(&mut msg_vec, message_data);
+    } // end 2test
+      //@
+
+
+
+    //====write vec created and daily message for email ========================
 
     message_data = "vec_switch and appends DONE".to_string();
     write_msg(&mut msg_vec, message_data);
@@ -1166,7 +1197,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
         .to("ANC <ac99@answer123.com>".parse().unwrap())
         .subject("Backups --  Rust")
         .header(ContentType::TEXT_PLAIN) // MUST HAVE THIS OR LINES TRUNCATE
-        .body(String::from(msg_final))  // GET FROM STRING ABOVE
+        .body(String::from(msg_final)) // GET FROM STRING ABOVE
         .unwrap();
 
     let creds = Credentials::new(

@@ -65,7 +65,7 @@ then
 
    # Get the current version from espo site and put in a 'from espo' file
    
-    curl -s https://www.espocrm.com/download/ |   grep  'Latest Release EspoCRM' > /usr/home/ancnet1/rs_bak_prod/bak-files/prev-espo-ver.txt
+    curl -s https://www.espocrm.com/download/ |   grep  'Latest Release EspoCRM' > /usr/home/ancnet1/rs_bak_prod/bak_files/prev-espo-ver.txt
 
   #sftp://ancnet1.pairserver.com//usr/home/ancnet1/rs_bak_prod/bak_files/bash/espo-prod-new-ver.sh 
 
