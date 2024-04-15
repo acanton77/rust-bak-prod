@@ -471,19 +471,28 @@ fn main() {
 
 
 
+        // ******** RE-WRITTEN BELOW FOR ENTIRE DIRECTORY EXCEPT TARGET
+        // ******** RE-WRITTEN BELOW FOR ENTIRE DIRECTORY EXCEPT TARGET
+        // ******** RE-WRITTEN BELOW FOR ENTIRE DIRECTORY EXCEPT TARGET
+        // ******** RE-WRITTEN BELOW FOR ENTIRE DIRECTORY EXCEPT TARGET
+
         //=== SCRIPTS-RS
         //=== SCRIPTS-RS
         //=== SCRIPTS-RS
 
-        if line == "scripts" {
-            zip_in_file = "/usr/home/ancnet1/rs_bak_prod/src".to_string();
-            zip_out_file_name = "rs_bak_prod_src-".to_string();
-            message_data = "rs_bak_prod_src backup is DONE".to_string();
-            rsync_dir = "web-backup-scripts".to_string();
-            bak_bootstrap(zip_in_file, zip_out_file_name, &rsync_dir);
-            write_msg(&mut msg_vec, message_data);
-        } // end scripts-rs
-          //@
+        /*
+               if line == "scripts" {
+               //    zip_in_file = "/usr/home/ancnet1/rs_bak_prod/src".to_string();
+                   zip_in_file = "/usr/home/ancnet1/rs_bak_prod/src".to_string();
+
+                   zip_out_file_name = "rs_bak_prod_src-".to_string();
+                   message_data = "rs_bak_prod_src backup is DONE".to_string();
+                   rsync_dir = "web-backup-scripts".to_string();
+                   bak_bootstrap(zip_in_file, zip_out_file_name, &rsync_dir);
+                   write_msg(&mut msg_vec, message_data);
+               } // end scripts-rs
+        */
+        //@
 
 
 
@@ -839,6 +848,62 @@ fn main() {
             //*** Delete the local .zip file
 
             fs::remove_file(anc123_zip_file);
+        } // end anc123
+          //@
+
+
+
+        //=== rs_bak_prod
+        //=== rs_bak_prod
+        //=== rs_bak_prod
+
+        if line == "scripts" {
+            let timestamp_rs_bak_prod = get_timestamp().to_string();
+            let mut rs_bak_prod_zip_file = "/usr/home/ancnet1/rs_bak_prod-".to_string();
+            rs_bak_prod_zip_file.push_str(&timestamp_rs_bak_prod);
+            rs_bak_prod_zip_file.push_str(".zip");
+
+            let _cmd2 = Command::new("/usr/bin/zip")
+                .args([
+                    "-rq",
+                    &rs_bak_prod_zip_file,
+                    "/usr/home/ancnet1/rs_bak_prod",
+                    "-x",
+                    "/usr/home/ancnet1/rs_bak_prod/target/*",
+                ])
+                .output()
+                .expect("zip scripts command failed to start");
+
+            //*** delete older files on datacenter via SSH rm command
+
+            let _cmd = Command::new("/usr/bin/ssh")
+                .args([
+                    SSH_RSYNC_ADDRESS.to_string(),
+                    " rm ".to_string(),
+                    "web-backup-scripts/rs_bak_prod*.zip".to_string(),
+                ])
+                .output()
+                .expect("ssh command failed to start");
+
+            // Send the zip up to the datacenter
+            let _cmd = Command::new("rsync")
+                .args([
+                    "-a",
+                    "-r",
+                    "-q",
+                    "--delete",
+                    &rs_bak_prod_zip_file,
+                    "fm1364@fm1364.rsync.net:web-backup-scripts",
+                ])
+                .output()
+                .expect("rsync command failed to start");
+
+            message_data = "scripts (rs_bak_prod) backup is DONE".to_string();
+            write_msg(&mut msg_vec, message_data);
+
+            //*** Delete the local .zip file
+
+            fs::remove_file(rs_bak_prod_zip_file);
         } // end anc123
           //@
 
