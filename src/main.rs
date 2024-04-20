@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date:on Apr 15 17:16:41 MDT 2024
-// Add code for re-write of rs_bak_prod source
+// Change Date:on Sat Apr 20 10:21:55 MDT 2024
+// Add code to touch espo-db dir on rsync
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
