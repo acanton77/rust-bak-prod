@@ -320,6 +320,18 @@ fn main() {
                 .output()
                 .expect("rsync command failed to start");
 
+
+            // touch the datacenter espo-db backup folder for new date
+
+            let _cmd = Command::new("/usr/bin/ssh")
+                .args([
+                    SSH_RSYNC_ADDRESS.to_string(),
+                    " touch ".to_string(),
+                    "espo-db-backup-rs".to_string(),
+                ])
+                .output()
+                .expect("ssh command failed to start");
+
             message_data = "espo: DB backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
         } // end espodb

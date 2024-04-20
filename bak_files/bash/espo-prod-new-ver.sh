@@ -90,7 +90,7 @@ fi
 echo "---Prev Espo is now set---"
 
 echo "---All done with espocrm update and backup---"
-echo "---Remember to do manual backup via switch2 procedure---"
+echo "---Remember to do manual backup via switch3 procedure---"
 
 
 
