@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date:on Sat Apr 20 10:21:55 MDT 2024
-// Add code to touch espo-db dir on rsync
+// Change Date:on Thu Apr 25 20:43:01 MDT 2024
+// Add code to simplify creating vec file
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
@@ -44,6 +44,7 @@ use std::{thread, time};
 
 use std::fs::rename;
 use std::process::Stdio;
+use std::error::Error as OtherError;
 
 const SSH_RSYNC_ADDRESS: &str = "fm1364@fm1364.rsync.net";
 const RSYNC_ADDRESS: &str = "fm1364@fm1364.rsync.net:";
@@ -64,6 +65,7 @@ fn main() {
     let mut log_path = String::from("");
     let mut dump_out_file_name = String::from("");
 
+    let mut vec_switch_file = Vec::new();
     // Put one-time run here
     // =========
 
@@ -71,9 +73,20 @@ fn main() {
 
     //==========
 
-    // CREATE THE VEC FROM THE SWITCH FILE (call function)
+    // CREATE THE VEC FROM THE SWITCH FILE (call function) - NOT USED NOW
 
-    let mut vec_switch_file = lines_from_file(SWITCH_FILE).expect("Could not load lines");
+    //=====  let mut vec_switch_file = lines_from_file(SWITCH_FILE).expect("Could not load lines");
+
+    // IN ORDER TO MAKE THE CODE EASIER TO UNDERSTAND IT WAS SIMPLIFIED
+
+    //*** READ SWITCH FILE INTO A STRING
+    let my_switch_string = fs::read_to_string(SWITCH_FILE).expect("Fail reading switch file");
+
+    //*** NOW, READ THE STRING FILE AND PUSH EACH LINE INTO THE VECTOR.
+
+    for line in my_switch_string.lines() {
+        vec_switch_file.push(line.to_string());
+    }
 
     //*** APPEND DAILY ITEMS TO VEC_SWITCH_FILE
 
@@ -319,7 +332,6 @@ fn main() {
                 ])
                 .output()
                 .expect("rsync command failed to start");
-
 
             // touch the datacenter espo-db backup folder for new date
 
@@ -1154,6 +1166,9 @@ fn get_timestamp() -> String {
   //@
 
 
+//============ NOT USED ANYMORE: DONE IN-LINE ============
+//============ NOT USED ANYMORE: DONE IN-LINE ============
+//============ NOT USED ANYMORE: DONE IN-LINE ============
 
 //=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
 //=== FUNCTION: CREATE VEC FROM SWITCH FILE=========
@@ -1161,11 +1176,14 @@ fn get_timestamp() -> String {
 //*** This reads the switch file into a vector used to find out what sties
 //    to update via the big loop
 
+/* 
 fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
     BufReader::new(File::open(filename)?).lines().collect()
 } // end create vec
+ */
   //@
 
+//==========================================
 
 
 // FUNCTION: WRITE MESSAGE TO MSG_VEC
