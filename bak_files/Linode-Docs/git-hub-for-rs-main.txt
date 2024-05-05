@@ -1,0 +1,6 @@
+Github
+
+git add -u or git add .
+git status
+git commit -m "something here commit"
+git push
