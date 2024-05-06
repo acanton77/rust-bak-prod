@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date:on Thu Apr 25 20:43:01 MDT 2024
-// Add code to simplify creating vec file
+// Change Date:on Mon May  6 12:54:05 MDT 2024
+// add doc for scripts
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
@@ -877,9 +877,9 @@ fn main() {
 
 
 
-        //=== rs_bak_prod
-        //=== rs_bak_prod
-        //=== rs_bak_prod
+        //=== rs_bak_prod - SCRIPTS
+        //=== rs_bak_prod - SCRIPTS
+        //=== rs_bak_prod - SCRIPTS
 
         if line == "scripts" {
             let timestamp_rs_bak_prod = get_timestamp().to_string();
