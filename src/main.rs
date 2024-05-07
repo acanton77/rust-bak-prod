@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date:on Mon May  6 12:54:05 MDT 2024
-// add doc for scripts
+// Change Date:on Tue May  7 13:00:07 MDT 2024
+// change dir for jane backup.. not needed
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
@@ -93,7 +93,7 @@ fn main() {
     vec_switch_file.push("linode".to_string());
     vec_switch_file.push("ac_addressbook".to_string());
     vec_switch_file.push("chk_espo_ver".to_string());
-    vec_switch_file.push("jane".to_string());
+    //vec_switch_file.push("jane".to_string());
     vec_switch_file.push("baikal".to_string());
 
     //*** SORT THE VECTOR - items are done in alpha order and so 1test will sort
@@ -770,6 +770,13 @@ fn main() {
         // ======JANE ADDRESS BOOK
         // ======JANE ADDRESS BOOK
 
+
+// NOT USED SINCE JANE FOLDER IS ALREADY IN RS-ADDRESS FOLDER WHICH IS SENT UP
+// TO DATACENTER IN ABOVE ADDRESS-BOOK ROUTINE
+
+/*  START
+
+
         if line == "jane" {
             let _cmd = Command::new("rsync")
                 .args([
@@ -777,7 +784,8 @@ fn main() {
                     "-r",
                     "-q",
                     "--delete",
-                    "/usr/home/ancnet1/py-backup/bak-files/address-book-backup-dir/JaneAddressFolder",
+                    //  "/usr/home/ancnet1/py-backup/bak-files/address-book-backup-dir/JaneAddressFolder",
+"====/usr/home/ancnet1/rs_bak_prod/bak_files/address-book-backup-dir-rs/JaneAddressFolder",
                     "fm1364@fm1364.rsync.net:addressbook-backup-rs",
                 ])
                 .output()
@@ -786,6 +794,12 @@ fn main() {
             message_data = "jane address backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
         } // jane
+        
+END
+        
+ */ 
+        
+        
           //@
 
 
