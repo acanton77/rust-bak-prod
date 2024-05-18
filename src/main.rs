@@ -2,8 +2,8 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date:on Tue May  7 13:00:07 MDT 2024
-// change dir for jane backup.. not needed
+// Change Date:on Sat May 18 09:24:11 MDT 2024
+// change output rs-prod.txt in cron
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
