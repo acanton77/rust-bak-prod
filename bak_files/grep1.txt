@@ -231,7 +231,7 @@ div.category-blog.post {
 <div id="download-page" class="row">
 	<div id="download-espocrm" class="col-md-6"> 
 
-		<h2>Latest Release EspoCRM 8.2.3 (April 19, 2024)</h2>
+		<h2>Latest Release EspoCRM 8.2.4 (May 08, 2024)</h2>
 
 
 		<img src="/wp-content/uploads/EspoCRM-Screen.png" alt="EspoCRM Screen">
@@ -240,7 +240,7 @@ div.category-blog.post {
 
 
 		<p id='espocrm-actions'>
-			<a id="lead-form-button" class="btn btn-red btn-middle-size" title="Download free open source CRM" href="/downloads/EspoCRM-8.2.3.zip">Download</a> <a id="demo-espocrm-link" class="btn btn-green btn-middle-size" title="Demo EspoCRM" href="/demo/">Try Demo</a>
+			<a id="lead-form-button" class="btn btn-red btn-middle-size" title="Download free open source CRM" href="/downloads/EspoCRM-8.2.4.zip">Download</a> <a id="demo-espocrm-link" class="btn btn-green btn-middle-size" title="Demo EspoCRM" href="/demo/">Try Demo</a>
 		</p>
 
 
@@ -275,7 +275,7 @@ div.category-blog.post {
 
 			<div>
 					<strong>Checksum</strong><br> 
-					<a href="/downloads/EspoCRM-8.2.3.zip.sha256">SHA-256</a>
+					<a href="/downloads/EspoCRM-8.2.4.zip.sha256">SHA-256</a>
 			</div>
 		</div>
 
@@ -679,15 +679,15 @@ getCartItems();
 			<div class="col-md-4 col-sm-12 social-panel">
 				<div class="follow-us-lbl">Follow us</div>
 				
-				<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/EspoCRM/" title="Follow Us on FaceBook">
+				<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/EspoCRM/" title="Follow EspoCRM on FaceBook">
 					<div class="social-icons icon-facebook"></div>
 				</a>
 				
-				<a rel="nofollow noopener noreferrer" target="_blank" href="https://x.com/espocrm/" title="Follow Us on X">
+				<a rel="nofollow noopener noreferrer" target="_blank" href="https://x.com/espocrm/" title="Follow EspoCRM on X">
 					<div class="social-icons icon-x"></div>
 				</a>
 
-				<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.linkedin.com/groups/EspoCRM-8126303" title="Follow Us on LinkedIn">
+				<a rel="nofollow noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/espocrm" title="Follow EspoCRM on LinkedIn">
 					<div class="social-icons icon-linkedin"></div>
 				</a>
 
@@ -695,7 +695,7 @@ getCartItems();
 					<div class="social-icons icon-github"></div>
 				</a>
 
-				<a rel="nofollow noopener noreferrer" class="icon" target="_blank" href="https://www.espocrm.com/feed/" title="Rss">
+				<a rel="nofollow noopener noreferrer" class="icon" target="_blank" href="https://www.espocrm.com/feed/" title="RSS">
 					<div class="social-icons icon-rss-feed"></div>
 				</a>
 			</div>

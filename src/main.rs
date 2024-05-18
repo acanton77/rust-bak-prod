@@ -972,9 +972,9 @@ END
 
     let current_local_done: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
     let msg_date_done = current_local_done.format("%c");
-
-    println!("---GOOD EOJ---");
-    println!("Date: {}", msg_date_done);
+    
+    println!("Job End: {}", msg_date_done);
+    println!("--- RUST: rs-prod.txt message ---");
 }
 
 // ****************** FUNCTIONS *************************************************
