@@ -30,7 +30,11 @@ MAILTO=ac99@answer123.com
 #30  03  * * *   echo "Python  jobs are done....  $(date) ."
 
 # for MAIL AFTER RUST  JOB (BELOW) - 2:30 AM Pacific, 3:30 AM MTN
-30  03  * * *   echo "Rust  jobs are done....  $(date) ."
+#30  03  * * *   echo "Rust  jobs are done....  $(date) ."
+
+30  03  * * *   echo "RUST backup done."; cat /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt
+
+
 
 # for ESPOCRM
 #* * * * * cd /usr/home/ancnet1/public_html/anc123.com/espocrm2; /usr/www/cgi-bin/php81.cgi -f cron.php > /dev/null 2>&1

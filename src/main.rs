@@ -2,11 +2,22 @@
 // RS_BAK_PROD -- RUST
 // RS_BAK_PROD -- RUST
 
-// Change Date:on Sat May 18 09:24:11 MDT 2024
-// change output rs-prod.txt in cron
+//TO BUILD OR RUN
+
+// On pair, cd to (or use 'rs') /usr/home/ancnet1/rs_bak_prod
+// cargo build or run
+
+// DATE OF CHANGES
+
+// Change Date:on Mon Jun 10 10:51:58 PDT 2024
+// change wording on baikal msg. and add some doc.
+
+// TO FORMAT CODE
 
 // format code in BBEdit - find: //at-sign
 //replace: //at-sign\n
+
+// GITHUB
 
 /*
 Github
@@ -794,12 +805,12 @@ fn main() {
             message_data = "jane address backup is DONE".to_string();
             write_msg(&mut msg_vec, message_data);
         } // jane
-        
+
 END
-        
- */ 
-        
-        
+
+ */
+
+
           //@
 
 
@@ -813,7 +824,7 @@ END
         if line == "baikal" {
             zip_in_file = "/usr/home/ancnet1/public_html/anc123.com/baikal94a".to_string();
             zip_out_file_name = "baikal94a-rs-".to_string();
-            message_data = "baikal backup is DONE".to_string();
+            message_data = "baikal (Pair-anc123.com) backup is DONE".to_string();
             rsync_dir = "web-backup-baikal-rs".to_string();
             bak_bootstrap(zip_in_file, zip_out_file_name, &rsync_dir);
             write_msg(&mut msg_vec, message_data);
@@ -972,7 +983,7 @@ END
 
     let current_local_done: DateTime<Tz> = Utc::now().with_timezone(&Pacific);
     let msg_date_done = current_local_done.format("%c");
-    
+
     println!("Job End: {}", msg_date_done);
     println!("--- RUST: rs-prod.txt message ---");
 }
@@ -984,8 +995,9 @@ END
 
 
 
-//=== FUNCTION: BOOTSTRAP ================================================
-//=== FUNCTION: BOOTSTRAP ================================================
+//=== FUNCTION: BOOTSTRAP - for bootstrap (non WP) sites =================
+//=== FUNCTION: BOOTSTRAP - for bootstrap (non WP) sites =================
+//=== FUNCTION: BOOTSTRAP - for bootstrap (non WP) sites =================
 
 fn bak_bootstrap(mut zip_in_file: String, mut zip_out_file_name: String, mut rsync_dir: &String) {
     //** create the output file name that is zipped.
@@ -1190,7 +1202,7 @@ fn get_timestamp() -> String {
 //*** This reads the switch file into a vector used to find out what sties
 //    to update via the big loop
 
-/* 
+/*
 fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
     BufReader::new(File::open(filename)?).lines().collect()
 } // end create vec
