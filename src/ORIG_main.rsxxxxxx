@@ -9,8 +9,8 @@
 
 // DATE OF CHANGES
 
-// Change Date:on Sat Jul  6 14:21:29 MDT 2024
-// omit .git and target directory on script backup
+// Change Date:on Mon Jun 10 10:51:58 PDT 2024
+// change wording on baikal msg. and add some doc.
 
 // TO FORMAT CODE
 
@@ -28,9 +28,9 @@ git commit -m "something here commit"
 git push
  */
 
-//#![allow(warnings)]
+#![allow(warnings)]
 
-use chrono::{DateTime, Local, Utc};
+use chrono::{DateTime, Local, TimeZone, Utc};
 use chrono_tz::Tz;
 use chrono_tz::US::Pacific;
 
@@ -39,42 +39,42 @@ use lettre::transport::smtp::authentication::Credentials;
 use lettre::{Message, SmtpTransport, Transport};
 
 use std::fs;
-//use std::fs::File;
+use std::fs::File;
 use std::fs::OpenOptions;
-//use std::io;
-//use std::io::prelude::*;
-//use std::io::Error;
-//use std::io::Read;
-//use std::io::Result;
-//use std::io::Write;
-//use std::io::{BufRead};
-//use std::path::Path;
+use std::io;
+use std::io::prelude::*;
+use std::io::Error;
+use std::io::Read;
+use std::io::Result;
+use std::io::Write;
+use std::io::{BufRead, BufReader};
+use std::path::Path;
 use std::process::Command;
-use std::time::{Duration};
-use std::{thread};
+use std::time::{Duration, Instant};
+use std::{thread, time};
 
 use std::fs::rename;
-//use std::process::Stdio;
-//use std::error::Error as OtherError;
+use std::process::Stdio;
+use std::error::Error as OtherError;
 
 const SSH_RSYNC_ADDRESS: &str = "fm1364@fm1364.rsync.net";
 const RSYNC_ADDRESS: &str = "fm1364@fm1364.rsync.net:";
 const SWITCH_FILE: &str = "/usr/home/ancnet1/rs_bak_prod/bak_files/switch_file.txt";
-//const ZIP_IN_DIR: &str = "/usr/home/ancnet1/public_html/";
+const ZIP_IN_DIR: &str = "/usr/home/ancnet1/public_html/";
 const HOME_FILE_DIR: &str = "/usr/home/ancnet1/rs_bak_prod/bak_files/";
 const LINODE_DIR: &str =
     "/usr/home/ancnet1/rs_bak_prod/bak_files/Linode-Docs/Pair-cron/pair-anc1-cron.txt";
 
 fn main() {
     let mut msg_vec: Vec<(String, String, String)> = Vec::new();
-    let mut message_data : String;
-    //let mut html_dir_name = String::from("");
-    let mut zip_in_file : String;
-    let mut zip_out_file_name : String;
-    let mut rsync_dir : String;
-    let mut database: String;
-    let mut log_path : String;
-    let mut dump_out_file_name : String;
+    let mut message_data = String::from("");
+    let mut html_dir_name = String::from("");
+    let mut zip_in_file = String::from("");
+    let mut zip_out_file_name = String::from("");
+    let mut rsync_dir = String::from("");
+    let mut database = String::from("");
+    let mut log_path = String::from("");
+    let mut dump_out_file_name = String::from("");
 
     let mut vec_switch_file = Vec::new();
     // Put one-time run here
@@ -317,17 +317,17 @@ fn main() {
                 espo_vec.push(file.unwrap().path().display().to_string())
             }
 
-            let _ = &espo_vec.sort();
+            &espo_vec.sort();
 
-           // &espo_vec.sort();
+            //&espo_vec.sort();
 
-            let _ = &espo_vec.reverse();
+            &espo_vec.reverse();
             let count2 = espo_vec.len();
 
             for i in 4..count2 {
                 // println!("deleted: {}", &espo_vec[i]);
-                let file_name_to_be_deleted2 = &espo_vec[i];
-                let _ = fs::remove_file(file_name_to_be_deleted2);
+                let mut file_name_to_be_deleted2 = &espo_vec[i];
+                fs::remove_file(file_name_to_be_deleted2);
                 // println!("file-to-be-deleted: {}", file_name_to_be_deleted2);
             }
 
@@ -646,14 +646,14 @@ fn main() {
 
             // Get the previous version from the saved .txt file
 
-            let prev_ver1 : String;
+            let mut prev_ver1 = String::from("");
             prev_ver1 =
                 fs::read_to_string("/usr/home/ancnet1/rs_bak_prod/bak_files/prev-espo-ver.txt")
                     .expect("Should have been able to read the file");
 
             // get rid of \n as grep does not have one.
 
-            let mut prev_ver : String;
+            let mut prev_ver = String::from("");
             prev_ver = prev_ver1.to_string();
             //====println!("---prev--");
             //====println!("{}", prev_ver);
@@ -699,8 +699,8 @@ fn main() {
             )
             .unwrap()
             {
-                let orig_file_name: String = file.unwrap().path().display().to_string();
-                let  new_file_name : String;
+                let mut orig_file_name: String = file.unwrap().path().display().to_string();
+                let mut new_file_name: String = "".to_string();
 
                 if orig_file_name.contains("babu") {
                     if orig_file_name.contains(" ") {
@@ -719,11 +719,11 @@ fn main() {
 
             // Sort the vec of file names into descending: old first
 
-            let _ = &my_vec.sort();
+            &my_vec.sort();
 
             // Now reorder them so that the newest are at the top
 
-            let _ = &my_vec.reverse();
+            &my_vec.reverse();
 
             // We are going to find out how many we have in the vec and then only keep
             // the top (newest) for files by deleting all the others.
@@ -731,8 +731,8 @@ fn main() {
             let count = my_vec.len();
 
             for i in 4..count {
-                let file_name_to_be_deleted = &my_vec[i];
-                let _ = fs::remove_dir_all(file_name_to_be_deleted);
+                let mut file_name_to_be_deleted = &my_vec[i];
+                fs::remove_dir_all(file_name_to_be_deleted);
             }
 
             //*** write our mail message, touch a file to show date done and send up to datacenter
@@ -896,7 +896,7 @@ END
 
             //*** Delete the local .zip file
 
-            let _ = fs::remove_file(anc123_zip_file);
+            fs::remove_file(anc123_zip_file);
         } // end anc123
           //@
 
@@ -911,9 +911,6 @@ END
             let mut rs_bak_prod_zip_file = "/usr/home/ancnet1/rs_bak_prod-".to_string();
             rs_bak_prod_zip_file.push_str(&timestamp_rs_bak_prod);
             rs_bak_prod_zip_file.push_str(".zip");
-            
-            
-            // zip the rs_prod script directory but exclude everything in /target and /.git
 
             let _cmd2 = Command::new("/usr/bin/zip")
                 .args([
@@ -922,10 +919,6 @@ END
                     "/usr/home/ancnet1/rs_bak_prod",
                     "-x",
                     "/usr/home/ancnet1/rs_bak_prod/target/*",
-                    "-x",
-                    "/usr/home/ancnet1/rs_bak_prod/.git/*",
-                    
-                    
                 ])
                 .output()
                 .expect("zip scripts command failed to start");
@@ -959,7 +952,7 @@ END
 
             //*** Delete the local .zip file
 
-            let _ = fs::remove_file(rs_bak_prod_zip_file);
+            fs::remove_file(rs_bak_prod_zip_file);
         } // end anc123
           //@
 
@@ -981,7 +974,7 @@ END
 
     //*** truncate switch file as we clean it out for next time.
 
-    let _file = OpenOptions::new()
+    let file = OpenOptions::new()
         .write(true)
         .truncate(true)
         .open(SWITCH_FILE);
@@ -1006,7 +999,7 @@ END
 //=== FUNCTION: BOOTSTRAP - for bootstrap (non WP) sites =================
 //=== FUNCTION: BOOTSTRAP - for bootstrap (non WP) sites =================
 
-fn bak_bootstrap( zip_in_file: String,  zip_out_file_name: String,  rsync_dir: &String) {
+fn bak_bootstrap(mut zip_in_file: String, mut zip_out_file_name: String, mut rsync_dir: &String) {
     //** create the output file name that is zipped.
 
     let mut zip_out_file: String = format!("{}{}", HOME_FILE_DIR.to_string(), zip_out_file_name);
@@ -1064,7 +1057,7 @@ fn bak_bootstrap( zip_in_file: String,  zip_out_file_name: String,  rsync_dir: &
 
     //*** Delete the local .zip file
 
-    let _ = fs::remove_file(zip_out_file);
+    fs::remove_file(zip_out_file);
 } //end bootstrap
   //@
 
@@ -1083,7 +1076,7 @@ fn bak_wordpress(
 
     let timestamp_new = get_timestamp().to_string();
     let current_local22: DateTime<Local> = Local::now();
-    let _custom_format22 = current_local22.format("%b %d %H:%M:%S");
+    let custom_format22 = current_local22.format("%b %d %H:%M:%S");
 
     //*** set up the file name with timestamp and sql
 
@@ -1109,7 +1102,7 @@ fn bak_wordpress(
     //  zip up the database file - zip file comes first, then the input file
 
     let mut db_zip: String = dump_out_file.to_string();
-    let  sql_in: String = dump_out_file.to_string();
+    let mut sql_in: String = dump_out_file.to_string();
 
     db_zip.push_str(".zip");
 
@@ -1160,8 +1153,8 @@ fn bak_wordpress(
 
     // Delete the .zip file
 
-    let _ = fs::remove_file(db_zip);
-    let _ = fs::remove_file(sql_in);
+    fs::remove_file(db_zip);
+    fs::remove_file(sql_in);
 } // end wordpress
   //@
 
@@ -1241,7 +1234,7 @@ fn write_msg(msg_vec: &mut Vec<(String, String, String)>, message_data: String) 
 //*** Read the message vector and formats a string with all the content lines
 //    for the email to go out.
 
-fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<String>) {
+fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<(String)>) {
     let mut msg_final = String::new();
 
     //let msg_date_mail: String = get_current_date();
@@ -1273,15 +1266,15 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     // get the msg file and pop in line numbrers
 
     let mut num = 0;
-    let mut _newvalue: String;
-    let mut _from_orig: String;
+    let mut newvalue: String;
+    let mut from_orig: String;
 
     //*** We read the messages for each site done and add line numbers. We drop the
     //    datestamp as can be seen in the format code.
 
     for line in msg_vec {
         num = num + 1;
-        let num2: &str = &num.to_string();
+        let mut num2: &str = &num.to_string();
         let newvalue = format!("   {}--  {}  {}\n", num2, line.1, line.2);
         msg_final.push_str(&newvalue);
     } // end for msg_vec line read loop
