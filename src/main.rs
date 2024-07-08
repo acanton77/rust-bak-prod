@@ -9,8 +9,10 @@
 
 // DATE OF CHANGES
 
-// Change Date:on Sat Jul  6 14:21:29 MDT 2024
-// omit .git and target directory on script backup
+// Change Date
+// Sat Jul  6 14:21:29 MDT 2024: omit .git and target directory on script backup
+// Mon Jul  8 12:23:22 MDT 2024: add semi colon to for/read loop line 317
+
 
 // TO FORMAT CODE
 
@@ -314,7 +316,7 @@ fn main() {
             for file in
                 fs::read_dir("/usr/home/ancnet1/rs_bak_prod/bak_files/espo-db-backup-dir").unwrap()
             {
-                espo_vec.push(file.unwrap().path().display().to_string())
+                espo_vec.push(file.unwrap().path().display().to_string());
             }
 
             let _ = &espo_vec.sort();
