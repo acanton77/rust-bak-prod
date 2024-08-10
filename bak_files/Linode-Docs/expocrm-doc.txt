@@ -1,5 +1,28 @@
 ESPOCRM-doc.txt
 
+8-10-2024
+
+Espo local backup:  https://anc77.pairsite.com/espocrm2
+
+
+PROD:
+MySQL Version	8.0.36	Success
+Host Name	vdb2a.pair.com	Success
+Database Name	ancnet1_espo1	Success
+User Name	ancnet1
+
+
+BACK
+Database Settings
+MySQL Version	8.0.36	Success
+Host Name	db176.pair.com	Success
+Database Name	ancnet1_espobak	Success
+User Name	ancnet1_5	Success
+
+
+===========
+OUTDATED
+===========
 For conversion to 7.x:
 
 Keep www-data:www-data (33 and 33) in config.

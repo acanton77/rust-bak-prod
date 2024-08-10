@@ -7,6 +7,9 @@
 // On pair, cd to (or use 'rs') /usr/home/ancnet1/rs_bak_prod
 // cargo build or run
 
+// From command line:
+// /usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt
+
 // DATE OF CHANGES
 
 // Change Date
@@ -1308,12 +1311,17 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("# To update ESPO to a new version:\n");
     msg_final.push_str("SSH into Pair VPS\n");
     msg_final.push_str("cd /usr/home/ancnet1/rs_bak_prod/bak_files/bash\n");
-    msg_final.push_str("./espo-prod-new-ver.sh \n\n");
-
+    msg_final.push_str("./espo-prod-new-ver.sh \n");
+    msg_final.push_str("Note: Espo local backup: https://anc77.pairsite.com/espocrm2.\n\n");
+    
     msg_final.push_str("# To backup any site or file:\n");
     msg_final.push_str("Go to: https://anc123.com/switch3/index.php\n");
     msg_final.push_str("Enter the job/backups you want to run\n");
     msg_final.push_str("The backup will be uploaded to rsync.net that night.\n\n");
+
+    msg_final.push_str("# To run from command line:\n");
+    msg_final.push_str("/usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod\n\n");
+
 
     msg_final.push_str("-- End --\n");
     //@
