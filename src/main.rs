@@ -13,8 +13,9 @@
 // DATE OF CHANGES
 
 // Change Date
-// Sat Jul  6 14:21:29 MDT 2024: omit .git and target directory on script backup
+// Thu Aug 15 13:49:33 MDT 2024: add exit(0) code for vacation.
 // Mon Jul  8 12:23:22 MDT 2024: add semi colon to for/read loop line 317
+// Sat Jul  6 14:21:29 MDT 2024: omit .git and target directory on script backup
 
 
 // TO FORMAT CODE
@@ -100,8 +101,20 @@ fn main() {
 
     //*** NOW, READ THE STRING FILE AND PUSH EACH LINE INTO THE VECTOR.
 
+    // New code: if 0exit is in the switch file, print msg. and immediately exit. Used during vacations.
     for line in my_switch_string.lines() {
+    
+        if line == "0exit" {
+           println!("--- Exit: No processing ---");
+           println!("--- RUST: rs-prod.txt message ---");
+           std::process::exit(0);
+
+        }
+        else {
         vec_switch_file.push(line.to_string());
+        }
+    
+        
     }
 
     //*** APPEND DAILY ITEMS TO VEC_SWITCH_FILE
