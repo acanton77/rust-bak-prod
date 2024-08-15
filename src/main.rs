@@ -1333,7 +1333,8 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("The backup will be uploaded to rsync.net that night.\n\n");
 
     msg_final.push_str("# To run from command line:\n");
-    msg_final.push_str("/usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod\n\n");
+    msg_final.push_str("/usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod\n");
+    msg_final.push_str("  ( > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt)\n\n");
 
 
     msg_final.push_str("-- End --\n");
