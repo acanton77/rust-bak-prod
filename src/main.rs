@@ -56,6 +56,7 @@ use std::fs::OpenOptions;
 //use std::io::{BufRead};
 //use std::path::Path;
 use std::process::Command;
+use std::process::exit;
 use std::time::{Duration};
 use std::{thread};
 
@@ -107,7 +108,7 @@ fn main() {
         if line == "0exit" {
            println!("--- Exit: No processing ---");
            println!("--- RUST: rs-prod.txt message ---");
-           std::process::exit(0);
+           exit(0);
 
         }
         else {
