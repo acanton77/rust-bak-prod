@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Fri Aug 23 14:51:29 MDT 2024: add report - run switch file script.
 // Thu Aug 15 13:49:33 MDT 2024: add exit(0) code for vacation.
 // Mon Jul  8 12:23:22 MDT 2024: add semi colon to for/read loop line 317
 // Sat Jul  6 14:21:29 MDT 2024: omit .git and target directory on script backup
@@ -1313,6 +1314,9 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     //No errors found.
 
     msg_final.push_str("Note:\n\n");
+    
+    msg_final.push_str("# To create switch file entry:\n");
+    msg_final.push_str("https://anc123.com/switch3/index.php\n\n");
 
     msg_final.push_str("# For user crontab - pair:\n");
 
