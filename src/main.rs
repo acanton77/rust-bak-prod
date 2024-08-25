@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Sun Aug 25 14:23:45 MDT 2024: add doc for address book backup and .vcf
 // Fri Aug 23 14:51:29 MDT 2024: add report - run switch file script.
 // Thu Aug 15 13:49:33 MDT 2024: add exit(0) code for vacation.
 // Mon Jul  8 12:23:22 MDT 2024: add semi colon to for/read loop line 317
@@ -105,7 +106,7 @@ fn main() {
 
     // New code: if 0exit is in the switch file, print msg. and immediately exit. Used during vacations.
     for line in my_switch_string.lines() {
-    
+
         if line == "0exit" {
            println!("--- Exit: No processing ---");
            println!("--- RUST: rs-prod.txt message ---");
@@ -115,8 +116,8 @@ fn main() {
         else {
         vec_switch_file.push(line.to_string());
         }
-    
-        
+
+
     }
 
     //*** APPEND DAILY ITEMS TO VEC_SWITCH_FILE
@@ -705,7 +706,12 @@ fn main() {
         //=== ADDRESS BOOKS==========
 
         if line == "ac_addressbook" {
-            // *** We upload the previously made vcf file. We get the directory with the
+            // Around midnight we run rsync-address-book.sh which creates the new .vcf
+            // file and uploads it to the pair server's rust bak_files directory along
+            // with the BusyContact backups.
+            //
+            // *** We upload the previously made vcf file to Rsync.net.
+            // We get the directory with the
             //     BusyContact files and we only keep the latest 4 of them.
 
             let mut my_vec: Vec<String> = Vec::new();
@@ -931,8 +937,8 @@ END
             let mut rs_bak_prod_zip_file = "/usr/home/ancnet1/rs_bak_prod-".to_string();
             rs_bak_prod_zip_file.push_str(&timestamp_rs_bak_prod);
             rs_bak_prod_zip_file.push_str(".zip");
-            
-            
+
+
             // zip the rs_prod script directory but exclude everything in /target and /.git
 
             let _cmd2 = Command::new("/usr/bin/zip")
@@ -944,8 +950,8 @@ END
                     "/usr/home/ancnet1/rs_bak_prod/target/*",
                     "-x",
                     "/usr/home/ancnet1/rs_bak_prod/.git/*",
-                    
-                    
+
+
                 ])
                 .output()
                 .expect("zip scripts command failed to start");
@@ -1314,7 +1320,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     //No errors found.
 
     msg_final.push_str("Note:\n\n");
-    
+
     msg_final.push_str("# To create switch file entry:\n");
     msg_final.push_str("https://anc123.com/switch3/index.php\n\n");
 
@@ -1331,7 +1337,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("cd /usr/home/ancnet1/rs_bak_prod/bak_files/bash\n");
     msg_final.push_str("./espo-prod-new-ver.sh \n");
     msg_final.push_str("Note: Espo local backup: https://anc77.pairsite.com/espocrm2.\n\n");
-    
+
     msg_final.push_str("# To backup any site or file:\n");
     msg_final.push_str("Go to: https://anc123.com/switch3/index.php\n");
     msg_final.push_str("Enter the job/backups you want to run\n");
