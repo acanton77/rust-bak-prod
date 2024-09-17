@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Tue Sep 17 09:36:16 MDT 2024: take out duplicate doc about switch file
 // Sun Aug 25 14:23:45 MDT 2024: add doc for address book backup and .vcf
 // Fri Aug 23 14:51:29 MDT 2024: add report - run switch file script.
 // Thu Aug 15 13:49:33 MDT 2024: add exit(0) code for vacation.
@@ -1321,8 +1322,8 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
 
     msg_final.push_str("Note:\n\n");
 
-    msg_final.push_str("# To create switch file entry:\n");
-    msg_final.push_str("https://anc123.com/switch3/index.php\n\n");
+    //msg_final.push_str("# To create switch file entry:\n");
+    //msg_final.push_str("https://anc123.com/switch3/index.php\n\n");
 
     msg_final.push_str("# For user crontab - pair:\n");
 
