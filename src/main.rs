@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Thu Sep 19 10:44:26 MDT 2024: take out extra line after "note:"
 // Tue Sep 17 09:36:16 MDT 2024: take out duplicate doc about switch file
 // Sun Aug 25 14:23:45 MDT 2024: add doc for address book backup and .vcf
 // Fri Aug 23 14:51:29 MDT 2024: add report - run switch file script.
@@ -1316,7 +1317,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("\n");
 
     //msg_final.push_str("Errors:\n");
-    msg_final.push_str("\n");
+    //msg_final.push_str("\n");
 
     //No errors found.
 
