@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Sat Sep 28 16:16:14 MDT 2024: add code for newmediawebfix
 // Thu Sep 19 10:44:26 MDT 2024: take out extra line after "note:"
 // Tue Sep 17 09:36:16 MDT 2024: take out duplicate doc about switch file
 // Sun Aug 25 14:23:45 MDT 2024: add doc for address book backup and .vcf
@@ -481,6 +482,29 @@ fn main() {
             write_msg(&mut msg_vec, message_data);
         } // end newmedialanding
           //@
+
+
+
+        //=== NEWMEDIWEBFIX
+        //=== NEWMEDIWEBFIX
+        //=== NEWMEDIWEBFIX
+
+        if line == "newmediawebfix" {
+            zip_in_file = "/usr/home/ancnet1/public_html/newmediawebfix.com".to_string();
+            zip_out_file_name = "newmediawebfix.com-rs-".to_string();
+            message_data = "newmediawebfix backup is DONE".to_string();
+            rsync_dir = "web-backup-newmediawebfix".to_string();
+            bak_bootstrap(zip_in_file, zip_out_file_name, &rsync_dir);
+            write_msg(&mut msg_vec, message_data);
+        } // end newmediawebfix
+          //@
+
+
+
+
+
+
+
 
 
 
@@ -1323,8 +1347,8 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
 
     msg_final.push_str("Note:\n\n");
 
-    //msg_final.push_str("# To create switch file entry:\n");
-    //msg_final.push_str("https://anc123.com/switch3/index.php\n\n");
+    msg_final.push_str("# To create switch file entry:\n");
+    msg_final.push_str("https://anc123.com/switch3/index.php\n\n");
 
     msg_final.push_str("# For user crontab - pair:\n");
 
