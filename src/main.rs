@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Fri Jan 10 22:07:57 MST 2025: add line to output report
 // Sat Sep 28 16:16:14 MDT 2024: add code for newmediawebfix
 // Thu Sep 19 10:44:26 MDT 2024: take out extra line after "note:"
 // Tue Sep 17 09:36:16 MDT 2024: take out duplicate doc about switch file
@@ -1373,6 +1374,8 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("/usr/home/ancnet1/rs_bak_prod/target/debug/rs_bak_prod\n");
     msg_final.push_str("  ( > /usr/home/ancnet1/rs_bak_prod/bak_files/rs-prod.txt)\n\n");
 
+    msg_final.push_str("# EspoCRM download page:\n");
+    msg_final.push_str("https://www.espocrm.com/download/\n\n");
 
     msg_final.push_str("-- End --\n");
     //@

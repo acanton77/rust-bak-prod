@@ -48,6 +48,21 @@
 	<link rel="icon" href="https://www.espocrm.com/images/favicon.png" type="image/png" sizes="48x48">
 	<link rel="icon" href="https://www.espocrm.com/images/favicon-96x96.png" type="image/png" sizes="96x96">
 
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "EspoCRM",
+		"url": "https://www.espocrm.com/",
+		"logo": "https://www.espocrm.com/images/espocrm-logo-92x92.png",
+		"contactPoint": {
+		"contactType": "Customer Service",
+		"telephone": "+1 (408) 320-0380"
+		}
+	}
+    </script>
+
 	<link rel="preload" href="/wp-content/themes/responsive/fonts/roboto-regular-webfont.woff"  as="font" type="font/woff" crossorigin>
 		
 <!-- BEGIN Metadata added by the Add-Meta-Tags WordPress plugin -->
@@ -55,11 +70,12 @@
 <!-- END Metadata added by the Add-Meta-Tags WordPress plugin -->
 
 <meta name='robots' content='max-image-preview:large' />
-				<link rel="stylesheet" type="text/css" href="/minified/css/styles.css" /><link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="https://www.espocrm.com/feed/" />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+					<link rel="stylesheet" type="text/css" href="/minified/css/styles.css" /><link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="https://www.espocrm.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="https://www.espocrm.com/comments/feed/" />
 <script type="text/javascript">
 /* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.espocrm.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.espocrm.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
 /*! This file is auto-generated */
 !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
 /* ]]> */
@@ -95,9 +111,9 @@ var wpcf7cf_global_settings = {"ajaxurl":"https:\/\/www.espocrm.com\/wp-admin\/a
 var wpcf7 = {"api":{"root":"https:\/\/www.espocrm.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
 /* ]]> */
 </script>
-<script type="text/javascript" src="https://www.espocrm.com/minified/js/header.js?ver=6.6.2" id="header-js-js"></script>
+<script type="text/javascript" src="https://www.espocrm.com/minified/js/header.js?ver=6.7.1" id="header-js-js"></script>
 <link rel="https://api.w.org/" href="https://www.espocrm.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.espocrm.com/wp-json/wp/v2/pages/235" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.espocrm.com/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 6.6.2" />
+<meta name="generator" content="WordPress 6.7.1" />
 <link rel="canonical" href="https://www.espocrm.com/download/" />
 <link rel='shortlink' href='https://www.espocrm.com/?p=235' />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.espocrm.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.espocrm.com%2Fdownload%2F" />
@@ -246,7 +262,7 @@ div.category-blog.post {
 <div id="download-page" class="row">
 	<div id="download-espocrm" class="col-md-6"> 
 
-		<h2>Latest Release EspoCRM 8.4.1 (September 17, 2024)</h2>
+		<h2>Latest Release EspoCRM 8.4.2 (October 10, 2024)</h2>
 
 
 		<img src="/wp-content/uploads/EspoCRM-Screen.png" alt="EspoCRM Screen">
@@ -254,7 +270,7 @@ div.category-blog.post {
 		<p>EspoCRM is a free, open-source, self-hosted Customer Relationship Management (CRM) web application that enables you to view, manage and analyze your company's relationships with customers and partners alike. Lightning fast and easily customizable, this web-based CRM solution will provide you with the tools to understand your consumers’ behavior and cater your products and services specifically to their needs.</p>
 
 		<p id='espocrm-actions'>
-			<a id="lead-form-button" class="btn btn-red btn-middle-size" title="Download free open source CRM" href="/downloads/EspoCRM-8.4.1.zip">Download</a> <a id="demo-espocrm-link" class="btn btn-green btn-middle-size" title="Demo EspoCRM" href="/demo/">Try Demo</a>
+			<a id="lead-form-button" class="btn btn-red btn-middle-size" title="Download free open source CRM" href="/downloads/EspoCRM-8.4.2.zip">Download</a> <a id="demo-espocrm-link" class="btn btn-green btn-middle-size" title="Demo EspoCRM" href="/demo/">Try Demo</a>
 		</p>
 
 
@@ -289,7 +305,7 @@ div.category-blog.post {
 
 			<div>
 					<strong>Checksum</strong><br> 
-					<a href="/downloads/EspoCRM-8.4.1.zip.sha256">SHA-256</a>
+					<a href="/downloads/EspoCRM-8.4.2.zip.sha256">SHA-256</a>
 			</div>
 		</div>
 
@@ -561,18 +577,18 @@ getCartItems();
 					</li>
 
 					<li>
-						<a title="EspoCRM Windows Installer" href="https://www.espocrm.com/bitnami-espocrm-stack/#windows">
-							Windows Installer
+						<a title="Install EspoCRM on Windows with Docker" href="https://hub.docker.com/r/espocrm/espocrm#windows">
+							Install on Windows
 						</a>
 					</li>
 					<li>
-						<a title="EspoCRM OS X Installer" href="https://www.espocrm.com/bitnami-espocrm-stack/#osx">
-							OS X Installer
+						<a title="Install EspoCRM on OS X with Docker" href="https://hub.docker.com/r/espocrm/espocrm/#osx">
+							Install on OS X
 						</a>
 					</li>
 					<li>
-						<a title="EspoCRM Linux Installer" href="https://www.espocrm.com/bitnami-espocrm-stack/#linux">
-							Linux Installer
+						<a title="Install EspoCRM on Linux with Docker" href="https://hub.docker.com/r/espocrm/espocrm#linux">
+							Install on Linux
 						</a>
 					</li>
 				</ul>
@@ -601,8 +617,8 @@ getCartItems();
 			<div class="col-md-2 col-sm-3">
 				<ul>
 					<li>
-						<a title="EspoCRM Forum" href="https://forum.espocrm.com/" rel="noopener noreferrer">
-							Forum
+						<a title="CRM Help & Support Forum" href="https://forum.espocrm.com/" rel="noopener noreferrer">
+							Community Forum
 						</a>
 					</li>
 					<li>
@@ -739,7 +755,7 @@ getCartItems();
 		</div>
 
 		<div class="row copyright">
-			© 2024 EspoCRM. All Rights Reserved.
+			© 2025 EspoCRM. All Rights Reserved.
 		</div>
 	</div>
 	<!-- end #footer-wrapper -->
@@ -749,7 +765,7 @@ getCartItems();
 
 
 
-<script type="text/javascript" src="https://www.espocrm.com/minified/js/footer.js?ver=6.6.2" id="footer-js-js"></script>
+<script type="text/javascript" src="https://www.espocrm.com/minified/js/footer.js?ver=6.7.1" id="footer-js-js"></script>
 
 	<script type="text/javascript">
 
