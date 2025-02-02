@@ -13,6 +13,7 @@
 // DATE OF CHANGES
 
 // Change Date
+// Sat Feb  1 21:47:28 MST 2025 take out word local in email report
 // Fri Jan 10 22:07:57 MST 2025: add line to output report
 // Sat Sep 28 16:16:14 MDT 2024: add code for newmediawebfix
 // Thu Sep 19 10:44:26 MDT 2024: take out extra line after "note:"
@@ -1363,7 +1364,7 @@ fn send_mail(msg_vec: &mut Vec<(String, String, String)>, vec_switch_file: &Vec<
     msg_final.push_str("SSH into Pair VPS\n");
     msg_final.push_str("cd /usr/home/ancnet1/rs_bak_prod/bak_files/bash\n");
     msg_final.push_str("./espo-prod-new-ver.sh \n");
-    msg_final.push_str("Note: Espo local backup: https://anc77.pairsite.com/espocrm2.\n\n");
+    msg_final.push_str("Note: Espo backup: https://anc77.pairsite.com/espocrm2.\n\n");
 
     msg_final.push_str("# To backup any site or file:\n");
     msg_final.push_str("Go to: https://anc123.com/switch3/index.php\n");

@@ -6,29 +6,32 @@ echo "***Now on Rust***"
 echo "/usr/home/ancnet1/rs_bak_prod/bak_files/bash/espo-prod-new-ver.sh"
 # Run manually via SSH. This will use the espo PHP command to run the update.
 
+# NOTE: We now use the -d parm for the memory_limit. We could use the -c parm
+# to call in the .user.ini file.
+# php -c /usr/home/ancnet1/public_html/anc123.com/espocrm2/.user.ini command.php upgrade
  
 
 cd /usr/home/ancnet1/public_html/anc123.com/espocrm2
 
 
 
-read -p "Do you want to update the espo prod via PHP82 to new version (yes/no):  " var3
+read -p "Do you want to update the espo prod via PHP84 to new version (yes/no):  " var3
 
 if [ $var3 == "yes" ]
 then
-/usr/local/bin/php82  command.php upgrade
+/usr/local/bin/php84 -d  memory_limit=524M command.php upgrade
 echo "---done with prod"
 fi
 
 echo " "
 
-read -p "Do you want to upgrade the BAK file via PHP82 to new version (yes/no):  " var1
+read -p "Do you want to upgrade the BAK file via PHP84 to new version (yes/no):  " var1
 
 if [ $var1 == "yes" ]
 then
 # go to the backup site directory
 cd /usr/home/ancnet1/public_html/anc77.pairsite.com/espocrm2
-/usr/local/bin/php82  command.php upgrade
+/usr/local/bin/php84 -d  memory_limit=524M command.php upgrade
 echo "---done with BAK"
 
 fi
