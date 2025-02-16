@@ -1,1 +1,1 @@
-		<h2>Latest Release EspoCRM 9.0.2 (January 27, 2025)</h2>
+		<h2>Latest Release EspoCRM 9.0.4 (February 09, 2025)</h2>

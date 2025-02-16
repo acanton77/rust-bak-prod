@@ -13,6 +13,8 @@
 // DATE OF CHANGES
 
 // Change Date
+// Sat Feb 15 17:07:46 MST 2025: took out Jane permanently  
+// Thu Feb 13 18:15:54 MST 2025 take out Jane - temp
 // Sat Feb  1 21:47:28 MST 2025 take out word local in email report
 // Fri Jan 10 22:07:57 MST 2025: add line to output report
 // Sat Sep 28 16:16:14 MDT 2024: add code for newmediawebfix
@@ -162,7 +164,7 @@ fn main() {
             *x != "linode"
                 && *x != "ac_addressbook"
                 && *x != "chk_espo_ver"
-                && *x != "jane"
+               // && *x != "jane"
                 && *x != "baikal"
         });
         //dbg!(&vec_switch_file);
